@@ -1,3 +1,28 @@
+.btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0.125rem 0.125rem 0.125rem 0.1875rem;
+    border-style: solid;
+    border-color: transparent;
+    font-weight: 500;
+    letter-spacing: 0;
+    background-image: linear-gradient(166deg, transparent 0% 50%, #2D3135 50%, #3E4248 100%), linear-gradient(166deg, #3E4248 0%, #2A2E32 50%, #3E4248 50%, #313437 100%);
+    background-position: 0% 0%, 100% 100%;
+    background-size: 200% 200%;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    color: #b4c0ce;
+    text-shadow: inherit;
+    box-shadow: 8px 8px 22px rgb(21 22 24 / 38%), -4px -2px 16px rgb(195 200 205 / 8%);
+    transition: 0.5s ease-in-out;
+    padding: 0.6875rem 2.5rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
 body{
-    background-color: #ffffff;
+    overflow-x: hidden;
 }
