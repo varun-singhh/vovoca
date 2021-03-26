@@ -32,7 +32,7 @@ const Footer = () => {
                         <div className="contact-box">
                             <div className="row">
                                 <div className="get-the-app">
-                                    <h4>Get the app:</h4>
+                                    <h4>Get the app</h4>
                                     <div className="download-app-buttons">
                                         <button className="apple-btn">Apple Store</button>
                                         <button className="playstore-btn">Google Play</button>
@@ -40,7 +40,7 @@ const Footer = () => {
                                     
                                 </div>
                                 <div className="contact-details">
-                                    <h4>Contacts:</h4>
+                                    <h4>Contacts</h4>
                                     <table className="contact-info">
                                         <tbody>
                                             <tr>

@@ -202,6 +202,7 @@ textarea {
   letter-spacing: -0.01em;
   color: #d7e1ec;
   margin: 0;
+  padding-left: 50px;
 }
 
 .contact-info {
@@ -269,4 +270,54 @@ textarea {
     -4px -2px 16px rgb(195 200 205 / 8%),
     inset -2px -2px 4px rgb(54 54 57 / 16%),
     inset 2px 2px 4px rgb(30 30 32 / 18%);
+}
+
+@media only screen and (max-width: 600px) {
+  .contents {
+    display: block;
+  }
+  .get-in-touch {
+    width: 90%;
+  }
+  .get-in-touch > h2 {
+    font-size: 38px;
+    width: 90%;
+    text-align: center;
+  }
+
+  .get-in-touch > p {
+    font-size: 1rem;
+  }
+
+  .inputs {
+    padding-left: 35px;
+  }
+
+  .message {
+    padding-left: 35px;
+  }
+
+  .subscribe-btn {
+  }
+
+  .contacts {
+    width: 90%;
+    padding-left: 0;
+  }
+  .row {
+    display: block;
+  }
+
+  .get-the-app > h4 {
+    padding-left: 30px;
+  }
+
+  .download-app-buttons {
+    padding-left: 18px;
+    margin-bottom: 1.875rem;
+  }
+
+  .contact-details > h4 {
+    padding-left: 50px;
+  }
 }
