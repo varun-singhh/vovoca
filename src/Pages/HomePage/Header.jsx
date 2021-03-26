@@ -1,23 +1,13 @@
 import React from 'react';
 import '../../Static/css/Header.css';
+import banner from '../../Static/images/Saly.svg';
+import Navbar from './Navbar';
 const Header = () => {
   return (
-    <div>
-      <nav className="nav-bar">
-        <div class="container">
-          <div class="neon">Vovoca </div>
-        </div>
-        <ul className="nav-items">
-          <li className="list-items">Home</li>
-          <li className="list-items">Features</li>
-          <li className="list-items">Trending</li>
-          <li className="list-items">About</li>
-          <li className="list-items">Contact</li>
-          <button className="butn">Login</button>
-        </ul>
-      </nav>
+    <div className="">
+      <Navbar />
       <div className="header-info">
-        <div>
+        <div className="mobile-view">
           <p className="banner-heading">
             #Tune you work with Trending Royalty free Music
           </p>
@@ -27,22 +17,11 @@ const Header = () => {
           </p>
           <button className="btn">Join us Now</button>
         </div>
-        <img
-          src="https://ld-wt73.template-help.com/tf/neon_tf_v2/media/image-01-827x730.png"
-          className="banner-image"
-        />
+        <img src={banner} className="banner-image" />
       </div>
-      <div className="vovoca-markdown">
-        <p className="vovoca-name">VOVOCA</p>
-      </div>
+
       <div className="header">
-        <svg
-          class="image-svg"
-          width="1520"
-          height="792"
-          viewBox="0 0 1920 792"
-          fill="none"
-        >
+        <svg class="image-svg" viewBox="0 0 1920 792" fill="none">
           <path
             opacity="0.05"
             d="M1245 671.5H0V792H1920V0.5H1450C1392.01 0.5 1345 47.5101 1345 105.5V571.5C1345 626.728 1300.23 671.5 1245 671.5Z"
@@ -65,6 +44,9 @@ const Header = () => {
             </linearGradient>
           </defs>
         </svg>
+        <div className="vovoca-markdown">
+          <p className="vovoca-name">VOVOCA</p>
+        </div>
       </div>
     </div>
   );

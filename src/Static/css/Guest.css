@@ -1,0 +1,8 @@
+.guest{
+    background: radial-gradient(
+        37.53% 147.33% at 5.39% 8.57%,
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(180deg, #26282a 0%, #212325 100%);
+}
