@@ -60,19 +60,19 @@ const Navbar = () => {
     <nav class="navigation__nav">
       <ul class="navigation__list">
         <li class="navigation__item">
-          <a href="#" class="navigation__link">About Natours</a>
+          <a href="#" class="navigation__link">Home</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Your Benefits</a>
+          <a href="#" class="navigation__link">Features</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Popular Tours</a>
+          <a href="#" class="navigation__link">Trending</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Stories</a>
+          <a href="#" class="navigation__link">About</a>
         </li>
         <li class="navigation__item">
-          <a href="#" class="navigation__link">Book Now</a>
+          <a href="#" class="navigation__link">Contact us</a>
         </li>
       </ul>
     </nav>

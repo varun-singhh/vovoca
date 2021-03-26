@@ -128,12 +128,11 @@
     margin-bottom: 5%;
   }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   .banner-heading {
     font-size: x-large;
     margin-top: 20%;
   }
-
 }
 /* KeyFrames Here */
 @keyframes neon {

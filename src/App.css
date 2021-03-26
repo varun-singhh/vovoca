@@ -35,6 +35,20 @@
   background-size: 50% 400%;
   color: #f3af32;
 }
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 0;
+  border-top: 1px solid rgba(29, 31, 35, 0.8);
+}
+.divider::after {
+  display: block;
+  content: '';
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(180deg, #2e3138 0%, #43464e 100%);
+  opacity: 0.9;
+}
 body {
   margin: 0px;
   background: radial-gradient(

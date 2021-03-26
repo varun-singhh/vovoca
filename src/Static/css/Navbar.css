@@ -54,8 +54,7 @@
 .navigation {
   display: none;
 }
-@media only screen and (m-width: 768px){
-
+@media only screen and (m-width: 768px) {
 }
 @media only screen and (max-width: 600px) {
   .navigation {
@@ -64,12 +63,12 @@
   .navbar-box {
     display: none;
   }
-  .mobile-header{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .butn{
+  .butn {
     margin-top: 5%;
     margin-right: 2%;
     line-height: 0.7;
