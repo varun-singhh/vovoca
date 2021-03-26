@@ -71,9 +71,12 @@ body {
 }
 @media only screen and (max-width: 360px) {
   .btn {
+    margin-top: 5%;
+    margin-right: 2%;
     line-height: 0.7;
-    font-size: 0.5rem;
+    font-size: 0.9rem;
+    width: 30%;
+    padding: 4%;
     border-radius: 0.325rem;
-    width: 50%;
   }
 }
