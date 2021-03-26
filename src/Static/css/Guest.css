@@ -34,18 +34,6 @@
   padding: 10%;
   justify-content: space-between;
 }
-.pricing-badge {
-  text-align: center;
-  border-top-right-radius: 1.25rem;
-  border-top-left-radius: 1.25rem;
-  color: #fff;
-  background: #5f5f5e;
-  /* box-shadow: 0 2px 16px #2f3030; */
-  width: 114%;
-  margin-left: -7%;
-  margin-top: -15%;
-  height: 14%;
-}
 .trend-heading {
   color: rgb(173, 158, 107);
 }
@@ -82,5 +70,6 @@
   .pricing-body {
     width: 90%;
     margin-bottom: 5%;
+    margin-left: -4%;
   }
 }

@@ -66,5 +66,14 @@ body {
     line-height: 0.7;
     font-size: 0.9rem;
     border-radius: 0.325rem;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .btn {
+    line-height: 0.7;
+    font-size: 0.5rem;
+    border-radius: 0.325rem;
+    width: 50%;
   }
 }

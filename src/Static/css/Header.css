@@ -134,6 +134,10 @@
     margin-top: 20%;
   }
 }
+@font-face {
+  font-family:'fantasy';
+  src: local("fantasy");
+}
 /* KeyFrames Here */
 @keyframes neon {
   0%,
