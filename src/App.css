@@ -29,11 +29,17 @@
   line-height: 1.7;
   border-radius: 0.625rem;
   cursor: pointer;
-  transition: all 1s ease;
+  margin-top: -10px;
+  white-space: nowrap;
 }
 .btn:hover {
-  background-size: 50% 400%;
-  color: #f3af32;
+  text-decoration: none;
+  background-position: 100% 100%, 0% 0%;
+  color: #d7e1ec;
+  box-shadow: 8px 8px 22px rgb(21 22 24 / 38%),
+    -4px -2px 16px rgb(195 200 205 / 8%),
+    inset -2px -2px 4px rgb(54 54 57 / 16%),
+    inset 2px 2px 4px rgb(30 30 32 / 18%);
 }
 hr {
   margin-top: 0;

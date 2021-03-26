@@ -78,25 +78,27 @@
     -4px -2px 16px rgb(195 200 205 / 8%);
   transition: 0.5s ease-in-out;
   padding: 0.6875rem 2.5rem;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   border-radius: 0.625rem;
   cursor: pointer;
   margin-top: -10px;
   margin-left: 15px;
 }
+.butn:hover {
+  text-decoration: none;
+  background-position: 100% 100%, 0% 0%;
+  color: #d7e1ec;
+  box-shadow: 8px 8px 22px rgb(21 22 24 / 38%),
+    -4px -2px 16px rgb(195 200 205 / 8%),
+    inset -2px -2px 4px rgb(54 54 57 / 16%),
+    inset 2px 2px 4px rgb(30 30 32 / 18%);
+}
 @font-face {
   font-family: neon;
   src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
-.draw {
-  border: 3px solid cyan;
-}
-.butn:hover {
-  animation: draw 4s ease infinite;
-  -moz-animation: draw 4s ease infinite;
-  -webkit-animation: draw 4s ease infinite;
-}
+
 
 /* Smaller Screen Size Starts Here */
 @media only screen and (max-width: 600px) {
@@ -145,13 +147,5 @@
     text-shadow: 0 0 0.8vw #cac70d, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
       0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
     color: #f7c364;
-  }
-}
-@keyframes draw {
-  0%,
-  50% {
-    box-shadow: 8px 8px 10px rgb(21 22 24 / 38%),
-      -4px -2px 10px rgb(195 200 205 / 8%);
-    color: #f3af32;
   }
 }
