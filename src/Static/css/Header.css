@@ -31,7 +31,7 @@
   margin-right: -10%;
 }
 .banner-heading {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: #d7e1ec;
@@ -39,7 +39,7 @@
   font-size: xx-large;
 }
 .banner-sub-heading {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.05rem;
   line-height: 1.7;
   letter-spacing: 0;
@@ -99,7 +99,6 @@
   src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 
-
 /* Smaller Screen Size Starts Here */
 @media only screen and (max-width: 600px) {
   .vovoca-name {
@@ -137,7 +136,7 @@
   }
 }
 @font-face {
-  font-family:'fantasy';
+  font-family: "fantasy";
   src: local("fantasy");
 }
 /* KeyFrames Here */

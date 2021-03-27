@@ -154,7 +154,12 @@
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-image: radial-gradient(#053f3f, #00fff2, #00fff2);
+    background: radial-gradient(
+        37.53% 147.33% at 5.39% 8.57%,
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(180deg, #26282a 0%, #212325 100%);
     z-index: 10;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
@@ -184,7 +189,7 @@
     counter-increment: list;
   }
   .navigation__link::before {
-    content: '0' counters(list, '');
+    content: "0" counters(list, "");
     padding-right: 1.2rem;
   }
   .navigation__link:link,
