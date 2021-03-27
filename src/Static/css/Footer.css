@@ -40,15 +40,17 @@
 
 .get-in-touch {
   position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  width: 80%;
+  padding-top: 15px;
+  margin-left: 5%;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .get-in-touch > h2 {
   font-size: 42px;
-  line-height: 1.31;
+  line-height: 1.65;
   letter-spacing: -0.01em;
   color: #d7e1ec;
 }
@@ -56,18 +58,29 @@
 .get-in-touch > p {
   font-size: 1.0625rem;
   line-height: 1.65;
-  margin-top: 1.25rem;
+  margin-top: -5%;
   color: #d7e1ec;
 }
 
 .get-in-touch-form {
-  margin-top: 1.875rem;
+  margin-top: 0.275rem;
 }
-
+.form-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 .inputs {
-  margin-bottom: 30px;
+  margin-bottom: 2%;
 }
-
+.feild-input {
+  margin: 2%;
+}
+.mssg-input {
+  width: 65%;
+  height: 55%;
+  margin-left: 2%;
+}
 .inputs > input,
 textarea {
   background-image: linear-gradient(166deg, #2c2d2f 0% 100%),
@@ -97,8 +110,10 @@ textarea {
 .contacts {
   position: relative;
   width: 100%;
+
   padding-right: 15px;
   padding-left: 15px;
+  margin-right: 3%;
 }
 
 .contact-box {
@@ -202,21 +217,21 @@ textarea {
   letter-spacing: -0.01em;
   color: #d7e1ec;
   margin: 0;
-  padding-left: 50px;
 }
 
 .contact-info {
   margin-top: 1.875rem;
+  margin-bottom: 5%;
 }
 
 .contact-type {
   color: #6b6f77;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   padding: 10px;
 }
 
 .contact-value {
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   color: #b4c0ce;
 }
 
@@ -260,6 +275,7 @@ textarea {
   cursor: pointer;
   margin-top: -10px;
   white-space: nowrap;
+  margin-left: 3%;
 }
 
 .subscribe-btn:hover {
@@ -273,51 +289,62 @@ textarea {
 }
 
 @media only screen and (max-width: 600px) {
-  .contents {
-    display: block;
-  }
   .get-in-touch {
-    width: 90%;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
   }
   .get-in-touch > h2 {
-    font-size: 38px;
-    width: 90%;
-    text-align: center;
+    font-size: 32px;
   }
-
   .get-in-touch > p {
-    font-size: 1rem;
+    font-size: 12px;
   }
-
-  .inputs {
-    padding-left: 35px;
-  }
-
-  .message {
-    padding-left: 35px;
-  }
-
-  .subscribe-btn {
-  }
-
   .contacts {
-    width: 90%;
-    padding-left: 0;
+    width: 80%;
+    padding-left: 13%;
+    margin-right: 6%;
+    margin-bottom: 6%;
   }
   .row {
     display: block;
   }
-
-  .get-the-app > h4 {
-    padding-left: 30px;
+  .contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
-
   .download-app-buttons {
-    padding-left: 18px;
-    margin-bottom: 1.875rem;
+    margin-right: -62%;
   }
-
+  .phone-display {
+    display: none;
+  }
+  .mssg-input,
+  .feild-input {
+    width: 80%;
+  }
+  .subscribe-btn {
+    margin-left: 5%;
+    margin-right: 2%;
+    line-height: 0.9;
+    font-size: 0.9rem;
+    width: 50%;
+    padding: 4%;
+    border-radius: 0.325rem;
+  }
+  .get-the-app > h4,
   .contact-details > h4 {
-    padding-left: 50px;
+    font-size: 32px;
+  }
+  .contact-details {
+    margin-top: 2%;
+  }
+  .container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 }

@@ -15,11 +15,11 @@ const Footer = () => {
                         <form className="get-in-touch-form">
                             <div className="form-row">
                                 <div className="inputs">
-                                <input className="name-input" type="text" placeholder="Your name*" name="name"/>
-                                <input className="email-input" type="text" placeholder="Your email id*" name="email"/>
+                                <input className="feild-input" type="text" placeholder="Your name*" name="name"/>
+                                <input className="feild-input" type="text" placeholder="Your email id*" name="email"/>
                                 </div>
                                 <div className="message">
-                                <textarea className="message-text" type="text" placeholder="Your question" name="email"/>
+                                <textarea className="mssg-input" type="text" placeholder="Your question" name="email"/>
 
                                 </div>
                             </div>
@@ -31,8 +31,8 @@ const Footer = () => {
                     <div className="contacts">
                         <div className="contact-box">
                             <div className="row">
-                                <div className="get-the-app">
-                                    <h4>Get the app</h4>
+                                <div className="get-the-app phone-display">
+                                    <h4>Get the app:</h4>
                                     <div className="download-app-buttons">
                                         <button className="apple-btn">Apple Store</button>
                                         <button className="playstore-btn">Google Play</button>
@@ -40,7 +40,7 @@ const Footer = () => {
                                     
                                 </div>
                                 <div className="contact-details">
-                                    <h4>Contacts</h4>
+                                    <h4>Contacts:</h4>
                                     <table className="contact-info">
                                         <tbody>
                                             <tr>
@@ -74,9 +74,9 @@ const Footer = () => {
                                 </div>
                                 
                             </div>
-                            <hr></hr>
+                            <hr className="divider"></hr>
                             <div className="rights">
-                                <p>2021 DevBucket. All rights reserved</p>
+                                <p>© DevBucket 2021. All rights reserved</p>
                             </div>
                         </div>
                     </div>
