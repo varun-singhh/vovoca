@@ -1,0 +1,362 @@
+.footer {
+    background: radial-gradient(
+        37.53% 147.33% at 5.39% 8.57%,
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(180deg, #26282a 0%, #212325 100%);
+  }
+  
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 1600px) {
+    .container {
+      max-width: 1650px;
+    }
+  }
+  
+  .contents {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  @media (min-width: 1200px) {
+    .contents {
+      align-items: center !important;
+    }
+  }
+  @media (min-width: 1600px) {
+    .contents {
+      justify-content: space-between !important;
+    }
+  }
+  
+  .get__in__touch {
+    position: relative;
+    width: 80%;
+    padding-top: 15px;
+    margin-left: 5%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .get__in__touch > h2 {
+    font-size: 42px;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+    color: #d7e1ec;
+  }
+  
+  .get__in__touch > p {
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    margin-top: -5%;
+    color: #d7e1ec;
+    width: 92%;
+  }
+  
+  .get__in__touch-form {
+    margin-top: 0.275rem;
+  }
+  .form__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .inputs {
+    margin-bottom: 2%;
+  }
+  .feild__input {
+    margin-right: 4%;
+  }
+  .mssg__input {
+    width: 92%;
+    height: 200%;
+    font-family: 'Poppins', sans-serif !important;
+  }
+  .inputs > input {
+    background-image: linear-gradient(166deg, #2c2d2f 0% 100%),
+      linear-gradient(166deg, #525a63 0%, #2e353c 50%, #616972 50%, #3e464f 100%);
+    background-size: auto auto, 200% 200%;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: inset 2px 2px 8px rgb(4 4 5 / 60%);
+    transition: 0.7s ease-in-out;
+    padding: 1rem 1.25rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.74;
+    width: 44%;
+    font-family: 'Poppins', sans-serif !important;
+    color: #d7e1ec;
+    background-color: #2c2d2f;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: 0.625rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    resize: none;
+  }
+  
+  .message {
+    margin-bottom: 30px;
+  }
+  
+  .contacts {
+    position: relative;
+    width: 100%;
+  
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 3%;
+  }
+  
+  .contact__box {
+    padding: 1.875rem;
+    border: 1px solid transparent;
+    border-radius: 1.25rem;
+    margin-right: 5%;
+    background-image: linear-gradient(
+        135deg,
+        #3a3e41 0%,
+        #2a2d30 49%,
+        #242628 100%
+      ),
+      linear-gradient(139deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
+      -4px -4px 15px rgb(195 200 205 / 4%);
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .get__the__app {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .get__the__app > h4 {
+    font-size: 28px;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+    color: #d7e1ec;
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  .download__app__buttons {
+    display: inline-grid;
+    margin-top: 1.875rem;
+  }
+  
+  .download__app__buttons > button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0.125rem 0.125rem 0.125rem 0.1875rem;
+    border-style: solid;
+    border-color: transparent;
+    font-weight: 500;
+    letter-spacing: 0;
+    background-image: linear-gradient(
+        166deg,
+        transparent 0% 50%,
+        #2d3135 50%,
+        #3e4248 100%
+      ),
+      linear-gradient(166deg, #3e4248 0%, #2a2e32 50%, #3e4248 50%, #313437 100%);
+    background-position: 0% 0%, 100% 100%;
+    background-size: 200% 200%;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    color: #b4c0ce;
+    text-shadow: inherit;
+    box-shadow: 8px 8px 22px rgb(21 22 24 / 38%),
+      -4px -2px 16px rgb(195 200 205 / 8%);
+    transition: 0.5s ease-in-out;
+    padding: 0.6875rem 2.5rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    margin-top: -10px;
+    margin-left: 15px;
+    white-space: nowrap;
+  }
+  
+  .download__app__buttons > button:hover {
+    text-decoration: none;
+    background-position: 100% 100%, 0% 0%;
+    color: #d7e1ec;
+    box-shadow: 8px 8px 22px rgb(21 22 24 / 38%),
+      -4px -2px 16px rgb(195 200 205 / 8%),
+      inset -2px -2px 4px rgb(54 54 57 / 16%),
+      inset 2px 2px 4px rgb(30 30 32 / 18%);
+  }
+  
+  .apple__btn {
+    margin-bottom: 25px;
+  }
+  
+  .contact__details {
+    padding-left: 40px;
+  }
+  
+  .contact__details > h4 {
+    font-size: 28px;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+    color: #d7e1ec;
+    margin: 0;
+  }
+  
+  .contact__info {
+    margin-top: 1.875rem;
+    margin-bottom: 5%;
+  }
+  
+  .contact__type {
+    color: #6b6f77;
+    font-size: 1.05rem;
+    padding: 10px;
+  }
+  
+  .contact__value {
+    font-size: 0.95rem;
+    color: #b4c0ce;
+  }
+  
+  .rights {
+    text-align: center;
+  }
+  .rights > p {
+    color: rgba(107, 111, 119, 0.7);
+  }
+  
+  .subscribe__btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0.125rem 0.125rem 0.125rem 0.1875rem;
+    border-style: solid;
+    border-color: transparent;
+    font-weight: 500;
+    letter-spacing: 0;
+    background-image: linear-gradient(
+        166deg,
+        transparent 0% 50%,
+        #2d3135 50%,
+        #3e4248 100%
+      ),
+      linear-gradient(166deg, #3e4248 0%, #2a2e32 50%, #3e4248 50%, #313437 100%);
+    background-position: 0% 0%, 100% 100%;
+    background-size: 200% 200%;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    color: #b4c0ce;
+    text-shadow: inherit;
+    box-shadow: 8px 8px 22px rgb(21 22 24 / 38%),
+      -4px -2px 16px rgb(195 200 205 / 8%);
+    transition: 0.5s ease-in-out;
+    padding: 0.6875rem 2.5rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    margin-top: 15%;
+    white-space: nowrap;
+    margin-left: 3%;
+  }
+  
+  .subscribe__btn:hover {
+    text-decoration: none;
+    background-position: 100% 100%, 0% 0%;
+    color: #d7e1ec;
+    box-shadow: 8px 8px 22px rgb(21 22 24 / 38%),
+      -4px -2px 16px rgb(195 200 205 / 8%),
+      inset -2px -2px 4px rgb(54 54 57 / 16%),
+      inset 2px 2px 4px rgb(30 30 32 / 18%);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .get__in__touch {
+      display: block;
+      width: 100%;
+    }
+    .get__in__touch > h2 {
+      font-size: 32px;
+    }
+    .get__in__touch > p {
+      font-size: 12px;
+    }
+    .contacts {
+      width: 100%;
+      margin-bottom: 6%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .row {
+      display: block;
+    }
+    .contents {
+      width: 100%;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .download__app__buttons {
+      margin-right: -62%;
+    }
+    .phone__display {
+      display: none;
+    }
+    .inputs > input{
+      width: 100%;
+    }
+    .mssg__input,
+    .feild__input {
+      width: 100%;
+    }
+    .subscribe__btn {
+      margin-left: 5%;
+      margin-right: 2%;
+      line-height: 0.9;
+      font-size: 0.9rem;
+      width: 50%;
+      padding: 4%;
+      margin-top: 20%;
+      border-radius: 0.325rem;
+    }
+    .get__the__app > h4,
+    .contact__details > h4 {
+      font-size: 32px;
+    }
+    .contact__details {
+      margin-top: 2%;
+      padding-left: unset;
+    }
+    .container {
+      width: 100%;
+      padding-right: 0px;
+      padding-left: 0px;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+  }
+  
