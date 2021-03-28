@@ -74,7 +74,7 @@ const Footer = () => {
                                 </div>
                                 
                             </div>
-                            <hr className={style.divider}></hr>
+                            <hr className="divider"></hr>
                             <div className={style.rights}>
                                 <p>© DevBucket 2021. All rights reserved</p>
                             </div>

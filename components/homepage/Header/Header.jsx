@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './Header.module.css'
 import Navbar from '../Navbar/Navbar'
-// import banner from '../../../static/sally.svg'
+import 'react-responsive-modal/styles.css';
 const Header = () => {
   return (
     <div>

@@ -46,12 +46,12 @@ const Navbar = () => {
 
     <label htmlFor="navi-toggle" className={style.navigation__button}>
       <span className={style.navigation__icon}>
-        <span className={style.navigation__icon__span}></span>
-        <span className={style.navigation__icon__span}></span>
-        <span className={style.navigation__icon__span}></span>
-        <span className={style.navigation__icon__span}></span>
-        <span className={style.navigation__icon__span}></span>
-        <span className={style.navigation__icon__span}></span>
+        <span className={scrollState !== "down" ? (style.navigation__icon__span) : ('')}></span>
+        <span className={scrollState !== "down" ? (style.navigation__icon__span) : ('')}></span>
+        <span className={scrollState !== "down" ? (style.navigation__icon__span) : ('')}></span>
+        <span className={scrollState !== "down" ? (style.navigation__icon__span) : ('')}></span>
+        <span className={scrollState !== "down" ? (style.navigation__icon__span) : ('')}></span>
+        <span className={scrollState !== "down" ? (style.navigation__icon__span) : ('')}></span>
       </span>
     </label>
 
