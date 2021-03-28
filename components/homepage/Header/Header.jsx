@@ -3,15 +3,13 @@ import style from './Header.module.css';
 
 import { Modal } from 'react-responsive-modal';
 import Login from './Login';
+import Navbar from '../Navbar/Navbar';
 const Header = () => {
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
-  const closeIcon = (
-    <svg style={{display:"none"}}>
-    </svg>
-  );
+  const closeIcon = <svg style={{ display: 'none' }}></svg>;
   return (
     <div>
       <Modal
@@ -24,16 +22,17 @@ const Header = () => {
         }}
         closeIcon={closeIcon}
       >
-       <Login/>
+        <Login />
       </Modal>
+      <Navbar/>
       <div className={style.header__info}>
         <div className={style.mobile__view}>
           <h1 className={style.banner__heading}>
-            #Tune you work with Trending Free Music
+            #Tune your work with Royalty Free Music
           </h1>
           <p className={style.banner__sub__heading}>
-            Welcome to Neon, an award-winning & easy-to-use mobile application
-            that revolutionizes your daily tasks.
+            Welcome to vovoca, one stop solution for all you musical needs, we provide royalty 
+            free music so that your creativity never stops.
           </p>
           <button
             style={{ marginTop: '25px' }}
