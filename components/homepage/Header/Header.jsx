@@ -4,6 +4,7 @@ import style from './Header.module.css';
 import { Modal } from 'react-responsive-modal';
 import Login from './Login';
 import Navbar from '../Navbar/Navbar';
+import style_modal from "../../../styles/Modal.module.css"
 const Header = () => {
   const [open, setOpen] = React.useState(false);
 
@@ -17,8 +18,8 @@ const Header = () => {
         onClose={onCloseModal}
         center
         classNames={{
-          overlay: style.customOverlay,
-          modal: style.customModal,
+          overlay: style_modal.customOverlay,
+          modal: style_modal.customModal,
         }}
         closeIcon={closeIcon}
       >
