@@ -2,6 +2,7 @@ import React,{useEffect,useState} from 'react';
 import style from './Navbar.module.css'
 import { Modal } from 'react-responsive-modal';
 import Login from '../Header/Login';
+import style_modal from "../../../styles/Modal.module.css"
 const Navbar = () => {
 
   const [scrollState, setScrollState] = useState("top")
@@ -39,8 +40,8 @@ const Navbar = () => {
         onClose={onCloseModal}
         center
         classNames={{
-          overlay: style.customOverlay,
-          modal: style.customModal,
+          overlay: style_modal.customOverlay,
+          modal: style_modal.customModal,
         }}
         closeIcon={closeIcon}
       >
