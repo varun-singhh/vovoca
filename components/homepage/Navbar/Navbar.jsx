@@ -1,29 +1,50 @@
 import React,{useEffect,useState} from 'react';
 import style from './Navbar.module.css'
-
+import { Modal } from 'react-responsive-modal';
+import Login from '../Header/Login';
 const Navbar = () => {
+
   const [scrollState, setScrollState] = useState("top")
-  // useEffect(() => {
-  //   const listener = document.addEventListener("scroll", e => {
-  //     var scrolled = document.scrollingElement.scrollTop
+  useEffect(() => {
+    const listener = document.addEventListener("scroll", e => {
+      var scrolled = document.scrollingElement.scrollTop
 
-  //     if (scrolled >= 1) {
-  //       if (scrollState !== "down") {
-  //         setScrollState("down")
-  //       }
-  //     } else {
-  //       if (scrollState !== "top") {
-  //         setScrollState("top")
-  //       }
-  //     }
-  //   })
+      if (scrolled >= 1) {
+        if (scrollState !== "down") {
+          setScrollState("down")
+        }
+      } else {
+        if (scrollState !== "top") {
+          setScrollState("top")
+        }
+      }
+    })
 
-  //   return () => {
-  //     document.removeEventListener("scroll", listener)
-  //   }
-  // }, [scrollState])
+    return () => {
+      document.removeEventListener("scroll", listener)
+    }
+  }, [scrollState])
+  const [open, setOpen] = React.useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+  const closeIcon = (
+    <svg style={{display:"none"}}>
+    </svg>
+  );
   return (
 <>
+<Modal
+        open={open}
+        onClose={onCloseModal}
+        center
+        classNames={{
+          overlay: style.customOverlay,
+          modal: style.customModal,
+        }}
+        closeIcon={closeIcon}
+      >
+       <Login/></Modal>
 <div className={scrollState !== "top" ? ([style.navbar__box, style.scroll__header].join(' ')) : (style.navbar__box)}>
         <div className={style.neon}>VOVOCA</div>
         <div className={style.nav__bar}>
@@ -33,7 +54,7 @@ const Navbar = () => {
           <li className={style.list__items}>Trending</li>
           <li className={style.list__items}>About</li>
           <li className={style.list__items}>Contact</li>
-            <button style={{marginLeft: '15px', paddingTop: '0.5em', paddingBottom: '0.5em', fontSize: '1.1em'}} className={style.butn}>Login</button>
+            <button style={{marginLeft: '15px', paddingTop: '0.5em', paddingBottom: '0.5em', fontSize: '1.1em'}} className={style.butn} onClick={onOpenModal}>Login</button>
         </ul>
       </div>
     </div>
