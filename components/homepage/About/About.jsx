@@ -16,7 +16,7 @@ const About=()=>{
                                 incididunt ut labore et dolore.</p>
                             </div>
                         </div>
-                        <hr></hr>
+                        <hr className="divider"></hr>
                         <div className={style.feature}>
                         <div className={style.feature__heading}>
                                 <h1>Feature 2</h1>
@@ -38,7 +38,7 @@ const About=()=>{
                                 incididunt ut labore et dolore.</p>
                             </div>
                         </div>
-                        <hr></hr>
+                        <hr className="divider"></hr>
                         <div className={style.feature}>
                         <div className={style.feature__heading}>
                                 <h1>Feature 4</h1>
@@ -49,6 +49,7 @@ const About=()=>{
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
     )

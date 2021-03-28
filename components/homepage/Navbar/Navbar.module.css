@@ -149,14 +149,11 @@
     }
     .navigation__button {
       position: fixed;
-      bottom: -3rem;
-      right: -3rem;
-      width: 6rem;
-      height: 6rem;
+      top: 0.7rem;
+      left: -0.5rem;
+      width: 1rem;
+      height: 1rem;
       border-radius: 50%;
-      background-color: rgb(255, 255, 255);
-      box-shadow: 8px 8px 10px rgb(21 22 24 / 38%),
-        -4px -2px 10px rgb(195 200 205 / 8%);
       cursor: pointer;
       z-index: 1001;
       text-align: center;
@@ -164,8 +161,8 @@
     }
     .navigation__background {
       position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
+      top: -2rem;
+      left: -6rem;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
@@ -211,6 +208,7 @@
     .navigation__link:link,
     .navigation__link:visited {
       display: flex;
+      color: black;
       font-size: large;
       font-weight: 300;
       padding: 1rem 1rem;
@@ -220,7 +218,7 @@
         120deg,
         transparent 0%,
         transparent 49.9%,
-        #fff 50%
+        rgb(175, 175, 175) 50%
       );
       background-size: 235%;
       transition: all 0.4s;
