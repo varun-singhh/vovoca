@@ -99,7 +99,6 @@
   src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 
-
 /* Smaller Screen Size Starts Here */
 @media only screen and (max-width: 600px) {
   .vovoca-name {
@@ -137,8 +136,8 @@
   }
 }
 @font-face {
-  font-family:'fantasy';
-  src: local("fantasy");
+  font-family: 'fantasy';
+  src: local('fantasy');
 }
 /* KeyFrames Here */
 @keyframes neon {
