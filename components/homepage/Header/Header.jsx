@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './Header.module.css';
-import Navbar from '../Navbar/Navbar';
 
 import { Modal } from 'react-responsive-modal';
 import Login from './Login';
@@ -27,7 +26,6 @@ const Header = () => {
       >
        <Login/>
       </Modal>
-      <Navbar />
       <div className={style.header__info}>
         <div className={style.mobile__view}>
           <h1 className={style.banner__heading}>

@@ -7,6 +7,7 @@ import Header from '../components/homepage/Header/Header'
 import { useMediaQuery } from 'react-responsive'
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
+import Navbar from '../components/homepage/Navbar/Navbar'
 const Tablet = () => {
     const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 })
     return isTablet
@@ -25,6 +26,7 @@ const HomePage = () => {
       </Modal>
             </>):(
                 <>
+                <Navbar/>
                 <Head>
                 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/>
                 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"/>
