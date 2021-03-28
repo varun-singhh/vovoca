@@ -11,6 +11,7 @@ body {
     linear-gradient(180deg, #26282a 0%, #212325 100%);
   overflow-x: hidden !important;
   font-family: 'Poppins', sans-serif;
+
 }
 
 a {
@@ -84,6 +85,7 @@ button {
   cursor: pointer;
   margin-top: -5px;
   white-space: nowrap;
+  outline: none;
 }
 button:hover {
   text-decoration: none;

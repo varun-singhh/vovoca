@@ -37,7 +37,6 @@
   .banner__image {
     width: 45vw;
     z-index: 2;
-    margin-top: ;
     margin-right: -10%;
   }
   .banner__heading {
@@ -74,7 +73,7 @@
     }
     .banner__heading {
       font-size: x-large;
-      margin-top: 10%;
+      margin-top: 30%;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -104,10 +103,7 @@
       flex-direction: column;
     }
     .banner__image {
-      min-width: 250px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 25px;
+      display: none;
     }
     .btn {
       padding: 5%;
