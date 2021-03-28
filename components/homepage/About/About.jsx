@@ -27,7 +27,7 @@ const About=()=>{
                         </div>
                     </div>
                     <div className={style.vovoca__img}>
-                        <h2>image</h2>
+                        <img src="/ms-icon-310x310.png/" />
                     </div>
                     <div className={style.feature__col__2}>
                     <div className={style.feature}>

@@ -1,62 +1,93 @@
 .about {
-    padding: 5rem 0;
+  padding: 5rem 0;
+}
+
+.container > h2 {
+  color: #d7e1ec;
+  text-align: center;
+  font-size: 3em;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature__heading {
+  color: rgb(173, 158, 107);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.feature__heading > p {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  line-height: 1.74;
+  color: #a0a1ac;
+  margin-bottom: 2rem;
+}
+
+.vovoca__img {
+  /* background-image: linear-gradient(
+      135deg,
+      #3a3e41 0%,
+      #2a2d30 49%,
+      #242628 100%
+    ),
+    linear-gradient(139deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;*/
+  box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
+    -4px -4px 15px rgb(195 200 205 / 4%);
+
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.vovoca__img > img {
+  margin: auto;
+  padding-left: 0.7rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .about {
+    width: 90%;
+    margin: auto;
   }
-  
-  .container > h2 {
-    color: #d7e1ec;
-    text-align: center;
-    font-size: 3em;
-  }
-  
   .features {
-    display: flex;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
   }
-  
-  .feature__heading {
-    color: rgb(173, 158, 107);
-    margin-bottom: 2rem;
+  .container > h2 {
+    font-size: 2em;
+  }
+
+  .feature__heading > h1 {
     text-align: center;
   }
-  
+
   .feature__heading > p {
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-weight: 400;
-    line-height: 1.74;
-    color: #a0a1ac;
-    margin-bottom: 2rem;
   }
-  
-  @media only screen and (max-width: 600px) {
-    .about {
-      width: 90%;
-      margin: auto;
-    }
-    .features {
-      display: block;
-    }
-    .container > h2 {
-      font-size: 2em;
-    }
-  
-    .feature__heading > h1 {
-      text-align: center;
-    }
-  
-    .feature__heading > p {
-      text-align: center;
-    }
-  
-    .vovoca__img {
-      display: none;
-    }
-    .feature__col-1 > hr,
-    .feature__col-2 > hr {
-      display: none;
-    }
+
+  .vovoca__img {
+    height: 200px;
+    width: 200px;
+    margin: auto;
   }
-  
+
+  .vovoca__img > img {
+    height: 150px;
+    width: 150px;
+  }
+  .feature__col-1 > hr,
+  .feature__col-2 > hr {
+    display: none;
+  }
+}
