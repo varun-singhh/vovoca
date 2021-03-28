@@ -1,0 +1,19 @@
+.customOverlay {
+    background-color: #212325f1 !important;
+  }
+  .customModal {
+    padding: 1.875rem !important;
+    border: 1px solid transparent !important;
+    border-radius: 1.25rem !important;
+    background-image: linear-gradient(
+        135deg,
+        #3a3e41 0%,
+        #2a2d30 49%,
+        #242628 100%
+      ),
+      linear-gradient(139deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%) !important;
+    background-clip: padding-box, border-box !important;
+    background-origin: padding-box, border-box !important;
+    box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%) ,
+      -4px -4px 15px rgb(195 200 205 / 4%) !important;
+  }

@@ -5,6 +5,7 @@ import Footer from '../components/homepage/Footer/Footer'
 import Guest from '../components/homepage/Guest/Guest'
 import Header from '../components/homepage/Header/Header'
 import { useMediaQuery } from 'react-responsive'
+import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 
 const Tablet = () => {
