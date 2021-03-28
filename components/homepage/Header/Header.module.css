@@ -1,4 +1,3 @@
-/* Header Banner Starts Here */
 .image__svg {
     margin-top: -100%;
     position: relative;
@@ -37,6 +36,7 @@
   .banner__image {
     width: 45vw;
     z-index: 2;
+    margin-top: ;
     margin-right: -10%;
   }
   .banner__heading {
@@ -73,7 +73,7 @@
     }
     .banner__heading {
       font-size: x-large;
-      margin-top: 30%;
+      margin-top: 10%;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -103,7 +103,10 @@
       flex-direction: column;
     }
     .banner__image {
-      display: none;
+      min-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 25px;
     }
     .btn {
       padding: 5%;
@@ -124,4 +127,3 @@
       color: #f7c364;
     }
   }
-  
