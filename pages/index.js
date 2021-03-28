@@ -16,6 +16,7 @@ const closeIcon = (
     </svg>
   );
 const HomePage = () => {
+
     return (
         <div>
             {Tablet()?(<>

@@ -1,0 +1,99 @@
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+.app > h2{
+  font-size: 3em;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  color: #d7e1ec;
+  margin: 0;
+  margin-top: 1.5em;
+  white-space: nowrap;
+}
+.modal__button{
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    margin-top: 1.5em;
+    width: 50%;
+    min-width: 320px;
+    flex-direction: column;
+    padding: 1.125rem 1.125rem 1.125rem 1.5625rem;
+    border-radius: 0.9375rem;
+    background-image: linear-gradient(175deg, #3A3E41 0%, #2A2D30 49%, #242628 100%), linear-gradient(170deg, #434B54 1%, #2A2C2F 45%, #191B1E 75%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: 1.25rem 0.9375rem 1.375rem rgba(21, 22, 24, 0.24), -4px -4px 15px rgba(195, 200, 205, 0.04);
+    transition: display 3s ease;
+}
+.modal__button__info > h4{
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 75%;
+    color: #d7e1ec;
+    margin: 0;
+    white-space: nowrap;
+}
+.modal__button__info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.modal__button__para{
+    color: #d7e1ec;
+    opacity: 0.8;
+    width: 95%;
+    list-style: 1.7em;
+    padding-top: 10px;
+    text-align: center;
+    align-items: center;
+    transition: scale 0.5s ease;
+    /* transition: opacity 0.3s ease; */
+}
+.none{
+    scale: 0;
+    translate: (-50%, 0);
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+    z-index: -500;
+    /* display: none; */
+    /* opacity: 0; */
+    /* display: none; */
+    transition: 1s ease;
+}
+.none > 
+.active{
+    color: #6ae7cc !important;
+}
+.toggle__button{
+    background: linear-gradient(136deg, #2D3135 0%, #4C4F54 44% 56%, #232A30 92%) 100% 100%/200% 200%;
+    box-shadow: 6px 6px 22px rgba(21, 22, 24, 0.65), -3px -1px 16px rgba(195, 200, 205, 0.06);
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: #a0a1ac;
+    transition: display 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .app > h2{
+        font-size: 2.2em;
+    }
+}
