@@ -1,129 +1,148 @@
 .image__svg {
-    margin-top: -100%;
-    position: relative;
-    z-index: 1;
+  margin-top: -100%;
+  position: relative;
+  z-index: 1;
+}
+.header__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4%;
+  height: auto;
+  width: 75%;
+  padding: 0;
+  position: relative;
+  z-index: 15;
+}
+.vovoca__name {
+  font-size: 17em;
+  font-family: fantasy;
+  color: #47474723;
+  z-index: 0;
+  position: relative;
+  margin-top: -22%;
+  margin-bottom: -7px;
+  font-weight: 800;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+.banner__image {
+  width: 45vw;
+  z-index: 2;
+  margin-top: 0;
+  margin-right: -10%;
+}
+.banner__heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #d7e1ec;
+  width: 90%;
+  font-size: 4em;
+  margin-bottom: unset;
+  margin-top: unset;
+  z-index: 20;
+  cursor: text;
+}
+.banner__sub__heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+  color: #d7e1ec9a;
+  width: 80%;
+  z-index: 20;
+  cursor: text;
+}
+.customOverlay {
+  background-color: #212325f1;
+}
+.customModal {
+  padding: 1.875rem;
+  border: 1px solid transparent;
+  border-radius: 1.25rem;
+  background-image: linear-gradient(
+      135deg,
+      #3a3e41 0%,
+      #2a2d30 49%,
+      #242628 100%
+    ),
+    linear-gradient(139deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
+    -4px -4px 15px rgb(195 200 205 / 4%);
+}
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+/* Smaller Screen Size Starts Here */
+@media only screen and (max-width: 600px) {
+  .vovoca__name {
+    display: none;
+  }
+  .banner__heading {
+    font-size: x-large;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100%;
+  }
+  .joinUs__btn {
+    margin: auto;
+  }
+  .banner__sub__heading {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: unset;
+    width: 100%;
   }
   .header__info {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    z-index: 201;
+  }
+  .mobile__view {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4%;
-    height: auto;
-    width: 75%;
-    padding: 0;
-    position: relative;
-    z-index: 15;
+    display: flex;
+    flex-direction: column;
   }
-  .vovoca__name {
-    font-size: 17em;
-    font-family: fantasy;
-    color: #47474723;
-    z-index: 0;
-    position: relative;
-    margin-top: -22%;
-    margin-bottom: -7px;
-    font-weight: 800;
-    -ms-user-select:none;
-    -moz-user-select:none;
-    -webkit-user-select:none;
-    -webkit-touch-callout: none;
-    -khtml-user-select: none;
-     user-select:none;
-  }
-  
   .banner__image {
-    width: 45vw;
-    z-index: 2;
-    margin-top: ;
-    margin-right: -10%;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
   }
-  .banner__heading {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-    color: #d7e1ec;
-    width: 90%;
-    font-size: 4em;
-    margin-bottom: unset;
-    margin-top: unset;
-    z-index: 20;
-    cursor: text;
+  .btn {
+    padding: 5%;
+    width: 70%;
+    margin-bottom: 2%;
   }
-  .banner__sub__heading {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.25rem;
-    line-height: 1.7;
-    letter-spacing: 0;
-    color: #d7e1ec9a;
-    width: 80%;
-    z-index: 20;
-    cursor: text;
+}
+@font-face {
+  font-family: 'fantasy';
+  src: local('fantasy');
+}
+/* KeyFrames Here */
+@keyframes neon {
+  0%,
+  50% {
+    text-shadow: 0 0 0.8vw #cac70d, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
+      0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
+    color: #f7c364;
   }
-  @font-face {
-    font-family: neon;
-    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-  }
-  
-  /* Smaller Screen Size Starts Here */
-  @media only screen and (max-width: 600px) {
-    .vovoca__name {
-      display: none;
-    }
-    .banner__heading {
-      font-size: x-large;
-      margin-top: 10%;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      width: 100%;
-    }
-    .joinUs__btn{
-      margin: auto;
-    }
-    .banner__sub__heading {
-      font-size: 0.9rem;
-      text-align: center;
-      margin-left: auto;
-      margin-right: auto;
-      padding: unset;
-      width: 100%;
-    }
-    .header__info {
-      display: flex;
-      flex-direction: column;
-      z-index: 201;
-    }
-    .mobile__view {
-      width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      display: flex;
-      flex-direction: column;
-    }
-    .banner__image {
-      min-width: 250px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 25px;
-    }
-    .btn {
-      padding: 5%;
-      width: 70%;
-      margin-bottom: 2%;
-    }
-  }
-  @font-face {
-    font-family: "fantasy";
-    src: local("fantasy");
-  }
-  /* KeyFrames Here */
-  @keyframes neon {
-    0%,
-    50% {
-      text-shadow: 0 0 0.8vw #cac70d, 0 0 1.5vw #800e0b, 0 0 5vw #800e0b,
-        0 0 5vw #800e0b, 0 0 0.2vw #800e0b, 0.5vw 0.5vw 0.1vw #40340a;
-      color: #f7c364;
-    }
-  }
+}
