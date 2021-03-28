@@ -293,7 +293,13 @@
   @media only screen and (max-width: 600px) {
     .get__in__touch {
       display: block;
-      width: 100%;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact__box{
+      margin-right: 5%;
+      margin-left: 5%;
     }
     .get__in__touch > h2 {
       font-size: 32px;
@@ -328,8 +334,12 @@
     }
     .inputs > input{
       width: 100%;
+      margin-top: 5px;
     }
-    .mssg__input,
+    .mssg__input{
+      height: 200% !important;
+      width: 100%;
+    }
     .feild__input {
       width: 100%;
     }
