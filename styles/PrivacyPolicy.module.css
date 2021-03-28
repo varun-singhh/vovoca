@@ -23,6 +23,7 @@
     align-items: center;
     min-height: 70px;
     margin-top: 1.5em;
+	margin-bottom: 0.5em;
     width: 50%;
     min-width: 320px;
     flex-direction: column;
@@ -57,21 +58,15 @@
     padding-top: 10px;
     text-align: center;
     align-items: center;
-    transition: scale 0.5s ease;
+    /* transition: scale 0.5s ease; */
     /* transition: opacity 0.3s ease; */
 }
 .none{
-    scale: 0;
-    translate: (-50%, 0);
-    margin: 0;
-    padding: 0;
-    height: 0;
-    width: 0;
-    z-index: -500;
-    /* display: none; */
+    display: none;
     /* opacity: 0; */
     /* display: none; */
-    transition: 1s ease;
+    transition: margin 1s ease;
+    transition: padding 1s ease;
 }
 .none > 
 .active{
