@@ -2,6 +2,7 @@
   width: 100%;
   padding-right: 4rem;
   padding-left: 4rem;
+  height: 100vh;
 }
 
 .testimonial {
@@ -59,4 +60,20 @@
 
 .testimonial__content > span {
   color: #d7e1ec;
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonial__row__1 {
+    display: block;
+  }
+  .testimonial__row__2 {
+    display: block;
+  }
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .testimonial__heading {
+    font-size: 2rem;
+  }
 }
