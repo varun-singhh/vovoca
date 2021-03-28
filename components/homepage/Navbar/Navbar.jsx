@@ -3,25 +3,25 @@ import style from './Navbar.module.css'
 
 const Navbar = () => {
   const [scrollState, setScrollState] = useState("top")
-  // useEffect(() => {
-  //   const listener = document.addEventListener("scroll", e => {
-  //     var scrolled = document.scrollingElement.scrollTop
+  useEffect(() => {
+    const listener = document.addEventListener("scroll", e => {
+      var scrolled = document.scrollingElement.scrollTop
 
-  //     if (scrolled >= 1) {
-  //       if (scrollState !== "down") {
-  //         setScrollState("down")
-  //       }
-  //     } else {
-  //       if (scrollState !== "top") {
-  //         setScrollState("top")
-  //       }
-  //     }
-  //   })
+      if (scrolled >= 1) {
+        if (scrollState !== "down") {
+          setScrollState("down")
+        }
+      } else {
+        if (scrollState !== "top") {
+          setScrollState("top")
+        }
+      }
+    })
 
-  //   return () => {
-  //     document.removeEventListener("scroll", listener)
-  //   }
-  // }, [scrollState])
+    return () => {
+      document.removeEventListener("scroll", listener)
+    }
+  }, [scrollState])
   return (
 <>
 <div className={scrollState !== "top" ? ([style.navbar__box, style.scroll__header].join(' ')) : (style.navbar__box)}>
