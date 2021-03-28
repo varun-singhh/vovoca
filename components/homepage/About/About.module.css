@@ -56,9 +56,6 @@
   padding-left: 0.7rem;
 }
 
-.vovoca__img > img:hover {
-}
-
 @media only screen and (max-width: 600px) {
   .about {
     width: 90%;
