@@ -8,7 +8,7 @@ const Guest = () => {
         <div className={[style.guest__chart, style.mobile__chart].join(' ')}>
           <div className={style.pricing__body}>
           <h1 className={style.trend__heading}>New Arrival</h1>
-            <hr className={style.divider}/>
+            <hr className="divider"/>
             <div className={style.song__box}>
               <div
                 className={style.music__cover}
@@ -44,7 +44,7 @@ const Guest = () => {
 
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Trending</h1>
-          <hr className={style.divider} />
+          <hr className="divider" />
             <div className={style.song__box}>
               <div
               className={style.music__cover}
@@ -80,7 +80,7 @@ const Guest = () => {
 
           <div className={style.pricing__body}>
           <h1 className={style.trend__heading}>Popular</h1>
-            <hr className={style.divider}/>
+            <hr className="divider"/>
             <div className={style.song__box}>
               <div
                 className={style.music__cover}

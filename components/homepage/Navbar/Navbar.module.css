@@ -148,8 +148,8 @@
     }
     .navigation__button {
       position: fixed;
-      bottom: -3rem;
-      right: -3rem;
+      bottom: -2rem;
+      right: 7rem;
       width: 6rem;
       height: 6rem;
       border-radius: 50%;
@@ -163,8 +163,8 @@
     }
     .navigation__background {
       position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
+      bottom: -2rem;
+      right: 7.5rem;
       width: 2rem;
       height: 2rem;
       border-radius: 50%;

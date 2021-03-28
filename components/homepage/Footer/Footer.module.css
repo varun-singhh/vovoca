@@ -81,6 +81,7 @@
     width: 92%;
     height: 200%;
     font-family: 'Poppins', sans-serif !important;
+    border: 0.05rem solid gray;
   }
   .inputs > input {
     background-image: linear-gradient(166deg, #2c2d2f 0% 100%),
@@ -99,7 +100,7 @@
     color: #d7e1ec;
     background-color: #2c2d2f;
     background-clip: padding-box;
-    border: 1px solid transparent;
+    border: 0.05rem solid gray;
     border-radius: 0.625rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     resize: none;
@@ -327,20 +328,22 @@
       display: none;
     }
     .inputs > input{
-      width: 100%;
+      width: 90%;
+      margin-top: 2%;
     }
     .mssg__input,
     .feild__input {
-      width: 100%;
+      width: 90%;
+      margin-right: 2%;
     }
     .subscribe__btn {
       margin-left: 5%;
       margin-right: 2%;
       line-height: 0.9;
       font-size: 0.9rem;
-      width: 50%;
+      width: 80%;
       padding: 4%;
-      margin-top: 20%;
+      margin-top: 3%;
       border-radius: 0.325rem;
     }
     .get__the__app > h4,
@@ -357,6 +360,12 @@
       padding-left: 0px;
       margin-right: 0px;
       margin-left: 0px;
+    }
+    .contact__box {
+      padding: 1.875rem;
+      border: 1px solid transparent;
+      border-radius: 1.25rem;
+      margin-right: 1%;
     }
   }
   
