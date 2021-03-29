@@ -8,13 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "js-cookie": "^2.2.1",
     "netlify": "^6.1.16",
     "next": "10.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-modal": "^3.12.1",
+    "react-redux": "^7.2.3",
     "react-responsive": "^8.2.0",
     "react-responsive-modal": "^6.0.1",
-    "react-spinners-kit": "^1.9.1"
+    "react-spinners-kit": "^1.9.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
   }
 }

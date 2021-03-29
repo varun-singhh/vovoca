@@ -10,6 +10,7 @@ body {
     ),
     linear-gradient(180deg, #26282a 0%, #212325 100%);
   overflow-x: hidden !important;
+  scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
 
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import About from '../components/homepage/About/About'
 import Footer from '../components/homepage/Footer/Footer'
@@ -7,6 +7,8 @@ import Header from '../components/homepage/Header/Header'
 import { useMediaQuery } from 'react-responsive'
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
+import { useDispatch } from 'react-redux'
+import { getAllMusic } from '../actions/musicActions'
 
 const Tablet = () => {
     const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 })
@@ -17,6 +19,10 @@ const closeIcon = (
     </svg>
   );
 const HomePage = () => {
+    const dispatch = useDispatch()
+    useEffect(() => {
+        dispatch(getAllMusic())
+    }, [])
 
     return (
         <div>

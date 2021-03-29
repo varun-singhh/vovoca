@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import style from '../../styles/PrivacyPolicy.module.css'
-import Navbar from '../../components/homepage/Navbar/Navbar'
+import style from '../styles/PrivacyPolicy.module.css'
 
 const privacyPolicy = () => {
 
@@ -24,7 +23,6 @@ const privacyPolicy = () => {
                 <title>VOVOCA | Privacy Policy</title>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
             </Head>
-            <Navbar/>
             <div className={style.app}>
                 <h2>Privacy Policy</h2>
                 <div className={style.modal__button}>

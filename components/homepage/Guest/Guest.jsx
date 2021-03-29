@@ -3,7 +3,7 @@ import style from './Guest.module.css';
 
 const Guest = () => {
   return (
-    <div>
+    <div id="features">
       <div className={style.guest}>
         <div className={[style.guest__chart, style.mobile__chart].join(' ')}>
           <div className={style.pricing__body}>
