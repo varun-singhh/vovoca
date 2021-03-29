@@ -3,7 +3,6 @@ import style from './Header.module.css';
 
 import { Modal } from 'react-responsive-modal';
 import Login from './Login';
-import Navbar from '../Navbar/Navbar';
 import style_modal from "../../../styles/Modal.module.css"
 const Header = () => {
   const [open, setOpen] = React.useState(false);
@@ -25,7 +24,6 @@ const Header = () => {
       >
         <Login />
       </Modal>
-      <Navbar/>
       <div className={style.header__info}>
         <div className={style.mobile__view}>
           <h1 className={style.banner__heading}>

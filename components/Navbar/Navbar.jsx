@@ -1,8 +1,9 @@
 import React,{useEffect,useState} from 'react';
 import style from './Navbar.module.css'
 import { Modal } from 'react-responsive-modal';
-import Login from '../Header/Login';
-import style_modal from "../../../styles/Modal.module.css"
+import Login from '../homepage/Header/Login';
+import style_modal from "../../styles/Modal.module.css"
+import Link from "next/link"
 const Navbar = () => {
 
   const [scrollState, setScrollState] = useState("top")
@@ -50,13 +51,13 @@ const Navbar = () => {
         <div className={style.neon}>VOVOCA</div>
         <div className={style.nav__bar}>
           <ul className={style.nav__items}>
-          <li className={style.list__items}>Home</li>
-          <li className={style.list__items}>Features</li>
-          <li className={style.list__items}>Trending</li>
-          <li className={style.list__items}>About</li>
-          <li className={style.list__items}>Contact</li>
-            <button style={{marginLeft: '15px', paddingTop: '0.5em', paddingBottom: '0.5em', fontSize: '1.1em'}} className={style.butn} onClick={onOpenModal}>Login</button>
-        </ul>
+          <Link href="/"><li className={style.list__items}>Home</li></Link>
+          <Link href="/#about"><li className={style.list__items}>About us</li></Link>
+          <Link href="/#features"><li className={style.list__items}>Trending</li></Link>
+          <Link href="/testimonial"><li className={style.list__items}>Testimonials</li></Link>
+          <Link href="/privacy-policy"><li className={style.list__items}>Privacy Policy</li></Link>
+          <button style={{marginLeft: '15px', paddingTop: '0.5em', paddingBottom: '0.5em', fontSize: '1.1em'}} className={style.butn} onClick={onOpenModal}>Login</button>
+          </ul>
       </div>
     </div>
     <div className={style.navigation}>

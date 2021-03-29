@@ -3,7 +3,7 @@ import style from './About.module.css';
 
 const About=()=>{
     return(
-        <div className={style.about}>
+        <div id="about" className={style.about}>
             <div className={style.container}>
                 <h2>Welcome to Vovoca</h2>
                 <div className={style.features}>
