@@ -14,6 +14,7 @@
   .inputs > input {
     outline: none;
     width: 92%;
+    max-width: 92%;
     height: calc(1.74em + 2rem + 2px);
     padding: 1rem 1.25rem;
     font-size: 0.9375rem;
@@ -81,6 +82,25 @@
       -4px -2px 16px rgb(195 200 205 / 8%),
       inset -2px -2px 4px rgb(54 54 57 / 16%),
       inset 2px 2px 4px rgb(30 30 32 / 18%);
+  }
+  .toast_background{
+    color: wheat;
+    background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(134, 3, 21) 0%, #581301 100%) !important;
+  }
+  .toast_success_background{
+    color: rgb(39, 38, 38);
+    font-weight: 600;
+    background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(48, 65, 4) 0%, #6b6a17 100%) !important;
   }
   @media only screen and (max-width: 600px) {
   .subscribe__btn {
