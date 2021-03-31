@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { USER_LOGIN, LOADING, USER_LOGIN_FAILED } from './type';
+import { USER_LOGIN, LOADING, USER_LOGIN_FAILED,LOAD_USER } from './type';
 
 export const loginUser = (email, password) => async (dispatch) => {
   const config = {
@@ -20,7 +20,9 @@ export const loginUser = (email, password) => async (dispatch) => {
       type: USER_LOGIN,
       payload: res.data,
     });
-    return res.data;
+    
+    // dispatch({ type: USER_LOGIN_FAILED, payload: null });
+    dispatch({ type: LOAD_USER, payload: res.data });
   } catch (err) {
     dispatch({ type: USER_LOGIN_FAILED, payload: err.response.data });
   }

@@ -16,15 +16,15 @@ const Signup = () => {
   }
   const handleSubmit= async (e)=>{
     e.preventDefault();
-    if (register.password!==register.pass) {
-      toast("Password didn't Match!, Try Again",{className: style.toast_background})
+    if (register.email===""|| register.username==="") {
+      toast("All feilds are Mandatory",{className: style.toast_background})
     }
     else if(register.password.length<8 || register.password.length>16){
       toast("Password length should be between 8-16 characters",{className: style.toast_background})
     }
-    // else if(register.password.search(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,16}$/)<0){
-    //   toast.error("Password should contain atleast 1 number, 1 special character,1 lowercase and 1 uppercase")
-    // }
+    else if(register.password.length<8 || register.password.length>16){
+      toast("Password length should be between 8-16 characters",{className: style.toast_background})
+    }
     else{
       const reg = await registerUser(register.username,register.email,register.password)
       if(reg==="Username already exists" || reg==="Email already registered"){
@@ -40,7 +40,7 @@ const Signup = () => {
     return (
         <div>
       <ToastContainer hideProgressBar={true} closeButton={false} position="top-center"/>
-      <form className={style.get__in__touch__form}>
+      <form className={style.get__in__touch__form} >
         <div className={style.form__row}>
             <h1 style={{color:"wheat"}}>Create Account</h1>
           <div className={style.inputs}>

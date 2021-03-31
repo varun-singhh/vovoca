@@ -1,10 +1,10 @@
-import { USER_LOGIN, LOADING ,USER_LOGIN_FAILED} from '../actions/type';
+import { USER_LOGIN, LOADING ,USER_LOGIN_FAILED,LOAD_USER} from '../actions/type';
 
 const initialState = {
   isAuthenticated: false,
-  loading: true,
+  loading: false,
   token: null,
-  error:null
+  data:null,
 };
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -20,7 +20,7 @@ export default (state = initialState, action) => {
         isAuthenticated: true,
         loading: !state.loading,
         token: action.payload.token,
-        error:null
+        data:action.payload,
       };
     case USER_LOGIN_FAILED:
       return {
@@ -28,7 +28,7 @@ export default (state = initialState, action) => {
         isAuthenticated: false,
         loading: !state.loading,
         token: null,
-        error:action.payload
+        data:null,
       };
     default:
       return state;

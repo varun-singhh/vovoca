@@ -7,15 +7,16 @@ import style_modal from '../../../styles/Modal.module.css';
 import Signup from './Signup';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
+import Router from 'next/router';
 const Header = () => {
-  const authenticated = useSelector((state) => state.auth);
+  const authenticated = useSelector((state) => state.auth.isAuthenticated);
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
   const closeIcon = <svg style={{ display: 'none' }}></svg>;
   const [method, setMethod] = useState('login');
-
+  
   const AuthModal = () => {
     return (
       <>
@@ -89,11 +90,9 @@ const Header = () => {
 
               <p style={{ color: 'gray', fontSize: 'x-small' }}>
                 By submitting this form, you confirm that you agree to our{' '}
-                <Link href="privacy-policy">
-                  <span style={{ color: 'wheat', cursor: 'pointer' }}>
+                  <span style={{ color: 'wheat', cursor: 'pointer' }} onClick={()=>{Router.push('/privacy-policy');location.reload();}}>
                     Terms of Service and Privacy Policy
                   </span>
-                </Link>
               </p>
             </>
           )}
