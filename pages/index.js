@@ -4,20 +4,10 @@ import About from '../components/homepage/About/About'
 import Footer from '../components/homepage/Footer/Footer'
 import Guest from '../components/homepage/Guest/Guest'
 import Header from '../components/homepage/Header/Header'
-import { useMediaQuery } from 'react-responsive'
-import 'react-responsive-modal/styles.css';
-import { Modal } from 'react-responsive-modal';
+
 import { useDispatch } from 'react-redux'
 import { getAllMusic } from '../actions/musicActions'
 
-const Tablet = () => {
-    const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 })
-    return isTablet
-}
-const closeIcon = (
-    <svg style={{display:"none"}}>
-    </svg>
-  );
 const HomePage = () => {
     const dispatch = useDispatch()
     useEffect(() => {
@@ -26,12 +16,7 @@ const HomePage = () => {
 
     return (
         <div>
-            {Tablet()?(<>
-                <Modal open={true} onClose={false} center closeIcon={closeIcon}>
-        <h2>This Web service is not available in Tablet mode :(</h2>
-      </Modal>
-            </>):(
-                <>
+
                 <Head>
                 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png"/>
                 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png"/>
@@ -54,9 +39,7 @@ const HomePage = () => {
             <Header/>
             <About/>
             <Guest/>
-            <Footer/></>
-            )}
-            
+            <Footer/>
         </div>
     )
 }

@@ -6,6 +6,7 @@
   text-shadow: 0 0 1vw #4ce2ec;
   padding-top: 1.1em;
   margin-left: 5%;
+  cursor: pointer;
 }
 
 .neon {
@@ -170,7 +171,7 @@
         rgba(255, 255, 255, 0.07) 0%,
         rgba(255, 255, 255, 0) 100%
       ),
-      linear-gradient(180deg, #26282a 0%, #212325 100%);
+      linear-gradient(180deg, #26282a 0%, #212325a1 100%);
     z-index: 10;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
