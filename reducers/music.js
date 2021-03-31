@@ -16,6 +16,7 @@ const reducer = (state = initialState, action) => {
         case GET_MUSIC:
             return {
                 ...state,
+                loading: false,
                 musics: action.payload,
             }
         default:

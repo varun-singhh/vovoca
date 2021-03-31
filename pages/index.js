@@ -4,6 +4,7 @@ import About from '../components/homepage/About/About'
 import Footer from '../components/homepage/Footer/Footer'
 import Guest from '../components/homepage/Guest/Guest'
 import Header from '../components/homepage/Header/Header'
+import '../styles/classes.css'
 
 import { useDispatch } from 'react-redux'
 import { getAllMusic } from '../actions/musicActions'
