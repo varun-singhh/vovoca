@@ -7,7 +7,8 @@ import { useDispatch } from 'react-redux';
 
 const Login = () => {
   const dispatch = useDispatch();
-  const authenticated = useSelector((state) => state.auth);
+  const error = useSelector((state) => state.error);
+  const authenticate = useSelector((state) => state.auth.isAuthenticated);
   const [login, setLogin] = useState({
     email: '',
     password: '',
@@ -16,17 +17,31 @@ const Login = () => {
     login[e.target.name] = e.target.value;
     setLogin(login);
   };
+  const notify=(category)=>{
+    if (category==="success") {
+      toast('Loggedin Successfully', {
+        className: style.toast_success_background,
+      });
+    } else {
+      toast(error.err, {
+        className: style.toast_background,
+      });
+    }
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    dispatch(loginUser(login.email, login.password));
-    console.log(authenticated.error);
-      if (authenticated.isAuthenticated !== false) {
-        toast('Loggedin Successfully', {
-          className: style.toast_success_background,
-        });
+    if (login.email===""|| login.password==="") {
+      toast("All feilds are Mandatory",{className: style.toast_background})
+    }
+    else{
+      dispatch(loginUser(login.email, login.password));
+      if (authenticate===true) {
+        notify("success");
       } else {
-        toast(authenticated.error, { className: style.toast_background });
+        notify("error");
       }
+    }
+    
   };
   return (
     <div>
