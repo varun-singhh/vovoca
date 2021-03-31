@@ -10,7 +10,6 @@ export const getAllMusic = () => async dispatch => {
             type: GET_MUSIC,
             payload: res.data.data
         })
-        dispatch({type: LOADING})
     } catch (error) {
         console.log(error)
     }
