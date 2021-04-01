@@ -29,7 +29,7 @@
     box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
       -4px -4px 15px rgb(195 200 205 / 4%);
     min-width: 320px;
-    width: 32%;
+    width: 42%;
   }
   .guest__chart {
     display: flex;
@@ -68,12 +68,10 @@
   @media only screen and (max-width: 600px) {
     .mobile__chart {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
     }
     .pricing__body {
-      width: 90%;
       margin-bottom: 5%;
-      margin-left: -4%;
       margin-top: 1rem;
     }
   }

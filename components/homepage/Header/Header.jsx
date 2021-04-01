@@ -1,15 +1,105 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './Header.module.css';
-
+import { FaTimes } from 'react-icons/fa';
 import { Modal } from 'react-responsive-modal';
 import Login from './Login';
-import style_modal from "../../../styles/Modal.module.css"
+import style_modal from '../../../styles/Modal.module.css';
+import Signup from './Signup';
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import Router from 'next/router';
 const Header = () => {
+  const authenticated = useSelector((state) => state.auth.isAuthenticated);
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
   const closeIcon = <svg style={{ display: 'none' }}></svg>;
+  const [method, setMethod] = useState('login');
+  
+  const AuthModal = () => {
+    return (
+      <>
+        <i style={{ color: 'gray', cursor: 'pointer' }} onClick={onCloseModal}>
+          <FaTimes />
+        </i>
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <p
+            style={{
+              cursor: 'pointer',
+              color: `${method === 'login' ? 'wheat' : 'gray'}`,
+              borderBottom: `${
+                method === 'login' ? '1px solid wheat' : 'gray'
+              }`,
+              paddingBottom: '5px',
+            }}
+            onClick={(res) => {
+              setMethod('login');
+            }}
+          >
+            Login
+          </p>
+          <p
+            style={{
+              cursor: 'pointer',
+              color: `${method === 'signup' ? 'wheat' : 'gray'}`,
+              borderBottom: `${
+                method === 'signup' ? '1px solid wheat' : 'gray'
+              }`,
+              paddingBottom: '5px',
+            }}
+            onClick={(res) => {
+              setMethod('signup');
+            }}
+          >
+            Signup
+          </p>
+        </div>
+        <hr className="divider"></hr>
+
+        {method === 'login' ? <Login closeModeal= {onCloseModal} hello="hello"/> : <Signup />}
+        <br />
+        <hr className="divider"></hr>
+        {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
+        <div style={{ textAlign: 'center' }}>
+          {method === 'login' ? (
+            <p style={{ color: 'gray', fontSize: 'x-small' }}>
+              Don’t have an account?{' '}
+              <span
+                style={{ color: 'wheat', cursor: 'pointer' }}
+                onClick={(res) => {
+                  setMethod('signup');
+                }}
+              >
+                Signup Here
+              </span>
+            </p>
+          ) : (
+            <>
+              <p style={{ color: 'gray', fontSize: 'x-small' }}>
+                Already have an account?{' '}
+                <span
+                  style={{ color: 'wheat', cursor: 'pointer' }}
+                  onClick={(res) => {
+                    setMethod('login');
+                  }}
+                >
+                  Login Here
+                </span>
+              </p>
+
+              <p style={{ color: 'gray', fontSize: 'x-small' }}>
+                By submitting this form, you confirm that you agree to our{' '}
+                  <span style={{ color: 'wheat', cursor: 'pointer' }} onClick={()=>{Router.push('/privacy-policy');location.reload();}}>
+                    Terms of Service and Privacy Policy
+                  </span>
+              </p>
+            </>
+          )}
+        </div>
+      </>
+    );
+  };
   return (
     <div>
       <Modal
@@ -22,7 +112,7 @@ const Header = () => {
         }}
         closeIcon={closeIcon}
       >
-        <Login />
+        <AuthModal />
       </Modal>
       <div className={style.header__info}>
         <div className={style.mobile__view}>
@@ -30,16 +120,20 @@ const Header = () => {
             #Tune your work with Royalty Free Music
           </h1>
           <p className={style.banner__sub__heading}>
-            Welcome to vovoca, one stop solution for all you musical needs, we provide royalty 
-            free music so that your creativity never stops.
+            Welcome to vovoca, one stop solution for all you musical needs, we
+            provide royalty free music so that your creativity never stops.
           </p>
-          <button
-            style={{ marginTop: '25px' }}
-            className={[style.btn, style.joinUs__btn].join(' ')}
-            onClick={onOpenModal}
-          >
-            Join us Now
-          </button>
+          {authenticated.isAuthenticated === true ? (
+            <></>
+          ) : (
+            <button
+              style={{ marginTop: '25px' }}
+              className={[style.btn, style.joinUs__btn].join(' ')}
+              onClick={onOpenModal}
+            >
+              Join us Now
+            </button>
+          )}
         </div>
         <img src="./static/saly.svg" className={style.banner__image} />
       </div>
