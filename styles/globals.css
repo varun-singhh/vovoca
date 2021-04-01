@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 html,
 body {
@@ -11,8 +11,7 @@ body {
     linear-gradient(180deg, #26282a 0%, #212325 100%);
   overflow-x: hidden !important;
   scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
-
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -81,7 +80,7 @@ button {
   padding: 0.68rem 2.5rem;
   font-size: 1.2rem;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 0.625rem;
   cursor: pointer;
   margin-top: -5px;
@@ -97,9 +96,13 @@ button:hover {
     inset -2px -2px 4px rgb(54 54 57 / 16%),
     inset 2px 2px 4px rgb(30 30 32 / 18%);
 }
+
+ul {
+  padding-inline-start: unset !important;
+}
 .divider::after {
   display: block;
-  content: '';
+  content: "";
   height: 1px;
   width: 100%;
   background-image: linear-gradient(180deg, #2e3138 0%, #43464e 100%);
@@ -111,14 +114,14 @@ button:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 10px rgba(27, 26, 26, 0); 
+  box-shadow: inset 0 0 10px rgba(27, 26, 26, 0);
   background-color: #26282a;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   cursor: pointer;
-  box-shadow: inset 0 0 10px rgba(2, 2, 2, 0.993); 
+  box-shadow: inset 0 0 10px rgba(2, 2, 2, 0.993);
   background: radial-gradient(
       37.53% 147.33% at 5.39% 8.57%,
       rgba(255, 255, 255, 0.07) 0%,
@@ -138,26 +141,25 @@ button:hover {
     ),
     linear-gradient(180deg, rgb(194, 175, 141) 0%, rgb(151, 136, 108) 100%);
 }
-.rhap_container{
+.rhap_container {
   background-color: unset !important;
   box-shadow: unset !important;
   width: 600px !important;
   margin-left: 55px;
   margin-left: 55px;
 }
-.rhap_time{
+.rhap_time {
   color: #000 !important;
 }
-.rhap_controls-section{
+.rhap_controls-section {
   justify-content: space-around !important;
 }
-.rhap_additional-controls{
+.rhap_additional-controls {
   display: none !important;
 }
-.rhap_volume-controls{
+.rhap_volume-controls {
   display: none !important;
 }
-
 
 @media only screen and (max-width: 600px) {
   button {
@@ -168,10 +170,13 @@ button:hover {
     margin-left: auto !important;
     margin-right: auto !important;
   }
-  .rhap_container{
+  .rhap_container {
     margin-left: unset;
     margin-right: unset;
     width: 90% !important;
+  }
+  .rhap_horizontal {
+    flex-direction: column !important;
   }
 }
 @media only screen and (max-width: 360px) {

@@ -1,7 +1,9 @@
 import React from 'react';
 import style from './Guest.module.css';
 
+
 const Guest = () => {
+
   return (
     <div id="features">
       <div className={style.guest}>

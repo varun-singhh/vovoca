@@ -48,7 +48,8 @@
   min-width: 320px;
   width: 100%;
   height: fit-content;
-  max-height: 40rem;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 .navtext {
   display: flex;
@@ -60,7 +61,7 @@
   color: rgb(255, 231, 185) !important;
 }
 .dashnav_mobile {
-    display: none;
+  display: none;
 }
 @media only screen and (max-width: 600px) {
   .dashboard {
@@ -102,16 +103,18 @@
     font-size: xx-small;
   }
   .navtext {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-bottom: -5% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: -5% !important;
   }
   .dashcontent_mobile {
     margin-top: 3rem;
     margin-right: 0.5rem;
     height: fit-content;
     min-width: 10%;
+    height: 400vh;
     border-radius: 0.55rem;
+    overflow-y: scroll;
   }
 }

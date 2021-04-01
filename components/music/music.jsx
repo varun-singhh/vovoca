@@ -3,6 +3,7 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import style from './MusicCard.module.css';
 import { toast, ToastContainer } from 'react-toastify';
+import {IoIosShareAlt} from 'react-icons/io'
 
 const music = ({ music }) => {
   return (
@@ -19,7 +20,9 @@ const music = ({ music }) => {
         height="70px"
         width="70px"
       />
-      <AudioPlayer
+      <AudioPlayer 
+      autoPlayAfterSrcChange={false}
+      layout={'horizontal'}
         src={`data:audio/wav;base64,${Buffer.from(
           music.audiobuffer?.data
         ).toString('base64')}`}
@@ -34,6 +37,7 @@ const music = ({ music }) => {
         <p className={style.common}>Music</p>
         <p className={style.bold}>{music.name}</p>
       </div>
+      <IoIosShareAlt/>
     </div>
   );
 };
