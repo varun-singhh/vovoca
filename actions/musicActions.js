@@ -2,11 +2,11 @@ import axios from "axios";
 import cookie from "js-cookie";
 import { GET_MUSIC, LOADING } from "./type";
 
-export const getAllMusic = () => async (dispatch) => {
+export const getAllMusic = (page) => async (dispatch) => {
   try {
     dispatch({ type: LOADING });
     const res = await axios.get(
-      "https://vovoca.herokuapp.com/api/music/?page=1"
+      `https://vovoca.herokuapp.com/api/music/?page=${page}&limit=5`
     );
     console.log(res.data);
     dispatch({

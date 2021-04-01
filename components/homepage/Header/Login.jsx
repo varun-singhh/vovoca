@@ -5,8 +5,8 @@ import { loginUser } from '../../../actions/authAction';
 import { ToastContainer, toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
-const Login = (props) => {
-  console.log(props)
+const Login = () => {
+  
   const dispatch = useDispatch();
   const error = useSelector((state) => state.error);
   const authenticate = useSelector((state) => state.auth.isAuthenticated);
@@ -29,10 +29,10 @@ const Login = (props) => {
       });
     }
   }
-  console.log(props.closeModal)
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(props)
+   
     if (login.email===""|| login.password==="") {
       toast("All feilds are Mandatory",{className: style.toast_background})
     }

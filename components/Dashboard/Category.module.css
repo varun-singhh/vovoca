@@ -11,14 +11,42 @@
   border-radius: 10px;
   transition: transform ease-in-out 0.5s;
   filter: grayscale(1);
-
   -webkit-filter: grayscale(1);
-  background-image: url("https://images.squarespace-cdn.com/content/v1/54131064e4b065f40cc9059a/1475795603235-4F7NJ40SR0XWU0VY16AK/ke17ZwdGBToddI8pDm48kDalWL1vWeUfiVuFBduo28RZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIUoIfiCkeMrQ9gDeqbtpv207wZy3szp8WnurAZUP-hd8KMshLAGzx4R3EDFOm1kBS/elderly+music.jpg");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.category__card__icon :after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.category__card__icon :hover:after {
+  opacity: 1;
+}
+
+.category__card__icon > h3 {
+  color: wheat !important;
+  font-size: x-large;
+  position: relative;
+  z-index: 1;
 }
 
 .category__card__icon:hover {
-  transform: scale(1.2);
+  transform: scale(0.9);
   filter: none;
   -webkit-filter: none;
 }
@@ -26,4 +54,9 @@
 .selected {
   filter: none !important;
   -webkit-filter: none !important;
+  transform: scale(0.9);
+}
+
+.search_btn {
+  margin-top: 2rem;
 }

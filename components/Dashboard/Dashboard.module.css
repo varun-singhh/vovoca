@@ -1,10 +1,8 @@
 .dashboard {
   display: flex !important;
   flex-direction: row !important;
-  margin-top: 3rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  height: 100vh;
+  margin: 1.6rem;
+  height: 110vh;
 }
 .dashnav {
   color: rgb(196, 178, 146);
@@ -50,7 +48,8 @@
   min-width: 320px;
   width: 100%;
   height: fit-content;
-  max-height: 40rem;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 .navtext {
   display: flex;
@@ -68,11 +67,13 @@
   .dashboard {
     display: flex;
     flex-direction: column;
+    margin: 0.6rem;
   }
   .dashnav {
     display: none;
   }
   .dashnav_mobile {
+    z-index: 11111;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -108,8 +109,12 @@
     margin-bottom: -5% !important;
   }
   .dashcontent_mobile {
+    margin-top: 3rem;
+    margin-right: 0.5rem;
     height: fit-content;
-    min-width: 100%;
+    min-width: 10%;
+    height: 400vh;
     border-radius: 0.55rem;
+    overflow-y: scroll;
   }
 }
