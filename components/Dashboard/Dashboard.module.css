@@ -1,0 +1,113 @@
+.dashboard {
+  display: flex !important;
+  flex-direction: row !important;
+  margin: 3rem;
+  height: 85vh;
+}
+.dashnav {
+  color: rgb(196, 178, 146);
+  position: sticky;
+  text-align: center;
+  padding: 1.875rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  background-image: linear-gradient(
+      135deg,
+      #3a3e41 0%,
+      #2a2d30 49%,
+      #242628 100%
+    ),
+    linear-gradient(139deg, #676e75 1%, #2a2c2f 45%, #676e75 75%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
+    -4px -4px 15px rgb(195 200 205 / 4%);
+
+  height: fit-content;
+  width: 15%;
+  font-size: medium;
+}
+.dashcontent {
+  color: rgb(163, 151, 130);
+  margin-left: 2%;
+  text-align: center;
+  padding: 1.875rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 0.55rem;
+  background-image: linear-gradient(
+      135deg,
+      #3a3e41 0%,
+      #2a2d30 49%,
+      #242628 100%
+    ),
+    linear-gradient(139deg, #858585 1%, #212224 45%, #757574f5 75%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  box-shadow: 1rem 1rem 1rem rgb(21 22 24 / 24%),
+    -4px -4px 15px rgb(195 200 205 / 4%);
+  min-width: 320px;
+  width: 100%;
+  height: fit-content;
+  max-height: 40rem;
+}
+.navtext {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.navtext:hover {
+  color: rgb(255, 231, 185) !important;
+}
+.dashnav_mobile {
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashnav {
+    display: none;
+  }
+  .dashnav_mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    text-align: center;
+    padding: 1.875rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    background-image: linear-gradient(
+        135deg,
+        #3a3e41 0%,
+        #2a2d30 49%,
+        #242628 100%
+      ),
+      linear-gradient(139deg, #fff6c6 1%, #2a2c2f 45%, #a19e7d 75%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
+      -4px -4px 15px rgb(195 200 205 / 4%);
+    min-width: 100%;
+    height: 10%;
+    font-size: large;
+  }
+  .text_mobile {
+    font-size: xx-small;
+  }
+  .navtext {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: -5% !important;
+  }
+  .dashcontent_mobile {
+    height: fit-content;
+    min-width: 100%;
+    border-radius: 0.55rem;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import style from './Navbar.module.css';
 import { Modal } from 'react-responsive-modal';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaUserCircle } from 'react-icons/fa';
 import Login from '../homepage/Header/Login';
 import style_modal from '../../styles/Modal.module.css';
 import Link from 'next/link';
@@ -155,17 +155,19 @@ const Navbar = () => {
               <li className={style.list__items}>Privacy Policy</li>
             </Link>
             {authenticated.isAuthenticated === true ? (
-              <button
-                style={{
-                  marginLeft: '15px',
-                  paddingTop: '0.5em',
-                  paddingBottom: '0.5em',
-                  fontSize: '1.1em',
-                }}
-                className={style.butn}
-              >
-                Logout
-              </button>
+              <Link href="/dashboard">
+                <div style={{display:"flex",alignItems:"center"}}>
+                  <FaUserCircle
+                    style={{
+                      fontSize: '3.1em',
+                      marginLeft: '1.5rem',
+                      color: 'wheat',
+                      cursor: 'pointer',
+                      marginBottom: '-1rem',
+                    }}
+                  />
+                </div>
+              </Link>
             ) : (
               <button
                 style={{
