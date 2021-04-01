@@ -1,7 +1,7 @@
 .dashboard {
   display: flex !important;
   flex-direction: row !important;
-  margin: 0.6rem;
+  margin: 1.6rem;
   height: 110vh;
 }
 .dashnav {
@@ -66,6 +66,7 @@
   .dashboard {
     display: flex;
     flex-direction: column;
+    margin: 0.6rem;
   }
   .dashnav {
     display: none;

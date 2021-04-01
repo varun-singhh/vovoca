@@ -123,7 +123,7 @@ const Header = () => {
             Welcome to vovoca, one stop solution for all you musical needs, we
             provide royalty free music so that your creativity never stops.
           </p>
-          {authenticated.isAuthenticated === true ? (
+          {authenticated === true ? (
             <></>
           ) : (
             <button
