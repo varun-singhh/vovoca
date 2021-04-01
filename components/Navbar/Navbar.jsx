@@ -7,8 +7,21 @@ import style_modal from '../../styles/Modal.module.css';
 import Link from 'next/link';
 import Signup from '../homepage/Header/Signup';
 import { useSelector } from 'react-redux';
-
+import {
+  FaUserAlt,
+  FaPowerOff,
+  FaCrown,
+  FaHistory,
+  FaLayerGroup,
+} from 'react-icons/fa';
+import { IoMdLogIn,IoMdTrendingUp } from 'react-icons/io';
+import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
+import { BsFillShieldLockFill, BsFillPeopleFill,BsFillMusicPlayerFill } from 'react-icons/bs';
+// RiDashboard2Line
+// BsFillShieldLockFill
+// AiFillHome
 const Navbar = () => {
+  const [nav, setNav] = useState('profile');
   const authenticated = useSelector((state) => state.auth);
   const [scrollState, setScrollState] = useState('top');
   useEffect(() => {
@@ -156,7 +169,7 @@ const Navbar = () => {
             </Link>
             {authenticated.isAuthenticated === true ? (
               <Link href="/dashboard">
-                <div style={{display:"flex",alignItems:"center"}}>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
                   <FaUserCircle
                     style={{
                       fontSize: '3.1em',
@@ -185,90 +198,137 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className={style.navigation}>
-        <div className={style.mobile__header}>
-          <Link href="/">
-            <div className={style.neon}>VOVOCA</div>
-          </Link>
-          <button className={[style.btn, style.getStarted__btn].join(' ')}>
-            Get Started
-          </button>
-        </div>
-        <input
-          type="checkbox"
-          id="navi-toggle"
-          className={style.navigation__checkbox}
-        />
-
-        <label htmlFor="navi-toggle" className={style.navigation__button}>
-          <span className={style.navigation__icon}>
-            <span
-              className={
-                scrollState !== 'down' ? style.navigation__icon__span : ''
-              }
-            ></span>
-            <span
-              className={
-                scrollState !== 'down' ? style.navigation__icon__span : ''
-              }
-            ></span>
-            <span
-              className={
-                scrollState !== 'down' ? style.navigation__icon__span : ''
-              }
-            ></span>
-            <span
-              className={
-                scrollState !== 'down' ? style.navigation__icon__span : ''
-              }
-            ></span>
-            <span
-              className={
-                scrollState !== 'down' ? style.navigation__icon__span : ''
-              }
-            ></span>
-            <span
-              className={
-                scrollState !== 'down' ? style.navigation__icon__span : ''
-              }
-            ></span>
-          </span>
-        </label>
-
-        <div className={style.navigation__background}>&nbsp;</div>
-
-        <nav className={style.navigation__nav}>
-          <ul className={style.navigation__list}>
-            <li className={style.navigation__item}>
-              <Link href="/#about" passHref>
-                <a href="/#about" className={style.navigation__link}>
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className={style.navigation__item}>
-              <a href="/#about" className={style.navigation__link}>
-                Features
-              </a>
-            </li>
-            <li className={style.navigation__item}>
-              <a href="#" className={style.navigation__link}>
-                Trending
-              </a>
-            </li>
-            <li className={style.navigation__item}>
-              <a href="#" className={style.navigation__link}>
-                About
-              </a>
-            </li>
-            <li className={style.navigation__item}>
-              <a href="#" className={style.navigation__link}>
-                Contact us
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      {authenticated.isAuthenticated === true ? (
+        <>
+          <div className={style.mobile__header}>
+            <Link href="/">
+              <div className={style.neon}>VOVOCA</div>
+            </Link>
+          </div>
+          <div className={style.dashnav_mobile}>
+            <Link href="/#features">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('profile')}
+                style={{ color: `${nav === 'profile' ? 'wheat' : 'gray'}` }}
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <IoMdTrendingUp />
+                <span className={style.text_mobile}>Testimonial</span>
+              </p>
+            </Link>
+            <Link href="/allMusic">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('category')}
+                style={{ color: `${nav === 'category' ? 'wheat' : 'gray'}` }}
+              >
+                <BsFillMusicPlayerFill />
+                <span className={style.text_mobile}>All Music</span>
+              </p>
+            </Link>
+            <Link href="/">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('trending')}
+                style={{ color: `${nav === 'trending' ? 'wheat' : 'gray'}` }}
+              >
+                {' '}
+                <AiFillHome />
+                <span className={style.text_mobile}>Home</span>
+              </p>
+            </Link>
+            <Link href="/dashboard">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('history')}
+                style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
+              >
+                {' '}
+                &nbsp;
+                <FaUserCircle />
+                <span className={style.text_mobile}>Dashboard</span>
+              </p>
+            </Link>
+            <p
+              className={style.navtext}
+              onClick={(r) => setNav('logout')}
+              style={{
+                color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
+              }}
+              onClick={onOpenModal}
+            >
+              <FaPowerOff />
+              <span className={style.text_mobile}>Logout</span>
+            </p>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={style.mobile__header}>
+            <Link href="/">
+              <div className={style.neon}>VOVOCA</div>
+            </Link>
+          </div>
+          <div className={style.dashnav_mobile}>
+            <Link href="/testimonial">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('profile')}
+                style={{ color: `${nav === 'profile' ? 'wheat' : 'gray'}` }}
+              >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <BsFillPeopleFill />
+                <span className={style.text_mobile}>Testimonial</span>
+              </p>
+            </Link>
+            <Link href="/privacy-policy">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('category')}
+                style={{ color: `${nav === 'category' ? 'wheat' : 'gray'}` }}
+              >
+                <BsFillShieldLockFill />
+                <span className={style.text_mobile}>Privacy Policy</span>
+              </p>
+            </Link>
+            <Link href="/">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('trending')}
+                style={{ color: `${nav === 'trending' ? 'wheat' : 'gray'}` }}
+              >
+                {' '}
+                <AiFillHome />
+                <span className={style.text_mobile}>Home</span>
+              </p>
+            </Link>
+            <Link href="/#about">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('history')}
+                style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
+              >
+                {' '}
+                &nbsp;
+                <AiFillInfoCircle />
+                <span className={style.text_mobile}>About</span>
+              </p>
+            </Link>
+            <p
+              className={style.navtext}
+              onClick={(r) => setNav('logout')}
+              style={{
+                color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
+              }}
+              onClick={onOpenModal}
+            >
+              <IoMdLogIn />
+              <span className={style.text_mobile}>Login</span>
+            </p>
+          </div>
+        </>
+      )}
     </>
   );
 };
