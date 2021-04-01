@@ -3,7 +3,7 @@ import React from 'react'
 const History = () => {
     return (
         <div>
-            <h1>This is History Component</h1>
+            <h1>Upload History</h1>
         </div>
     )
 }
