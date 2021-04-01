@@ -31,6 +31,15 @@
     min-width: 320px;
     width: 42%;
   }
+  .pricing__body:hover {
+    background-image: linear-gradient(
+        135deg,
+        #3a3e41 0%,
+        #2a2d30 49%,
+        #242628 100%
+      ),
+      linear-gradient(139deg, #c1c3c7 1%, #2a2c2f 45%, #8f949b 75%);
+  }
   .guest__chart {
     display: flex;
     margin-top: 1.5%;
@@ -68,7 +77,7 @@
   @media only screen and (max-width: 600px) {
     .mobile__chart {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
     }
     .pricing__body {
       margin-bottom: 5%;

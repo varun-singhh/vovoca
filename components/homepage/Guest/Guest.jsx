@@ -9,7 +9,7 @@ const Guest = () => {
       <div className={style.guest}>
         <div className={[style.guest__chart, style.mobile__chart].join(' ')}>
           <div className={style.pricing__body}>
-          <h1 className={style.trend__heading}>New Arrival</h1>
+          <h1 className={style.trend__heading}>Latest</h1>
             <hr className="divider"/>
             <div className={style.song__box}>
               <div
