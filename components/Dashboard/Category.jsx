@@ -21,9 +21,10 @@ const Category = () => {
 
      function handleClick(e, category){
          if(process.browser){
-             console.log("hello")
+         
             if(selected_category.indexOf(category.toLowerCase())!==-1){
-                selected_category.splice(selected_category.indexOf(category), 1)
+                console.log(selected_category.indexOf(category.toLowerCase()))
+                selected_category.splice(selected_category.indexOf(category.toLowerCase()),1)
             }else selected_category.push(category.toLowerCase())
            
            const param = document.getElementById(e)
