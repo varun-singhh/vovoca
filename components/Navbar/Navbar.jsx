@@ -158,8 +158,8 @@ const Navbar = () => {
             <Link href="/#about">
               <li className={style.list__items}>About us</li>
             </Link>
-            <Link href="/#features">
-              <li className={style.list__items}>Trending</li>
+            <Link href="/allMusic">
+              <li className={style.list__items}>Listen Now</li>
             </Link>
             <Link href="/testimonial">
               <li className={style.list__items}>Testimonials</li>

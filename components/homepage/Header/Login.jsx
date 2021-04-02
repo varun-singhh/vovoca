@@ -29,8 +29,10 @@ const Login = () => {
       });
     }
   }
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
+   
     if (login.email===""|| login.password==="") {
       toast("All feilds are Mandatory",{className: style.toast_background})
     }

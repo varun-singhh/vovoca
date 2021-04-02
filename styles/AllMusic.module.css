@@ -1,6 +1,55 @@
-.container{
-    min-height: 100vh;
-    width: 100%;
-    padding: 0 2em;
-    margin: 5em 0;
+.container {
+  min-height: 75vh;
+  width: 100%;
+  padding: 0 2em;
+  margin: 5em 0;
+}
+
+.container > p {
+  text-align: center;
+  color: wheat;
+  font-size: larger;
+}
+
+.pagination_container {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.pagination > li {
+  display: inline-block;
+  padding-left: 0;
+  cursor: pointer;
+}
+.pagination > li {
+  list-style: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 13px 25px;
+  line-height: 2;
+  text-decoration: none;
+  color: wheat;
+  border-radius: 50%;
+
+  margin-left: 10px;
+  background: linear-gradient(136deg, #2d3135 0%, #4c4f54 44% 56%, #232a30 92%)
+    100% 100%/200% 200%;
+}
+
+.pagination > li.active > a {
+  color: gray;
+  background: wheat;
+  font-weight: 500;
+  border-color: #1e7e34;
+}
+
+@media only screen and(max-width: 600px) {
+  .pagination > li > a,
+  .pagination > li > span {
+    padding: 5px 10px !important;
+  }
 }
