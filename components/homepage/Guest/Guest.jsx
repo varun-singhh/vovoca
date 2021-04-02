@@ -1,14 +1,16 @@
 import React from 'react';
 import style from './Guest.module.css';
 
+
 const Guest = () => {
+
   return (
-    <div>
+    <div id="features">
       <div className={style.guest}>
         <div className={[style.guest__chart, style.mobile__chart].join(' ')}>
           <div className={style.pricing__body}>
-          <h1 className={style.trend__heading}>New Arrival</h1>
-            <hr className={style.divider}/>
+          <h1 className={style.trend__heading}>Latest</h1>
+            <hr className="divider"/>
             <div className={style.song__box}>
               <div
                 className={style.music__cover}
@@ -44,7 +46,7 @@ const Guest = () => {
 
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Trending</h1>
-          <hr className={style.divider} />
+          <hr className="divider" />
             <div className={style.song__box}>
               <div
               className={style.music__cover}
@@ -73,42 +75,6 @@ const Guest = () => {
                 }}
               ></div>
               <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#3</p>
-            </div>
-          </div>
-
-
-          <div className={style.pricing__body}>
-          <h1 className={style.trend__heading}>Popular</h1>
-            <hr className={style.divider}/>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://upload.wikimedia.org/wikipedia/en/8/8d/Shawn_Mendes_and_Camila_Cabello_-_Se%C3%B1orita.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Senorita ft. Kaustubh </p>
-              <p className={style.song__rank}>#1</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Shape of You ft. Varun</p>
-              <p className={style.song__rank}>#2</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/00000779_3.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Yummy ft. prakhar pandey</p>
               <p className={style.song__rank}>#3</p>
             </div>
           </div>
