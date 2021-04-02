@@ -1,10 +1,10 @@
-import axios from 'axios';
-import { USER_LOGIN, LOADING, USER_LOGIN_FAILED,LOAD_USER } from './type';
+import axios from "axios";
+import { USER_LOGIN, LOADING, USER_LOGIN_FAILED, LOAD_USER } from "./type";
 
 export const loginUser = (email, password) => async (dispatch) => {
   const config = {
     headers: {
-      'Content-Type': 'Application/json',
+      "Content-Type": "Application/json",
     },
   };
   const body = JSON.stringify({ email, password });
@@ -12,7 +12,7 @@ export const loginUser = (email, password) => async (dispatch) => {
   try {
     dispatch({ type: LOADING });
     const res = await axios.post(
-      'https://vovoca.herokuapp.com/api/admin/login',
+      "https://vovoca.herokuapp.com/api/admin/login",
       body,
       config
     );
@@ -20,18 +20,20 @@ export const loginUser = (email, password) => async (dispatch) => {
       type: USER_LOGIN,
       payload: res.data,
     });
-    
+    return true;
+
     // dispatch({ type: USER_LOGIN_FAILED, payload: null });
     dispatch({ type: LOAD_USER, payload: res.data });
   } catch (err) {
     dispatch({ type: USER_LOGIN_FAILED, payload: err.response.data });
+    return false;
   }
 };
 
 export const registerUser = async (username, email, password) => {
   const config = {
     headers: {
-      'Content-Type': 'Application/json',
+      "Content-Type": "Application/json",
     },
   };
 
@@ -39,7 +41,7 @@ export const registerUser = async (username, email, password) => {
   const body = JSON.stringify({ username, email, password });
   try {
     const res = await axios.post(
-      'https://vovoca.herokuapp.com/api/admin/register',
+      "https://vovoca.herokuapp.com/api/admin/register",
       body,
       config
     );

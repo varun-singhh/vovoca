@@ -46,7 +46,7 @@ const Navbar = () => {
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
+  const onCloseModal = () => {console.log("hello"), setOpen(false)}
   const closeIcon = <svg style={{ display: 'none' }}></svg>;
   const [method, setMethod] = useState('login');
   const AuthModal = () => {
@@ -81,7 +81,7 @@ const Navbar = () => {
         </div>
         <hr className="divider"></hr>
 
-        {method === 'login' ? <Login /> : <Signup />}
+        {method === 'login' ? <Login onCloseModal={onCloseModal}/> : <Signup />}
         <br />
         <hr className="divider"></hr>
         {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
@@ -167,7 +167,7 @@ const Navbar = () => {
             <Link href="/privacy-policy">
               <li className={style.list__items}>Privacy Policy</li>
             </Link>
-            {authenticated.isAuthenticated === true ? (
+            {authenticated.isAuthenticated === true ?(
               <Link href="/dashboard">
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <FaUserCircle

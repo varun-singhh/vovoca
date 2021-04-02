@@ -5,8 +5,8 @@ import { loginUser } from '../../../actions/authAction';
 import { ToastContainer, toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
-const Login = () => {
-  
+const Login = (props) => {
+
   const dispatch = useDispatch();
   const error = useSelector((state) => state.error);
   const authenticate = useSelector((state) => state.auth.isAuthenticated);
@@ -20,10 +20,13 @@ const Login = () => {
   };
   const notify=(category)=>{
     if (category==="success") {
+      console.log(category)
+      
       toast('Loggedin Successfully', {
         className: style.toast_success_background,
       });
     } else {
+      console.log(error.err)
       toast(error.err, {
         className: style.toast_background,
       });
@@ -37,12 +40,25 @@ const Login = () => {
       toast("All feilds are Mandatory",{className: style.toast_background})
     }
     else{
-      dispatch(loginUser(login.email, login.password));
-      if (authenticate===true) {
-        notify("success");
-      } else {
-        notify("error");
-      }
+      dispatch(loginUser(login.email, login.password)).then((res)=>{
+        if (res===true) {
+          console.log(res)
+          props.onCloseModal()
+          notify("success");
+        } else {
+          notify("error");
+        }
+      });
+  
+      // if (x===true) {
+      //   console.log(authenticate)
+      //   props.onCloseModal()
+      //   notify("success");
+      // } else {
+      //   //props.onCloseModal()
+      //   console.log(x)
+      //   notify("error");
+      // }
     }
     
   };
