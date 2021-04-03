@@ -1,0 +1,92 @@
+.container{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card{
+    width: 70%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 100px;
+    margin: 75px auto;
+    background: linear-gradient(136deg, #2D3135 0%, #4C4F54 44% 56%, #232A30 92%) 100% 100%/200% 200%;
+    box-shadow: 6px 6px 22px rgba(21, 22, 24, 0.65), -3px -1px 16px rgba(195, 200, 205, 0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.background__image{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    background: #000;
+}
+.name{
+    color: wheat;
+    margin: 0;
+}
+.image{
+    height: 250px;
+    width: 25%;
+    border-radius: 25px;
+    position: absolute;
+    box-shadow: 6px 6px 22px rgba(21, 22, 24, 0.65), -3px -1px 16px rgba(195, 200, 205, 0.06);
+    object-fit: cover;
+  margin-top: 100px;
+}
+.buttons{
+    position: absolute;
+    margin-top: 35px;
+}
+.buttons button{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: wheat;
+}
+.detes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.artist{
+    color: white;
+    opacity: 0.5;
+    margin: 0;
+    font-weight: 400;
+}
+.artist > span{
+    color: wheat;
+    opacity: 1;
+    font-weight: 500;
+}
+.other__images{
+    margin-bottom: 25px;
+}
+@media screen and (max-width: 600px) {
+    .card{
+        width: 90%;
+        margin: 15px auto;
+        justify-content: space-between;
+    }
+    .image{
+        width: 80%;
+    }
+    .other__images{
+        width: 100%;
+        margin-bottom: 125px;
+    }
+    .audio{
+        display: flex;
+        justify-content: center;
+    }
+    .buttons{
+        margin-top: 600px;
+        display: flex;
+    }
+}

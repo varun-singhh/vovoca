@@ -1,6 +1,6 @@
 import React from 'react'
 import style from './Footer.module.css';
-
+import Link from 'next/link';
 const Footer = () => {
     return (
         <div className={style.footer}>
@@ -74,9 +74,9 @@ const Footer = () => {
                                 </div>
                                 
                             </div>
-                            <hr className={style.divider}></hr>
+                            <hr className="divider"></hr>
                             <div className={style.rights}>
-                                <p>© DevBucket 2021. All rights reserved</p>
+                                <p>© <Link href="https://devbucket.tech/"><span style={{color:"rgb(163, 151, 130)",cursor:"pointer"}}>Devbucket</span></Link> 2021. All rights reserved</p>
                             </div>
                         </div>
                     </div>

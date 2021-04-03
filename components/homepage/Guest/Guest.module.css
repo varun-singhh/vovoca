@@ -11,6 +11,8 @@
     align-content: center;
   }
   .pricing__body {
+    margin-top: -7rem;
+    margin-bottom: -7rem;
     text-align: center;
     padding: 1.875rem 1.25rem;
     border: 1px solid transparent;
@@ -27,7 +29,16 @@
     box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
       -4px -4px 15px rgb(195 200 205 / 4%);
     min-width: 320px;
-    width: 25%;
+    width: 42%;
+  }
+  .pricing__body:hover {
+    background-image: linear-gradient(
+        135deg,
+        #3a3e41 0%,
+        #2a2d30 49%,
+        #242628 100%
+      ),
+      linear-gradient(139deg, #c1c3c7 1%, #2a2c2f 45%, #8f949b 75%);
   }
   .guest__chart {
     display: flex;
@@ -69,9 +80,8 @@
       flex-direction: column;
     }
     .pricing__body {
-      width: 90%;
       margin-bottom: 5%;
-      margin-left: -4%;
+      margin-top: 1rem;
     }
   }
   

@@ -3,7 +3,7 @@ import style from './About.module.css';
 
 const About=()=>{
     return(
-        <div className={style.about}>
+        <div id="about" className={style.about}>
             <div className={style.container}>
                 <h2>Welcome to Vovoca</h2>
                 <div className={style.features}>
@@ -16,7 +16,7 @@ const About=()=>{
                                 incididunt ut labore et dolore.</p>
                             </div>
                         </div>
-                        <hr></hr>
+                        <hr className="divider"></hr>
                         <div className={style.feature}>
                         <div className={style.feature__heading}>
                                 <h1>Feature 2</h1>
@@ -27,7 +27,7 @@ const About=()=>{
                         </div>
                     </div>
                     <div className={style.vovoca__img}>
-                        <h2>image</h2>
+                        <img src="/ms-icon-310x310.png/" />
                     </div>
                     <div className={style.feature__col__2}>
                     <div className={style.feature}>
@@ -38,7 +38,7 @@ const About=()=>{
                                 incididunt ut labore et dolore.</p>
                             </div>
                         </div>
-                        <hr></hr>
+                        <hr className="divider"></hr>
                         <div className={style.feature}>
                         <div className={style.feature__heading}>
                                 <h1>Feature 4</h1>
@@ -49,6 +49,7 @@ const About=()=>{
                         </div>
                     </div>
                 </div>
+               
             </div>
         </div>
     )
