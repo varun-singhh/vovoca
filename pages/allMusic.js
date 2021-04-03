@@ -7,7 +7,7 @@ import Loader from "../components/Loader/Loader";
 import Music from "../components/music/music";
 import ReactPaginate from "react-paginate";
 import { LOADING } from "../actions/type";
-import Head from 'next/head'
+import Head from "next/head";
 
 const allMusic = () => {
   const [currentpage, setCurrentPage] = useState(1);
@@ -35,13 +35,11 @@ const allMusic = () => {
     );
   return (
     <>
-    <Head>
+      <Head>
         <title>VOVOCA | Royalty Free Music</title>
-    </Head>
+      </Head>
       <div className={style.container}>
-        {music.musics.data.map((m) => (
-          <Music music={m} />
-        ))}
+        {music.musics.data?.map((m) => (console.log(m), (<Music music={m} />)))}
         {auth.isAuthenticated ? (
           <div className={style.pagination_container}>
             <ReactPaginate
