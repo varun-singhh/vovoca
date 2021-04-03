@@ -11,6 +11,7 @@ import { HiViewList, HiCloudDownload, HiShare } from 'react-icons/hi'
 import Link from 'next/link'
 import Head from "next/head";
 import fileDownload from 'js-file-download'
+import axios from 'axios'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -37,6 +38,12 @@ const index = () => {
         }
     }
 
+    const downloadMusic = async (music) => {
+        fileDownload(`data:audio/wav;base64,${Buffer.from(music.audiobuffer.data).toString('base64')}`, `${music.name}.wav`);
+        const res = await axios.patch(`https://vovoca.herokuapp.com/api/music/download/${music._id}`)
+        console.log(res.data.downloadcount);
+    }
+
     if (!music)
         return (
             <>
@@ -60,7 +67,7 @@ const index = () => {
                     <img className={style.image} src="https://images.pexels.com/photos/1749822/pexels-photo-1749822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"></img>
                     <div className={style.buttons}>
                         <Link href="/allMusic" replace><button><HiViewList/></button></Link>
-                        <button disabled={music.audiobuffer.data ? false : true} onClick={() => { fileDownload(`data:audio/wav;base64,${Buffer.from(music.audiobuffer.data).toString('base64')}`, `${music.name}.wav`);}}><HiCloudDownload/></button>
+                        <button disabled={music.audiobuffer.data ? false : true} onClick={() => {downloadMusic(music)}}><HiCloudDownload/></button>
                         <button onClick={() => {copyLink()}}><HiShare/></button>
                     </div>
                     <div className={style.other__images}>
