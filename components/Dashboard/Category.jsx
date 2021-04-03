@@ -11,6 +11,7 @@ const Category = () => {
     async function getCategories(){
         try{
             const res = await axios.get(`https://vovoca.herokuapp.com/api/music/?category=${selected_category.join("+")}`)
+            console.log(res.data)
         }
         catch{
             console.error("error")

@@ -7,6 +7,7 @@ import { FaGetPocket } from 'react-icons/fa'
 import Link from 'next/link'
 
 const music = ({ music, history }) => {
+  console.log("Trending")
   const onClick = (id) => {
     history.push(`music/${id}`)
   }
@@ -19,7 +20,7 @@ const music = ({ music, history }) => {
       /> */}
       <img
         className={style.image}
-        src={`https://source.unsplash.com/random/300x200?sig=${Math.random()}`}
+        src={music.image}
         alt="Ran"
         height="70px"
         width="70px"

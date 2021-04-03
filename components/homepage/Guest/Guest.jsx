@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { FaGetPocket } from 'react-icons/fa';
+import {useDispatch, useSelector} from 'react-redux'
+import { getTrendingMusic } from '../../../actions/musicActions';
 import style from './Guest.module.css';
+import Link from 'next/link'
 
 
 const Guest = () => {
+  const dispatch = useDispatch()
+  const trending_music = useSelector(state => state.music.musics)
+  useEffect(() => {
+    dispatch(getTrendingMusic())
+  },[])
 
   return (
     <div id="features">
@@ -47,36 +56,26 @@ const Guest = () => {
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Trending</h1>
           <hr className="divider" />
+          {console.log(trending_music)}
+          {trending_music && trending_music.data?.splice(2).map((i, index)=>(
             <div className={style.song__box}>
               <div
               className={style.music__cover}
                 style={{
-                  backgroundImage: `url("https://i.pinimg.com/originals/72/c7/df/72c7df46166570810953740ebfcb3d70.png")`,
+                  backgroundImage: `url(${i.image})`,
                 }}
               ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#1</p>
+              {console.log(i)}
+              <p className={style.song__name}>{i.name}</p>
+              <Link href={`/music/${encodeURIComponent(i._id)}`} replace>
+              <button style={{cursor: 'pointer'}}
+             
+              >
+                  <FaGetPocket style={{ color: 'wheat', fontSize: '35px' }} />
+              </button>
+          </Link>
             </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://i.pinimg.com/originals/db/64/a9/db64a9770d61b573e9e1440d62aa4f14.jpg")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#2</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://i.pinimg.com/originals/6a/2d/13/6a2d13b7be4848e17a35a3001c7db423.jpg")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#3</p>
-            </div>
+          ))}      
           </div>
         </div>
       </div>
