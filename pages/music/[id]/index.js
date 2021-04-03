@@ -11,6 +11,7 @@ import { HiViewList, HiCloudDownload, HiShare } from "react-icons/hi";
 import Link from "next/link";
 import Head from "next/head";
 import fileDownload from "js-file-download";
+import axios from "axios";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -37,6 +38,19 @@ const index = () => {
       inputc.parentNode.removeChild(inputc);
       toast.success("Link Copied");
     }
+  };
+
+  const downloadMusic = async (music) => {
+    fileDownload(
+      `data:audio/wav;base64,${Buffer.from(music.audiobuffer.data).toString(
+        "base64"
+      )}`,
+      `${music.name}.wav`
+    );
+    const res = await axios.patch(
+      `https://vovoca.herokuapp.com/api/music/download/${music._id}`
+    );
+    console.log(res.data.downloadcount);
   };
 
   if (!music)
@@ -69,12 +83,7 @@ const index = () => {
             <button
               disabled={music.audiobuffer.data ? false : true}
               onClick={() => {
-                fileDownload(
-                  `data:audio/wav;base64,${Buffer.from(
-                    music.audiobuffer.data
-                  ).toString("base64")}`,
-                  `${music.name}.wav`
-                );
+                downloadMusic(music);
               }}
             >
               <HiCloudDownload />
