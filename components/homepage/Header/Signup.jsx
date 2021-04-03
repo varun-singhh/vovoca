@@ -3,7 +3,7 @@ import style from './Login.module.css';
 import {registerUser}  from "../../../actions/authAction"
 import { ToastContainer, toast } from 'react-toastify';
 
-const Signup = () => {
+const Signup = (props) => {
   const [register,setRegister]=useState({
     username:"",
     email:"",
@@ -32,6 +32,7 @@ const Signup = () => {
       }
 
       else{
+        props.onCloseModal()
         toast("Account Created Successfully, Login to Enter",{className: style.toast_success_background})
       }
       
