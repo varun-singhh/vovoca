@@ -33,18 +33,18 @@ const privacyPolicy = () => {
                         </div>
                     </div>
                     <p id="1b" id="1" className={style.modal__button__para}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci quibusdam vitae praesentium provident sunt nihil aspernatur, unde dolor ullam amet reiciendis blanditiis commodi ab repudiandae explicabo pariatur quasi dolore excepturi! Voluptatum, earum quae. Facere ducimus ipsa quaerat porro hic soluta, tenetur aperiam totam temporibus quos fuga quam, placeat alias! Necessitatibus eum amet nemo fugit explicabo dolores natus repellat culpa aliquam? Tempore ea velit non nulla accusantium dolore recusandae molestias
+                        Vovoca is a project under team DevBucket. We have putted our heart and soul in it to bring it to you for free. We our free today because of several open-source technologies out there that we have used all togethor to bring you Vovoca. We therefore aim to bring you vovoca as a open-source program too after completion of all the basic structure and interface. Our backend APIs are currently hosted on heroku and frontend on vercel while in development mode.
                     </p>
                 </div>
                 <div className={style.modal__button}>
                     <div className={style.modal__button__info}>
-                        <h4>User data Security</h4>
+                        <h4>User Data Security</h4>
                         <div id="2b" onClick={() => {maximiseInfo('2')}} className={style.toggle__button}>
                             <i className="fas fa-plus"></i>
                         </div>
                     </div>
                     <p id="2" className={[style.modal__button__para, style.none].join(' ')}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci quibusdam vitae praesentium provident sunt nihil aspernatur, unde dolor ullam amet reiciendis blanditiis commodi ab repudiandae explicabo pariatur quasi dolore excepturi! Voluptatum, earum quae. Facere ducimus ipsa quaerat porro hic soluta, tenetur aperiam totam temporibus quos fuga quam, placeat alias! Necessitatibus eum amet nemo fugit explicabo dolores natus repellat culpa aliquam? Tempore ea velit non nulla accusantium dolore recusandae molestias
+                        We are more than aware of your private data. We have taken care of end to end encryption as much as we could have. All your passwords are hashed before going into our database. We however suggest you to not to use your common password on this website. You can use auto password gernerator on any browser for the same. Team DevBucket does not hold any guarantee on any possible leakage of private data or your music. We However assure you that we have followed all the best practices to secure your data
                     </p>
                 </div>
                 <div className={style.modal__button}>
@@ -55,7 +55,7 @@ const privacyPolicy = () => {
                         </div>
                     </div>
                     <p id="3" className={[style.modal__button__para, style.none].join(' ')}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci quibusdam vitae praesentium provident sunt nihil aspernatur, unde dolor ullam amet reiciendis blanditiis commodi ab repudiandae explicabo pariatur quasi dolore excepturi! Voluptatum, earum quae. Facere ducimus ipsa quaerat porro hic soluta, tenetur aperiam totam temporibus quos fuga quam, placeat alias! Necessitatibus eum amet nemo fugit explicabo dolores natus repellat culpa aliquam? Tempore ea velit non nulla accusantium dolore recusandae molestias
+                        We have used most secured and open sourced programs to host our web app currently. We are using heroku and node and postgreSQL for our database. Therefore any data breach over heroku may lead to  data leakage on our website. In any such case, Vovoca or DevBucket does not holds any guarantee. We are currently working day and night and implementing methods to make vovoca a more secure app for your music and email and password. 
                     </p>
                 </div>
             </div>
