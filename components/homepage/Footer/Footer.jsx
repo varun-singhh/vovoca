@@ -9,9 +9,9 @@ const Footer = () => {
                     <div className={style.get__in__touch}>
                         <h2>Get in Touch</h2>
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore. Lorem ipsum 
-                        dolor sit amet, consectetur adipiscing.</p>
+                            Want to work, collaborate with us or you have any idea related to our project?
+                            Feel Free to contact us anytime. We are just a click away
+                        </p>
                         <form className={style.get__in__touch__form}>
                             <div className={style.form__row}>
                                 <div className={style.inputs}>
@@ -48,7 +48,7 @@ const Footer = () => {
                                                     Ph.
                                                 </td>
                                                 <td className={style.contact__value}>
-                                                    1-800-901-234
+                                                    +91-70079 92740
                                                 </td>
                                             </tr>
                                             <tr>
@@ -56,7 +56,7 @@ const Footer = () => {
                                                     Mail.
                                                 </td>
                                                 <td className={style.contact__value}>
-                                                    test@test.com
+                                                    info@devbucket.com
                                                 </td>
                                             </tr>
                                             <tr>
@@ -64,8 +64,8 @@ const Footer = () => {
                                                     Office.
                                                 </td>
                                                 <td className={style.contact__value}>
-                                                    DevBucket headoffic,
-                                                    Choonawala gali. Amsterdam
+                                                    DevBucket, Headoffice,
+                                                    Vikas Nagar, Lucknow, IN
                                                 </td>
                                             </tr>
                                         </tbody>
