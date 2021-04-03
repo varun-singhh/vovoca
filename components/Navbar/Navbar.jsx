@@ -81,7 +81,7 @@ const Navbar = () => {
         </div>
         <hr className="divider"></hr>
 
-        {method === 'login' ? <Login /> : <Signup />}
+        {method === 'login' ? <Login onCloseModal={onCloseModal} /> : <Signup onCloseModal={onCloseModal}/>}
         <br />
         <hr className="divider"></hr>
         {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
