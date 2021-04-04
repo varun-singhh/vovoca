@@ -10,7 +10,6 @@ import { LOADING } from "../actions/type";
 import Head from "next/head";
 
 const allMusic = () => {
-  const [currentpage, setCurrentPage] = useState(1);
   const music = useSelector((state) => state.music);
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -39,7 +38,9 @@ const allMusic = () => {
         <title>VOVOCA | Royalty Free Music</title>
       </Head>
       <div className={style.container}>
-        {music.musics.data?.map((m) => (console.log(m), (<Music music={m} />)))}
+        {!music.loading ? music.musics.data?.map((m) => (console.log(m), (<Music music={m} />))) : (
+            <Loader loading={true} />
+        )}
         {auth.isAuthenticated ? (
           <div className={style.pagination_container}>
             <ReactPaginate

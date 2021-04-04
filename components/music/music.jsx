@@ -7,10 +7,6 @@ import { FaGetPocket } from 'react-icons/fa'
 import Link from 'next/link'
 
 const music = ({ music, history }) => {
-  console.log("Trending")
-  const onClick = (id) => {
-    history.push(`music/${id}`)
-  }
   return (
     <div className={style.row}>
       {/* <ToastContainer

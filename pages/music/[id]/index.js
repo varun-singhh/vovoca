@@ -8,11 +8,10 @@ import Footer from "../../../components/homepage/Footer/Footer";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { HiViewList, HiCloudDownload, HiShare } from "react-icons/hi";
-import Link from "next/link";
+import Link from 'next/link'
 import Head from "next/head";
 import fileDownload from "js-file-download";
 import axios from "axios";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -39,19 +38,10 @@ const index = () => {
       toast.success("Link Copied");
     }
   };
-
-  const downloadMusic = async (music) => {
-    fileDownload(
-      `data:audio/wav;base64,${Buffer.from(music.audiobuffer.data).toString(
-        "base64"
-      )}`,
-      `${music.name}.wav`
-    );
-    const res = await axios.patch(
-      `https://vovoca.herokuapp.com/api/music/download/${music._id}`
-    );
-    console.log(res.data.downloadcount);
-  };
+  const downloadMusic = async (id) => {
+    const res = await axios.patch(`https://vovoca.herokuapp.com/api/music/download/${id}`)
+    console.log(res);
+  }
 
   if (!music)
     return (
@@ -80,14 +70,11 @@ const index = () => {
                 <HiViewList />
               </button>
             </Link>
-            <button
-              disabled={music.audiobuffer.data ? false : true}
-              onClick={() => {
-                downloadMusic(music);
-              }}
-            >
-              <HiCloudDownload />
-            </button>
+            <a href={`data:audio/mp3;base64,${Buffer.from(music.audiobuffer.data).toString("base64")}`} download={music.name}>
+              <button onClick={() => downloadMusic(music._id)}>
+                <HiCloudDownload />
+              </button>
+            </a>
             <button
               onClick={() => {
                 copyLink();
@@ -106,7 +93,7 @@ const index = () => {
             <div className={style.audio}>
               <AudioPlayer
                 autoPlayAfterSrcChange={false}
-                src={`data:audio/wav;base64,${Buffer.from(
+                src={`data:audio/mp3;base64,${Buffer.from(
                   music.audiobuffer?.data
                 ).toString("base64")}`}
                 onError={(e) => {

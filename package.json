@@ -15,6 +15,7 @@
     "next": "10.0.9",
     "nextjs-redirect": "^5.0.2",
     "react": "17.0.2",
+    "react-base64-downloader": "^2.1.6",
     "react-dom": "17.0.2",
     "react-h5-audio-player": "^3.6.2",
     "react-icons": "^4.2.0",
