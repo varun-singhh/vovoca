@@ -39,7 +39,7 @@ const index = () => {
     }
   };
   const downloadMusic = async (id) => {
-    const res = await axios.patch(`https:/vovoca.herokuapp.com/api/music/download/${id}`)
+    const res = await axios.patch(`https://vovoca.herokuapp.com/api/music/download/${id}`)
     console.log(res);
   }
 
