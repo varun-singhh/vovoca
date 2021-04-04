@@ -8,6 +8,7 @@ import Footer from "../../../components/homepage/Footer/Footer";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { HiViewList, HiCloudDownload, HiShare } from "react-icons/hi";
+import Link from 'next/link'
 import Head from "next/head";
 import fileDownload from "js-file-download";
 import axios from "axios";
@@ -37,6 +38,10 @@ const index = () => {
       toast.success("Link Copied");
     }
   };
+  const downloadMusic = async (id) => {
+    const res = await axios.patch(`https:/vovoca.herokuapp.com/api/music/download/${id}`)
+    console.log(res);
+  }
 
   if (!music)
     return (
@@ -66,7 +71,7 @@ const index = () => {
               </button>
             </Link>
             <a href={`data:audio/mp3;base64,${Buffer.from(music.audiobuffer.data).toString("base64")}`} download={music.name}>
-              <button>
+              <button onClick={() => downloadMusic(music._id)}>
                 <HiCloudDownload />
               </button>
             </a>
