@@ -5,4 +5,6 @@ export const USER_LOGIN = "USER_LOGIN";
 export const LOAD_USER = "LOAD_USER";
 export const USER_LOGIN_FAILED = "USER_LOGIN_FAILED";
 export const FETCH_USER = "FETCH_USER";
+export const GET_LATEST_MUSIC = "GET_LATEST_MUSIC";
+export const GET_TRENDING_MUSIC = "GET_TRENDING_MUSIC";
 export const UPLOADED_MUSIC = "UPLOADED_MUSIC";

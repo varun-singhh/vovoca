@@ -1,10 +1,20 @@
-import { GET_MUSIC, GET_MUSIC_SINGLE, UPLOADED_MUSIC, LOADING } from "../actions/type";
+import { FaAcquisitionsIncorporated } from "react-icons/fa";
+import {
+  GET_MUSIC,
+  GET_MUSIC_SINGLE,
+  LOADING,
+  GET_LATEST_MUSIC,
+  GET_TRENDING_MUSIC,
+  UPLOADED_MUSIC
+} from "../actions/type";
 
 const initialState = {
   musics: null,
   music: null,
   loading: true,
-  uploaded: null
+  uploaded: null,
+  latest_music: null,
+  trending_music: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -32,6 +42,19 @@ const reducer = (state = initialState, action) => {
           loading: false,
           uploaded: action.payload,
         };
+    case GET_LATEST_MUSIC:
+      console.log(action.payload);
+      return {
+        ...state,
+        loading: false,
+        latest_music: action.payload,
+      };
+    case GET_TRENDING_MUSIC:
+      return {
+        ...state,
+        loading: false,
+        trending_music: action.payload,
+      };
     default:
       return state;
   }

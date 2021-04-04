@@ -1,6 +1,13 @@
 import axios from "axios";
-import { GET_MUSIC, LOADING, UPLOADED_MUSIC, GET_MUSIC_SINGLE } from "./type";
-import setAuthToken from "./utils/setAuthToken";
+import cookie from "js-cookie";
+import {
+  GET_MUSIC,
+  LOADING,
+  GET_MUSIC_SINGLE,
+  UPLOADED_MUSIC,
+  GET_LATEST_MUSIC,
+  GET_TRENDING_MUSIC,
+} from "./type";
 
 export const getAllMusic = (page) => async (dispatch) => {
   try {
@@ -31,11 +38,29 @@ export const getSingleMusic = (id) => async (dispatch) => {
 };
 
 export const getTrendingMusic = () => async (dispatch) => {
-  try {    const res = await axios.get(
+  try {
+    dispatch({ type: LOADING });
+    const res = await axios.get(
       `https://vovoca.herokuapp.com/api/music/trending`
     );
     dispatch({
-      type: GET_MUSIC,
+      type: GET_TRENDING_MUSIC,
+      payload: res.data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getLatestMusic = () => async (dispatch) => {
+  try {
+    dispatch({ type: LOADING });
+    const res = await axios.get(
+      `https://vovoca.herokuapp.com/api/music/latest`
+    );
+    console.log(res.data);
+    dispatch({
+      type: GET_LATEST_MUSIC,
       payload: res.data,
     });
   } catch (error) {
