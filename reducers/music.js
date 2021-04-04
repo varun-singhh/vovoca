@@ -1,9 +1,10 @@
-import { GET_MUSIC, GET_MUSIC_SINGLE, LOADING } from "../actions/type";
+import { GET_MUSIC, GET_MUSIC_SINGLE, UPLOADED_MUSIC, LOADING } from "../actions/type";
 
 const initialState = {
   musics: null,
   music: null,
   loading: true,
+  uploaded: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -25,6 +26,12 @@ const reducer = (state = initialState, action) => {
         loading: false,
         music: action.payload,
       };
+      case UPLOADED_MUSIC:
+        return {
+          ...state,
+          loading: false,
+          uploaded: action.payload,
+        };
     default:
       return state;
   }

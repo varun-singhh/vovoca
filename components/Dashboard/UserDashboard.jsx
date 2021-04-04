@@ -17,7 +17,7 @@ const UserDashboard = () => {
             <hr className="divider"></hr>
                 <p className={style.navtext} onClick={r=>setNav("category")} style={{color:`${nav==="category"?("wheat"):("gray")}`}} >Category<FaLayerGroup/></p>
                 <p className={style.navtext} onClick={r=>setNav("trending")} style={{color:`${nav==="trending"?("wheat"):("gray")}`}}>Trending <FaCrown/></p>
-                <p className={style.navtext} onClick={r=>setNav("history")} style={{color:`${nav==="history"?("wheat"):("gray")}`}}>History &nbsp;<FaHistory/></p>
+                <p className={style.navtext} onClick={r=>setNav("history")} style={{color:`${nav==="history"?("wheat"):("gray")}`}}>Uploads &nbsp;<FaHistory/></p>
                 <hr className="divider"></hr>
                 <p className={style.navtext} onClick={r=>setNav("logout")} style={{color:`${nav==="logout"?("rgb(218, 84, 84)"):("gray")}`}}>Logout <FaPowerOff/></p>
             </div>
