@@ -7,24 +7,28 @@ import style_modal from '../../styles/Modal.module.css';
 import Link from 'next/link';
 import Signup from '../homepage/Header/Signup';
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  FaUserAlt,
-  FaPowerOff,
-  FaCrown,
-  FaHistory,
-  FaLayerGroup,
-} from 'react-icons/fa';
-import { IoMdLogIn,IoMdTrendingUp } from 'react-icons/io';
+import { FaPowerOff } from 'react-icons/fa';
+import { IoMdLogIn, IoMdTrendingUp } from 'react-icons/io';
 import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
-import { BsFillShieldLockFill, BsFillPeopleFill,BsFillMusicPlayerFill } from 'react-icons/bs';
+import {
+  BsFillShieldLockFill,
+  BsFillPeopleFill,
+  BsFillMusicPlayerFill,
+} from 'react-icons/bs';
 import { getUserDetails } from '../../actions/authAction';
 // RiDashboard2Line
 // BsFillShieldLockFill
 // AiFillHome
 
 const Navbar = () => {
-  const [nav, setNav] = useState('profile');
-  const dispatch = useDispatch()
+  const logout = () => {
+    localStorage.removeItem('token');
+    if (process.browser) {
+      window.location.href = '/';
+    }
+  };
+  const [nav, setNav] = useState('home');
+  const dispatch = useDispatch();
   const authenticated = useSelector((state) => state.auth);
   const [scrollState, setScrollState] = useState('top');
   useEffect(() => {
@@ -42,21 +46,17 @@ const Navbar = () => {
       }
     });
 
-   
-
     return () => {
       document.removeEventListener('scroll', listener);
     };
   }, [scrollState]);
 
   useEffect(() => {
-    if(localStorage.getItem("token")){
-      console.log("hello")
-      dispatch(getUserDetails())
-      
+    if (localStorage.getItem('token')) {
+      console.log('hello');
+      dispatch(getUserDetails());
     }
-    
-  }, [])
+  }, []);
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
@@ -95,7 +95,11 @@ const Navbar = () => {
         </div>
         <hr className="divider"></hr>
 
-        {method === 'login' ? <Login onCloseModal={onCloseModal} /> : <Signup onCloseModal={onCloseModal}/>}
+        {method === 'login' ? (
+          <Login onCloseModal={onCloseModal} />
+        ) : (
+          <Signup onCloseModal={onCloseModal} />
+        )}
         <br />
         <hr className="divider"></hr>
         {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
@@ -129,7 +133,6 @@ const Navbar = () => {
               <p style={{ color: 'gray', fontSize: 'x-small' }}>
                 By submitting this form, you confirm that you agree to our{' '}
                 <Link href="privacy-policy">
-                
                   <span style={{ color: 'wheat', cursor: 'pointer' }}>
                     Terms of Service and Privacy Policy
                   </span>
@@ -173,9 +176,13 @@ const Navbar = () => {
             <Link href="/#about">
               <li className={style.list__items}>About us</li>
             </Link>
-            <Link href="/allMusic">
-              <li className={style.list__items}>Listen Now</li>
-            </Link>
+            {authenticated.isAuthenticated === true ? (
+              <Link href="/allMusic">
+                <li className={style.list__items}>Listen Now</li>
+              </Link>
+            ) : (
+              <></>
+            )}
             <Link href="/testimonial">
               <li className={style.list__items}>Testimonials</li>
             </Link>
@@ -229,7 +236,7 @@ const Navbar = () => {
               >
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <IoMdTrendingUp />
-                <span className={style.text_mobile}>Testimonial</span>
+                <span className={style.text_mobile}>Trending</span>
               </p>
             </Link>
             <Link href="/allMusic">
@@ -271,7 +278,7 @@ const Navbar = () => {
               style={{
                 color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}`,
               }}
-              onClick={onOpenModal}
+              onClick={() => logout()}
             >
               <FaPowerOff />
               <span className={style.text_mobile}>Logout</span>
@@ -289,8 +296,8 @@ const Navbar = () => {
             <Link href="/testimonial">
               <p
                 className={style.navtext}
-                onClick={(r) => setNav('profile')}
-                style={{ color: `${nav === 'profile' ? 'wheat' : 'gray'}` }}
+                onClick={(r) => setNav('testimonial')}
+                style={{ color: `${nav === 'testimonial' ? 'wheat' : 'gray'}` }}
               >
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <BsFillPeopleFill />
@@ -300,18 +307,18 @@ const Navbar = () => {
             <Link href="/privacy-policy">
               <p
                 className={style.navtext}
-                onClick={(r) => setNav('category')}
-                style={{ color: `${nav === 'category' ? 'wheat' : 'gray'}` }}
+                onClick={(r) => setNav('privacy')}
+                style={{ color: `${nav === 'privacy' ? 'wheat' : 'gray'}` }}
               >
                 <BsFillShieldLockFill />
-                <span className={style.text_mobile}>Privacy Policy</span>
+                <span className={style.text_mobile}>Privacy</span>
               </p>
             </Link>
             <Link href="/">
               <p
                 className={style.navtext}
-                onClick={(r) => setNav('trending')}
-                style={{ color: `${nav === 'trending' ? 'wheat' : 'gray'}` }}
+                onClick={(r) => setNav('home')}
+                style={{ color: `${nav === 'home' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
                 <AiFillHome />
@@ -321,8 +328,8 @@ const Navbar = () => {
             <Link href="/#about">
               <p
                 className={style.navtext}
-                onClick={(r) => setNav('history')}
-                style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
+                onClick={(r) => setNav('about')}
+                style={{ color: `${nav === 'about' ? 'wheat' : 'gray'}` }}
               >
                 {' '}
                 &nbsp;
@@ -330,6 +337,7 @@ const Navbar = () => {
                 <span className={style.text_mobile}>About</span>
               </p>
             </Link>
+
             <p
               className={style.navtext}
               onClick={(r) => setNav('logout')}
@@ -338,6 +346,8 @@ const Navbar = () => {
               }}
               onClick={onOpenModal}
             >
+              {' '}
+              &nbsp;
               <IoMdLogIn />
               <span className={style.text_mobile}>Login</span>
             </p>

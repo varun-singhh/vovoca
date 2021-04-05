@@ -3,8 +3,8 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import style from './MusicCard.module.css';
 import { toast, ToastContainer } from 'react-toastify';
-import { FaGetPocket } from 'react-icons/fa'
-import Link from 'next/link'
+import { FaGetPocket } from 'react-icons/fa';
+import Link from 'next/link';
 
 const music = ({ music, history }) => {
   return (
@@ -21,9 +21,10 @@ const music = ({ music, history }) => {
         height="70px"
         width="70px"
       />
-      <AudioPlayer 
-      autoPlayAfterSrcChange={false}
-      layout={'horizontal'}
+      <AudioPlayer
+        className={[style.rhap_containe, style.rhap_controls_section,style.rhap_main_controls_button].join(' ')}
+        autoPlayAfterSrcChange={false}
+        layout={'horizontal'}
         src={`data:audio/wav;base64,${Buffer.from(
           music.audiobuffer?.data
         ).toString('base64')}`}
@@ -32,8 +33,11 @@ const music = ({ music, history }) => {
         }}
       />
       <Link href={`/music/${encodeURIComponent(music._id)}`} replace>
-        <button style={{cursor: 'pointer'}}>
-          <FaGetPocket style={{ color: 'wheat', fontSize: '35px' }} />
+        <button style={{ cursor: 'pointer' }} className={style.music_button}>
+          <FaGetPocket
+            style={{ color: 'wheat' }}
+            className={style.music_icon}
+          />
         </button>
       </Link>
     </div>
