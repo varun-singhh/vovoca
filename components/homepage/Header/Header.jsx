@@ -57,11 +57,7 @@ const Header = () => {
         </div>
         <hr className="divider"></hr>
 
-<<<<<<< HEAD
-        {method === 'login' ? <Login closeModeal= {onCloseModal} hello="hello"/> : <Signup />}
-=======
         {method === 'login' ? <Login oncloseModal= {onCloseModal} hello="hello"/> : <Signup />}
->>>>>>> c28ea2988d7d108bde407ddb9c44c57d390f19b7
         <br />
         <hr className="divider"></hr>
         {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}

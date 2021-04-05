@@ -10,18 +10,13 @@
   "dependencies": {
     "axios": "^0.21.1",
     "js-cookie": "^2.2.1",
-<<<<<<< HEAD
-=======
     "js-file-download": "^0.4.12",
->>>>>>> c28ea2988d7d108bde407ddb9c44c57d390f19b7
+    "multiselect-react-dropdown": "^1.6.11",
     "netlify": "^6.1.16",
     "next": "10.0.9",
     "nextjs-redirect": "^5.0.2",
     "react": "17.0.2",
-<<<<<<< HEAD
-=======
     "react-base64-downloader": "^2.1.6",
->>>>>>> c28ea2988d7d108bde407ddb9c44c57d390f19b7
     "react-dom": "17.0.2",
     "react-h5-audio-player": "^3.6.2",
     "react-icons": "^4.2.0",

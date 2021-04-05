@@ -1,12 +1,13 @@
-.profile_component{
-  display:  flex;
+.profile_component {
+  display: flex;
   align-items: center;
-  color:  gray;
+  color: gray;
+  flex-direction: column;
 }
-.custom_file_input::-webkit-file-upload-button{
+.custom_file_input::-webkit-file-upload-button {
   display: none;
 }
-.custom_file_input{
+.custom_file_input {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -16,7 +17,7 @@
   outline: none;
   cursor: pointer;
 }
-.upload_box{
+.upload_box {
   position: relative;
   display: flex;
   align-items: center;
@@ -25,18 +26,19 @@
   padding: 2.5rem 1.5rem;
   margin-top: 0.5rem;
   border: 3px dashed #595a5a;
-  border-radius: .5rem;
-  transition: background-color .25s ease-out;   
+  border-radius: 0.5rem;
+  transition: background-color 0.25s ease-out;
 }
-.upload_box h4{
+.upload_box h4 {
   margin-top: 0;
 }
-.upload_button{
+.upload_button {
   margin-top: 0.7rem;
 }
 @media only screen and (max-width: 600px) {
-  .profile_component{
-    justify-content: left !important;
+  .profile_component {
+    flex-direction: column;
+    justify-content: flex-start !important;
     font-size: small;
   }
 }

@@ -149,7 +149,7 @@ ul {
   margin-right: 55px;
 }
 .rhap_time {
-  color: #000 !important;
+  color: rgb(136, 135, 133) !important;
 }
 .rhap_controls-section {
   justify-content: space-around !important;
@@ -160,7 +160,10 @@ ul {
 .rhap_volume-controls {
   display: none !important;
 }
-
+.rhap_progress_filled{
+  background-color: #8b6b2b;
+  border-radius: 10px;
+}
 @media only screen and (max-width: 600px) {
   button {
     line-height: 0.7;
