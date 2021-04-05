@@ -27,7 +27,7 @@ const music = ({ music, history }) => {
           toast.error('Internal Server Error');
         }}
       />
-      <Link href={`/music/${encodeURIComponent(music._id)}`} replace>
+      <Link href={`/music/${encodeURIComponent(music._id)}`}>
         <button style={{ cursor: 'pointer' }} className={style.music_button}>
           <FaGetPocket
             style={{ color: 'wheat' }}

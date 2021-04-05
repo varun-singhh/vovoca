@@ -65,7 +65,7 @@ const index = () => {
           <img className={style.background__image} src={music.image}></img>
           <img className={style.image} src={music.image}></img>
           <div className={style.buttons}>
-            <Link href="/allMusic" replace>
+            <Link href="/allMusic">
               <button className={style.single_music_button}>
                 <HiViewList />
               </button>
