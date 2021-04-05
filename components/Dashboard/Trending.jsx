@@ -16,8 +16,6 @@ const Trending = () => {
 
     return (
         <div>
-            <h1>This is Trending Component</h1>
-            {console.log(trending_music)}
             { trending_music ?((trending_music.map((i)=>(
                 <Music music={i}/>
                 

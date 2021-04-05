@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { getSingleMusic } from "../../../actions/musicActions";
@@ -13,6 +14,24 @@ import Head from "next/head";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+=======
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { getSingleMusic } from '../../../actions/musicActions';
+import { useDispatch, useSelector } from 'react-redux';
+import Loader from '../../../components/Loader/Loader';
+import style from '../../../styles/singleMusic.module.css';
+import Footer from '../../../components/homepage/Footer/Footer';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import { HiViewList, HiCloudDownload, HiShare } from 'react-icons/hi';
+import Link from 'next/link';
+import Head from 'next/head';
+import fileDownload from 'js-file-download';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+>>>>>>> 9f9ac389bff1b22e63aeb25394cae9737e6f92a6
 
 const index = () => {
   const router = useRouter();
@@ -26,21 +45,23 @@ const index = () => {
   const copyLink = () => {
     if (process.browser) {
       var inputc = document.body.insertAdjacentElement(
-        "beforebegin",
-        document.createElement("input")
+        'beforebegin',
+        document.createElement('input')
       );
       inputc.value = window.location.href;
       inputc.focus();
       inputc.select();
-      document.execCommand("copy");
+      document.execCommand('copy');
       inputc.parentNode.removeChild(inputc);
-      toast.success("Link Copied");
+      toast.success('Link Copied');
     }
   };
   const downloadMusic = async (id) => {
-    const res = await axios.patch(`https://vovoca.herokuapp.com/api/music/download/${id}`)
+    const res = await axios.patch(
+      `https://vovoca.herokuapp.com/api/music/download/${id}`
+    );
     console.log(res);
-  }
+  };
 
   if (!music)
     return (
@@ -58,22 +79,38 @@ const index = () => {
         <title>VOVOCA | {music.name}</title>
       </Head>
       <div className={style.container}>
-        <input type="text" id="myInput" style={{ visibility: "hidden" }} />
+        <input type="text" id="myInput" style={{ visibility: 'hidden' }} />
         <div className={style.card}>
           <img className={style.background__image} src={music.image}></img>
           <img className={style.image} src={music.image}></img>
           <div className={style.buttons}>
+<<<<<<< HEAD
             <Link href="/allMusic">
               <button>
+=======
+            <Link href="/allMusic" replace>
+              <button className={style.single_music_button}>
+>>>>>>> 9f9ac389bff1b22e63aeb25394cae9737e6f92a6
                 <HiViewList />
               </button>
             </Link>
-            <a href={`data:audio/mp3;base64,${Buffer.from(music.audiobuffer.data).toString("base64")}`} download={music.name}>
-              <button onClick={() => downloadMusic(music._id)}>
-                <HiCloudDownload />
-              </button>
-            </a>
+
             <button
+              onClick={() => downloadMusic(music._id)}
+              className={style.single_music_button}
+            >
+              <a
+                href={`data:audio/mp3;base64,${Buffer.from(
+                  music.audiobuffer.data
+                ).toString('base64')}`}
+                download={music.name}
+              >
+                <HiCloudDownload />
+              </a>
+            </button>
+
+            <button
+              className={style.single_music_button}
               onClick={() => {
                 copyLink();
               }}
@@ -90,12 +127,17 @@ const index = () => {
             </div>
             <div className={style.audio}>
               <AudioPlayer
+                className={[
+                  style.rhap_containe,
+                  style.rhap_controls_section,
+                  style.rhap_main_controls_button,
+                ].join(' ')}
                 autoPlayAfterSrcChange={false}
                 src={`data:audio/mp3;base64,${Buffer.from(
                   music.audiobuffer?.data
-                ).toString("base64")}`}
+                ).toString('base64')}`}
                 onError={(e) => {
-                  toast.error("Internal Server Error");
+                  toast.error('Oops! Something went wrong');
                 }}
               />
             </div>

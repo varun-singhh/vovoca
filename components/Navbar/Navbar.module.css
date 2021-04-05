@@ -75,7 +75,7 @@
   }
   .mobile__header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   .butn {
@@ -129,18 +129,15 @@
     font-size: x-large;
   }
   .text_mobile {
-    display: none;
-  }
-  .text_mobile:hover {
-    display: block;
-    font-size: large;
+    font-size: xx-small;
+    display: inline;
   }
   .navtext {
       display: flex;
       flex-direction: column;
       justify-content: start !important;
-      margin-bottom: -5% !important;
-      align-content: center;
+      margin-bottom: -6% !important;
+      align-items: center;
   }
   .dashcontent_mobile {
     height: fit-content;

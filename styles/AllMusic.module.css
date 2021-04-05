@@ -2,7 +2,7 @@
   min-height: 75vh;
   width: 100%;
   padding: 0 2em;
-  margin: 5em 0;
+  margin: 3em 0;
 }
 
 .container > p {
@@ -21,9 +21,11 @@
   display: inline-block;
   padding-left: 0;
   cursor: pointer;
+  outline: none;
 }
 .pagination > li {
   list-style: none;
+  outline: none;
 }
 .pagination > li > a,
 .pagination > li > span {
@@ -34,7 +36,7 @@
   text-decoration: none;
   color: wheat;
   border-radius: 50%;
-
+  outline: none;
   margin-left: 10px;
   background: linear-gradient(136deg, #2d3135 0%, #4c4f54 44% 56%, #232a30 92%)
     100% 100%/200% 200%;
@@ -44,7 +46,7 @@
   color: gray;
   background: wheat;
   font-weight: 500;
-  border-color: #1e7e34;
+  outline: none;
 }
 
 @media only screen and(max-width: 600px) {

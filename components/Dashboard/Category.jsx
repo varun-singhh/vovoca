@@ -2,7 +2,6 @@ import axios from 'axios'
 import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
 import React, {useEffect, useState} from 'react'
 import style from "./Category.module.css"
-
 const Category = () => {
     
    
@@ -19,7 +18,6 @@ const Category = () => {
         
         
     }
-
      function handleClick(e, category){
          if(process.browser){
          
