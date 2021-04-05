@@ -8,12 +8,10 @@ import Footer from "../../../components/homepage/Footer/Footer";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
 import { HiViewList, HiCloudDownload, HiShare } from "react-icons/hi";
-import Link from "next/link";
+import Link from 'next/link'
 import Head from "next/head";
-import fileDownload from "js-file-download";
 import axios from "axios";
-
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const index = () => {
@@ -28,29 +26,22 @@ const index = () => {
   const copyLink = () => {
     if (process.browser) {
       var inputc = document.body.insertAdjacentElement(
-        "beforebegin",
-        document.createElement("input")
+        'beforebegin',
+        document.createElement('input')
       );
       inputc.value = window.location.href;
       inputc.focus();
       inputc.select();
-      document.execCommand("copy");
+      document.execCommand('copy');
       inputc.parentNode.removeChild(inputc);
-      toast.success("Link Copied");
+      toast.success('Link Copied');
     }
   };
-
-  const downloadMusic = async (music) => {
-    fileDownload(
-      `data:audio/wav;base64,${Buffer.from(music.audiobuffer.data).toString(
-        "base64"
-      )}`,
-      `${music.name}.wav`
-    );
+  const downloadMusic = async (id) => {
     const res = await axios.patch(
-      `https://vovoca.herokuapp.com/api/music/download/${music._id}`
+      `https://vovoca.herokuapp.com/api/music/download/${id}`
     );
-    console.log(res.data.downloadcount);
+    console.log(res);
   };
 
   if (!music)
@@ -68,27 +59,34 @@ const index = () => {
       <Head>
         <title>VOVOCA | {music.name}</title>
       </Head>
-      <ToastContainer position="top-center" />
       <div className={style.container}>
-        <input type="text" id="myInput" style={{ visibility: "hidden" }} />
+        <input type="text" id="myInput" style={{ visibility: 'hidden' }} />
         <div className={style.card}>
           <img className={style.background__image} src={music.image}></img>
           <img className={style.image} src={music.image}></img>
           <div className={style.buttons}>
-            <Link href="/allMusic" replace>
-              <button>
+            <Link href="/allMusic">
+              <button className={style.single_music_button}>
                 <HiViewList />
               </button>
             </Link>
+
             <button
-              disabled={music.audiobuffer.data ? false : true}
-              onClick={() => {
-                downloadMusic(music);
-              }}
+              onClick={() => downloadMusic(music._id)}
+              className={style.single_music_button}
             >
-              <HiCloudDownload />
+              <a
+                href={`data:audio/mp3;base64,${Buffer.from(
+                  music.audiobuffer.data
+                ).toString('base64')}`}
+                download={music.name}
+              >
+                <HiCloudDownload />
+              </a>
             </button>
+
             <button
+              className={style.single_music_button}
               onClick={() => {
                 copyLink();
               }}
@@ -98,19 +96,24 @@ const index = () => {
           </div>
           <div className={style.other__images}>
             <div className={style.detes}>
-              <h1 className={style.name}>{music.name}</h1>
+              <h1 className={style.name}>{music.name.charAt(0).toUpperCase() + music.name.slice(1)}</h1>
               <h4 className={style.artist}>
                 Music by: <span>{music.artist}</span>
               </h4>
             </div>
             <div className={style.audio}>
               <AudioPlayer
+                className={[
+                  style.rhap_containe,
+                  style.rhap_controls_section,
+                  style.rhap_main_controls_button,
+                ].join(' ')}
                 autoPlayAfterSrcChange={false}
-                src={`data:audio/wav;base64,${Buffer.from(
+                src={`data:audio/mp3;base64,${Buffer.from(
                   music.audiobuffer?.data
-                ).toString("base64")}`}
+                ).toString('base64')}`}
                 onError={(e) => {
-                  toast.error("Internal Server Error");
+                  toast.error('Oops! Something went wrong');
                 }}
               />
             </div>

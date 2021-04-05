@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import style from './Login.module.css';
 import {registerUser}  from "../../../actions/authAction"
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Signup = (props) => {
   const [register,setRegister]=useState({
@@ -17,30 +17,29 @@ const Signup = (props) => {
   const handleSubmit= async (e)=>{
     e.preventDefault();
     if (register.email===""|| register.username==="") {
-      toast("All feilds are Mandatory",{className: style.toast_background})
+      toast.error("All feilds are Mandatory")
     }
     else if(register.password.length<8 || register.password.length>16){
-      toast("Password length should be between 8-16 characters",{className: style.toast_background})
+      toast.error("Password length should be between 8-16 characters")
     }
     else if(register.password.length<8 || register.password.length>16){
-      toast("Password length should be between 8-16 characters",{className: style.toast_background})
+      toast.error("Password length should be between 8-16 characters")
     }
     else{
       const reg = await registerUser(register.username,register.email,register.password)
       if(reg==="Username already exists" || reg==="Email already registered"){
-        toast(reg,{className: style.toast_background})
+        toast.error(reg)
       }
 
       else{
         props.onCloseModal()
-        toast("Account Created Successfully, Login to Enter",{className: style.toast_success_background})
+        toast.success("Account Created Successfully, Login to Enter")
       }
       
     }
   }
     return (
         <div>
-      <ToastContainer hideProgressBar={true} closeButton={false} position="top-center"/>
       <form className={style.get__in__touch__form} >
         <div className={style.form__row}>
             <h1 style={{color:"wheat"}}>Create Account</h1>

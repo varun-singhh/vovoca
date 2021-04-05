@@ -4,6 +4,7 @@ import { Modal } from 'react-responsive-modal';
 import Login from './Login';
 import style_modal from '../../../styles/Modal.module.css';
 import Signup from './Signup';
+import Link from 'next/link'
 const AuthPopup = ({isopen}) => {
     const [open, setOpen] = useState(isopen);
 
@@ -84,11 +85,11 @@ const AuthPopup = ({isopen}) => {
                 
               <p style={{ color: 'gray', fontSize: 'x-small' }}>
                 By submitting this form, you confirm that you agree to our{' '}
-                <Link href="privacy-policy">
+                <a href="/privacy-policy">
                   <span style={{ color: 'wheat', cursor: 'pointer' }}>
                     Terms of Service and Privacy Policy
                   </span>
-                </Link>
+                </a>
               </p>
               </>
             )}

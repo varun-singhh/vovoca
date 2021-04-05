@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './Login.module.css';
 import { useSelector } from 'react-redux';
 import { loginUser } from '../../../actions/authAction';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
 const Login = (props) => {
@@ -22,14 +22,10 @@ const Login = (props) => {
     if (category==="success") {
       console.log(category)
       
-      toast('Loggedin Successfully', {
-        className: style.toast_success_background,
-      });
+      toast.success('Loggedin Successfully');
     } else {
-      console.log(error.err)
-      toast(error.err, {
-        className: style.toast_background,
-      });
+      console.log(error)
+      toast.error(error.err || "Something went wrong");
     }
   }
   
@@ -37,7 +33,7 @@ const Login = (props) => {
     e.preventDefault();
    
     if (login.email===""|| login.password==="") {
-      toast("All feilds are Mandatory",{className: style.toast_background})
+      toast.error("All feilds are Mandatory")
     }
     else{
       dispatch(loginUser(login.email, login.password)).then((res)=>{
@@ -64,11 +60,6 @@ const Login = (props) => {
   };
   return (
     <div>
-      <ToastContainer
-        hideProgressBar={true}
-        closeButton={false}
-        position="top-center"
-      />
       <form className={style.get__in__touch__form}>
         <div className={style.form__row}>
           <h1 style={{ color: 'wheat' }}>Login</h1>

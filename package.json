@@ -10,7 +10,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "js-cookie": "^2.2.1",
-    "js-file-download": "^0.4.12",
     "netlify": "^6.1.16",
     "next": "10.0.9",
     "nextjs-redirect": "^5.0.2",
