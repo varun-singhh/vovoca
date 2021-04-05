@@ -3,10 +3,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
 .category__card__icon {
-  height: 15rem;
-  width: 15rem;
+  height: 11rem;
+  width: 11rem;
   cursor: pointer;
   border-radius: 10px;
   transition: transform ease-in-out 0.5s;

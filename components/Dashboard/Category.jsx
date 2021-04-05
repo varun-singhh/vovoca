@@ -2,7 +2,7 @@ import axios from 'axios'
 import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
 import React, {useEffect, useState} from 'react'
 import style from "./Category.module.css"
-
+import {AiFillTag } from "react-icons/ai";
 const Category = () => {
     
    
@@ -18,7 +18,6 @@ const Category = () => {
         
         
     }
-
      function handleClick(e, category){
          if(process.browser){
          
@@ -39,7 +38,9 @@ const Category = () => {
             console.log(selected_category)
          }
          
+
      }
+     console.log(selected_category.length)
     return (
         <div className={style.category}>
             <div className={style.container}>
@@ -120,6 +121,19 @@ const Category = () => {
                     
                 </div>
 
+            </div>
+            {/* {selected_category.length>0?(
+                selected_category.map((res,index)=>(
+                    <p key={index}><AiFillTag/>{res}</p>
+                ))):(
+                    <p>Null<p>
+                )} */}
+            
+            {selected_category.length>0?(selected_category.forEach((res,index)=>{
+                <p key={index}><AiFillTag/>res</p>
+            })):(<p>Null</p>)}
+            <div>
+                <p>Selected Category</p>
             </div>
             <div className={style.search_btn}>
                 <button onClick={()=>getCategories()}>Search</button>

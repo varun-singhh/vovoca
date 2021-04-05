@@ -8,11 +8,6 @@ import {IoIosShareAlt} from 'react-icons/io'
 const music = ({ music }) => {
   return (
     <div className={style.row}>
-      {/* <ToastContainer
-        hideProgressBar={true}
-        closeButton={false}
-        position="top-center"
-      /> */}
       <img
         className={style.image}
         src={`https://source.unsplash.com/random/300x200?sig=${Math.random()}`}
@@ -30,7 +25,7 @@ const music = ({ music }) => {
           toast.success(`Playing ${music.name}`);
         }}
         onError={(e) => {
-          toast.error('Internal Server Error');
+          toast.error('Something went wrong');
         }}
       />
       <div className={style.details}>
