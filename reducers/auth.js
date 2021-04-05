@@ -5,6 +5,7 @@ import {
   LOAD_USER,
   FETCH_USER,
 } from "../actions/type";
+import cookie from 'js-cookie'
 
 const initialState = {
   isAuthenticated: false,
@@ -20,7 +21,7 @@ export default (state = initialState, action) => {
         loading: true,
       };
     case USER_LOGIN:
-      localStorage.setItem("token", action.payload.token);
+      cookie.set("token", action.payload.token);
       return {
         ...state,
         isAuthenticated: true,
@@ -41,7 +42,7 @@ export default (state = initialState, action) => {
         ...state,
         isAuthenticated: true,
         loading: !state.loading,
-        token: localStorage.getItem("token"),
+        token: cookie.get("token"),
         data: action.payload,
       };
     default:

@@ -61,7 +61,7 @@ const allMusic = () => {
             />
           </div>
         ) : (
-          <p>*Login to listen more*</p>
+           !music.loading && <p>*Login to listen more*</p>
         )}
       </div>
 

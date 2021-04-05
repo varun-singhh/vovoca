@@ -1,8 +1,9 @@
 import React from 'react'
+import cookie from 'js-cookie'
 
 const Logout = () => {
     const logout=()=>{
-        localStorage.removeItem("token");
+        cookie.remove("token");
         if(process.browser){
             window.location.href="/"
         }

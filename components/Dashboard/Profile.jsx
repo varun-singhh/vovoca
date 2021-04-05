@@ -4,6 +4,8 @@ import style from './Profile.module.css';
 import { FaMusic, FaUpload } from 'react-icons/fa';
 import Axios from 'axios';
 import setAuthToken from '../../actions/utils/setAuthToken';
+import cookie from 'js-cookie'
+
 import style_modal from '../../styles/Modal.module.css';
 import { Modal } from 'react-responsive-modal';
 import { FaTimes } from 'react-icons/fa';
@@ -25,8 +27,8 @@ const Profile = () => {
     formdata.append('music', file);
     formdata.append('tags', 'hip-hop');
 
-    setAuthToken(localStorage.getItem('token'));
-
+    setAuthToken(cookie.get("token"));
+   
     Axios.post('https://vovoca.herokuapp.com/api/admin', formdata)
       .then((res) => {
         console.log(res.data);
