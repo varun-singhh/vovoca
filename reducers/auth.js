@@ -1,10 +1,16 @@
-import { USER_LOGIN, LOADING ,USER_LOGIN_FAILED,LOAD_USER} from '../actions/type';
+import {
+  USER_LOGIN,
+  LOADING,
+  USER_LOGIN_FAILED,
+  LOAD_USER,
+  FETCH_USER,
+} from "../actions/type";
 
 const initialState = {
   isAuthenticated: false,
   loading: false,
   token: null,
-  data:null,
+  data: null,
 };
 export default (state = initialState, action) => {
   switch (action.type) {
@@ -14,13 +20,13 @@ export default (state = initialState, action) => {
         loading: true,
       };
     case USER_LOGIN:
-      localStorage.setItem('token', action.payload.token);
+      localStorage.setItem("token", action.payload.token);
       return {
         ...state,
         isAuthenticated: true,
         loading: !state.loading,
         token: action.payload.token,
-        data:action.payload,
+        data: action.payload,
       };
     case USER_LOGIN_FAILED:
       return {
@@ -28,7 +34,15 @@ export default (state = initialState, action) => {
         isAuthenticated: false,
         loading: !state.loading,
         token: null,
-        data:null,
+        data: null,
+      };
+    case FETCH_USER:
+      return {
+        ...state,
+        isAuthenticated: true,
+        loading: !state.loading,
+        token: localStorage.getItem("token"),
+        data: action.payload,
       };
     default:
       return state;

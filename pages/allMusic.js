@@ -7,9 +7,9 @@ import Loader from "../components/Loader/Loader";
 import Music from "../components/music/music";
 import ReactPaginate from "react-paginate";
 import { LOADING } from "../actions/type";
+import Head from "next/head";
 
 const allMusic = () => {
-  const [currentpage, setCurrentPage] = useState(1);
   const music = useSelector((state) => state.music);
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -25,17 +25,22 @@ const allMusic = () => {
 
   if (!music.musics)
     return (
-      <div className={style.container}>
-        <Loader loading={true} />
-      </div>
+      <>
+        <div className={style.container}>
+          <Loader loading={true} />
+        </div>
+        <Footer />
+      </>
     );
   return (
     <>
+      <Head>
+        <title>VOVOCA | Royalty Free Music</title>
+      </Head>
       <div className={style.container}>
-        {music.musics.data.map((m) => (
-          <Music music={m} />
-        ))}
-        {console.log(music.musics.data, music.musics.totalPages)}
+        {!music.loading ? music.musics.data?.map((m) => (console.log(m), (<Music music={m} />))) : (
+            <Loader loading={true} />
+        )}
         {auth.isAuthenticated ? (
           <div className={style.pagination_container}>
             <ReactPaginate

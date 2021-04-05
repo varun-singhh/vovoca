@@ -8,11 +8,18 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
-  border-radius: 45px;
-  background: linear-gradient(136deg, #2d3135 0%, #4c4f54 44% 56%, #232a30 92%)
-    100% 100%/200% 200%;
-  box-shadow: 6px 6px 22px rgba(21, 22, 24, 0.65),
-    -3px -1px 16px rgba(195, 200, 205, 0.06);
+  border-radius: 25px;
+  background-image: linear-gradient(
+      135deg,
+      #535a5f 0%,
+      #5d5d5e 49%,
+      #5b5f63 100%
+    ),
+    linear-gradient(139deg, #ffffff 1%, #2a2c2f 45%, #a7a7a7 75%);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
+      -4px -4px 15px rgb(195 200 205 / 4%);
 }
 .image {
   border-radius: 50%;

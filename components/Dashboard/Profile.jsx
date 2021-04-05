@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import style from './Profile.module.css';
 import { FaMusic } from 'react-icons/fa';
 import Axios from 'axios';
+import setAuthToken from '../../actions/utils/setAuthToken';
+
 const Profile = () => {
   const authenticated = useSelector((state) => state.auth);
   const [file, setFile] = useState([]);
@@ -11,13 +13,11 @@ const Profile = () => {
     const formdata = new FormData();
     formdata.append('name', 'Check');
     formdata.append('music', file);
-    formdata.append('tags', ['hip-hop']);
-    Axios.post('https://vovoca.herokuapp.com/api/admin', formdata, {
-      headers: {
-        'Content-Type': 'multipart/form-data',
-        'x-auth-token': localStorage.getItem('token'),
-      },
-    })
+    formdata.append('tags', 'hip-hop');
+
+    setAuthToken(localStorage.getItem("token"));
+   
+    Axios.post('https://vovoca.herokuapp.com/api/admin', formdata)
       .then((res) => {
         console.log(res.data);
       })
@@ -28,14 +28,13 @@ const Profile = () => {
   };
   return (
     <div>
-      <h3>Hi, {authenticated.data.username}</h3>
+      <h3>Hi, {authenticated.data?.username}</h3>
       <div className={style.profile_component}>
         <span style={{ color: 'wheat' }}>Username:</span>
-        <p>@{authenticated.data.username}</p>
+        <p>@{authenticated.data?.username}</p>
         <span style={{ color: 'wheat' }}>Email Id:</span>
-        <p>{authenticated.data.email}</p>
-        <span style={{ color: 'wheat' }}>Vovoca Unique Id:</span>
-        <p>{authenticated.data._id}</p>
+        <p>{authenticated.data?.email}</p>
+        
       </div>
 
       <div className={style.upload_box}>

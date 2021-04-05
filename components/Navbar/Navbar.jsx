@@ -6,7 +6,7 @@ import Login from '../homepage/Header/Login';
 import style_modal from '../../styles/Modal.module.css';
 import Link from 'next/link';
 import Signup from '../homepage/Header/Signup';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import {
   FaUserAlt,
   FaPowerOff,
@@ -17,11 +17,14 @@ import {
 import { IoMdLogIn,IoMdTrendingUp } from 'react-icons/io';
 import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
 import { BsFillShieldLockFill, BsFillPeopleFill,BsFillMusicPlayerFill } from 'react-icons/bs';
+import { getUserDetails } from '../../actions/authAction';
 // RiDashboard2Line
 // BsFillShieldLockFill
 // AiFillHome
+
 const Navbar = () => {
   const [nav, setNav] = useState('profile');
+  const dispatch = useDispatch()
   const authenticated = useSelector((state) => state.auth);
   const [scrollState, setScrollState] = useState('top');
   useEffect(() => {
@@ -39,10 +42,21 @@ const Navbar = () => {
       }
     });
 
+   
+
     return () => {
       document.removeEventListener('scroll', listener);
     };
   }, [scrollState]);
+
+  useEffect(() => {
+    if(localStorage.getItem("token")){
+      console.log("hello")
+      dispatch(getUserDetails())
+      
+    }
+    
+  }, [])
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
@@ -81,7 +95,7 @@ const Navbar = () => {
         </div>
         <hr className="divider"></hr>
 
-        {method === 'login' ? <Login /> : <Signup />}
+        {method === 'login' ? <Login onCloseModal={onCloseModal} /> : <Signup onCloseModal={onCloseModal}/>}
         <br />
         <hr className="divider"></hr>
         {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
@@ -115,6 +129,7 @@ const Navbar = () => {
               <p style={{ color: 'gray', fontSize: 'x-small' }}>
                 By submitting this form, you confirm that you agree to our{' '}
                 <Link href="privacy-policy">
+                
                   <span style={{ color: 'wheat', cursor: 'pointer' }}>
                     Terms of Service and Privacy Policy
                   </span>

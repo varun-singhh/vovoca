@@ -1,13 +1,28 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import style from "./Trending.module.css"
+import {getTrendingMusic} from '../../actions/musicActions'
+import Music from "../../components/music/music";
+import axios from 'axios';
+import Loader from '../Loader/Loader';
 
 const Trending = () => {
+    const dispatch = useDispatch()
+    const trending_music = useSelector(state => state.music.trending_music)
+    console.log(trending_music)
+    useEffect(() => {
+        dispatch(getTrendingMusic())
+    }, [])
+
     return (
         <div>
             <h1>This is Trending Component</h1>
-            <div>
+            {console.log(trending_music)}
+            { trending_music ?((trending_music.map((i)=>(
+                <Music music={i}/>
                 
-            </div>
+            )))):(<Loader loading={true}/>)
+           }
         </div>
     )
 }

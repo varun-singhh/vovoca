@@ -10,7 +10,7 @@ const testimonial = () => {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
           integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
       </Head>
       <div className={styles.container}>
@@ -19,14 +19,14 @@ const testimonial = () => {
           <div className={styles.testimonial}>
             <article className={styles.testimonial__article}>
               <div className={styles.testimonial__content}>
-                <span>Making Your Life Easier</span>
+                <span>Making My Life Easier</span>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing.
+                  Loving every bit of Vovoca. Thanks to the website now I can
+                  use and upload these sounds and beats to make songs for
+                  my local dance group
                 </p>
-                <span>John Doue, </span>
-                <span>SEO "Company"</span>
+                <span>Devansh Kaushik, </span>
+                <span>DNRevolution</span>
               </div>
               <div className={styles.testimonial__img}>
                 <img src="/android-icon-36x36.png" />
@@ -36,14 +36,14 @@ const testimonial = () => {
           <div className={styles.testimonial}>
             <article className={styles.testimonial__article}>
               <div className={styles.testimonial__content}>
-                <span>Making Your Life Easier</span>
+                <span>My Reels got more sexy</span>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing.
+                  After recording and editing my IG's reels, hardest part was to 
+                  get throught the audio part. Good music wasn't available 
+                  anywhere. Vovoca solved both of my problems
                 </p>
-                <span>John Doue, </span>
-                <span>SEO "Company"</span>
+                <span>Sheril Sonkar, </span>
+                <span>IG Influencer</span>
               </div>
               <div className={styles.testimonial__img}>
                 <img src="/android-icon-36x36.png" />
@@ -53,14 +53,14 @@ const testimonial = () => {
           <div className={styles.testimonial}>
             <article className={styles.testimonial__article}>
               <div className={styles.testimonial__content}>
-                <span>Making Your Life Easier</span>
+                <span>Nice Music for free</span>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing.
+                  Searching music was always a hard job but not anymore
+                  I am more than happy with the filter and sorting feature of
+                  vovoca. It is awesome
                 </p>
-                <span>John Doue, </span>
-                <span>SEO "Company"</span>
+                <span>Amolik Vivian, </span>
+                <span>ChaiWala</span>
               </div>
               <div className={styles.testimonial__img}>
                 <img src="/android-icon-36x36.png" />
@@ -72,14 +72,14 @@ const testimonial = () => {
           <div className={styles.testimonial}>
             <article className={styles.testimonial__article}>
               <div className={styles.testimonial__content}>
-                <span>Making Your Life Easier</span>
+                <span>Better than Youtube</span>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing.
+                  I'm an artist and I know how hard it is to find a platform
+                  like vovoca where your music finds its right destination
+                  Wishing vovoca more success
                 </p>
-                <span>John Doue, </span>
-                <span>SEO "Company"</span>
+                <span>DJ John</span>
+                <span>Ahuja Music</span>
               </div>
               <div className={styles.testimonial__img}>
                 <img src="/android-icon-36x36.png" />
@@ -89,14 +89,14 @@ const testimonial = () => {
           <div className={styles.testimonial}>
             <article className={styles.testimonial__article}>
               <div className={styles.testimonial__content}>
-                <span>Making Your Life Easier</span>
+                <span>Literal Chills</span>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing.
+                  All my hard time all these years could have been less hard only 
+                  if I would have founded vovoca earlier. It is an
+                  amazing website with just everything I need
                 </p>
-                <span>John Doue, </span>
-                <span>SEO "Company"</span>
+                <span>Archit Sharma</span>
+                <span>Head, ACM-JUIT</span>
               </div>
               <div className={styles.testimonial__img}>
                 <img src="/android-icon-36x36.png" />
@@ -106,14 +106,14 @@ const testimonial = () => {
           <div className={styles.testimonial}>
             <article className={styles.testimonial__article}>
               <div className={styles.testimonial__content}>
-                <span>Making Your Life Easier</span>
+                <span>Searching music just got fun</span>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore. Lorem ipsum
-                  dolor sit amet, consectetur adipiscing.
+                  I design music for my company and its always great to find some
+                  motivation. Vovoca gave it to me, that to free. I owe them 
+                  a lot for all my music
                 </p>
-                <span>John Doue, </span>
-                <span>SEO "Company"</span>
+                <span>Andy Cortrell, </span>
+                <span>Tayio.ai</span>
               </div>
               <div className={styles.testimonial__img}>
                 <img src="/android-icon-36x36.png" />

@@ -1,9 +1,11 @@
 import React from 'react'
-import Link from 'next/link';
 
 const Logout = () => {
     const logout=()=>{
-        localStorage.setItem("token",null);
+        localStorage.removeItem("token");
+        if(process.browser){
+            window.location.href="/"
+        }
     }
     return (
         <div>

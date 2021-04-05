@@ -5,8 +5,13 @@ import { loginUser } from '../../../actions/authAction';
 import { ToastContainer, toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
+<<<<<<< HEAD
 const Login = () => {
   
+=======
+const Login = (props) => {
+  console.log(props)
+>>>>>>> c28ea2988d7d108bde407ddb9c44c57d390f19b7
   const dispatch = useDispatch();
   const error = useSelector((state) => state.error);
   const authenticate = useSelector((state) => state.auth.isAuthenticated);
@@ -20,10 +25,19 @@ const Login = () => {
   };
   const notify=(category)=>{
     if (category==="success") {
+<<<<<<< HEAD
+=======
+      console.log(category)
+      
+>>>>>>> c28ea2988d7d108bde407ddb9c44c57d390f19b7
       toast('Loggedin Successfully', {
         className: style.toast_success_background,
       });
     } else {
+<<<<<<< HEAD
+=======
+      console.log(error.err)
+>>>>>>> c28ea2988d7d108bde407ddb9c44c57d390f19b7
       toast(error.err, {
         className: style.toast_background,
       });
@@ -37,12 +51,34 @@ const Login = () => {
       toast("All feilds are Mandatory",{className: style.toast_background})
     }
     else{
+<<<<<<< HEAD
       dispatch(loginUser(login.email, login.password));
       if (authenticate===true) {
         notify("success");
       } else {
         notify("error");
       }
+=======
+      dispatch(loginUser(login.email, login.password)).then((res)=>{
+        if (res===true) {
+          console.log(res)
+          props.onCloseModal()
+          notify("success");
+        } else {
+          notify("error");
+        }
+      });
+  
+      // if (x===true) {
+      //   console.log(authenticate)
+      //   props.onCloseModal()
+      //   notify("success");
+      // } else {
+      //   //props.onCloseModal()
+      //   console.log(x)
+      //   notify("error");
+      // }
+>>>>>>> c28ea2988d7d108bde407ddb9c44c57d390f19b7
     }
     
   };

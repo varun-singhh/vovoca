@@ -3,14 +3,20 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import style from './MusicCard.module.css';
 import { toast, ToastContainer } from 'react-toastify';
-import {IoIosShareAlt} from 'react-icons/io'
+import { FaGetPocket } from 'react-icons/fa'
+import Link from 'next/link'
 
-const music = ({ music }) => {
+const music = ({ music, history }) => {
   return (
     <div className={style.row}>
+      {/* <ToastContainer
+        hideProgressBar={true}
+        closeButton={false}
+        position="top-center"
+      /> */}
       <img
         className={style.image}
-        src={`https://source.unsplash.com/random/300x200?sig=${Math.random()}`}
+        src={music.image}
         alt="Ran"
         height="70px"
         width="70px"
@@ -21,18 +27,15 @@ const music = ({ music }) => {
         src={`data:audio/wav;base64,${Buffer.from(
           music.audiobuffer?.data
         ).toString('base64')}`}
-        onPlay={(e) => {
-          toast.success(`Playing ${music.name}`);
-        }}
         onError={(e) => {
-          toast.error('Something went wrong');
+          toast.error('Internal Server Error');
         }}
       />
-      <div className={style.details}>
-        <p className={style.common}>Music</p>
-        <p className={style.bold}>{music.name}</p>
-      </div>
-      <IoIosShareAlt/>
+      <Link href={`/music/${encodeURIComponent(music._id)}`} replace>
+        <button style={{cursor: 'pointer'}}>
+          <FaGetPocket style={{ color: 'wheat', fontSize: '35px' }} />
+        </button>
+      </Link>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 .profile_component{
   display:  flex;
-  flex-direction: column;
-  align-items:  flex-start;
+  align-items: center;
   color:  gray;
 }
 .custom_file_input::-webkit-file-upload-button{
@@ -23,12 +22,14 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 1.5rem 1.5rem;
+  padding: 2.5rem 1.5rem;
   margin-top: 0.5rem;
   border: 3px dashed #595a5a;
   border-radius: .5rem;
-  transition: background-color .25s ease-out;
-    
+  transition: background-color .25s ease-out;   
+}
+.upload_box h4{
+  margin-top: 0;
 }
 .upload_button{
   margin-top: 0.7rem;

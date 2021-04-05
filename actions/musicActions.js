@@ -1,6 +1,13 @@
 import axios from "axios";
 import cookie from "js-cookie";
-import { GET_MUSIC, LOADING } from "./type";
+import {
+  GET_MUSIC,
+  LOADING,
+  GET_MUSIC_SINGLE,
+  UPLOADED_MUSIC,
+  GET_LATEST_MUSIC,
+  GET_TRENDING_MUSIC,
+} from "./type";
 
 export const getAllMusic = (page) => async (dispatch) => {
   try {
@@ -8,9 +15,69 @@ export const getAllMusic = (page) => async (dispatch) => {
     const res = await axios.get(
       `https://vovoca.herokuapp.com/api/music/?page=${page}&limit=5`
     );
-    console.log(res.data);
     dispatch({
       type: GET_MUSIC,
+      payload: res.data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getSingleMusic = (id) => async (dispatch) => {
+  try {
+    dispatch({ type: LOADING });
+    const res = await axios.get(`https://vovoca.herokuapp.com/api/music/${id}`);
+    dispatch({
+      type: GET_MUSIC_SINGLE,
+      payload: res.data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getTrendingMusic = () => async (dispatch) => {
+  try {
+    dispatch({ type: LOADING });
+    const res = await axios.get(
+      `https://vovoca.herokuapp.com/api/music/trending`
+    );
+    dispatch({
+      type: GET_TRENDING_MUSIC,
+      payload: res.data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getLatestMusic = () => async (dispatch) => {
+  try {
+    dispatch({ type: LOADING });
+    const res = await axios.get(
+      `https://vovoca.herokuapp.com/api/music/latest`
+    );
+    console.log(res.data);
+    dispatch({
+      type: GET_LATEST_MUSIC,
+      payload: res.data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getUploadedMusic = (page = 1) => async (dispatch) => {
+  console.log(page);
+  try {
+    setAuthToken(localStorage.getItem("token"))
+    const res = await axios.get(
+      `https://vovoca.herokuapp.com/api/admin/uploaded?page=${page}`
+    );
+    console.log(res.data.data);
+    dispatch({
+      type: UPLOADED_MUSIC,
       payload: res.data,
     });
   } catch (error) {
