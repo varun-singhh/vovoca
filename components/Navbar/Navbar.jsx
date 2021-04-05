@@ -4,6 +4,7 @@ import { Modal } from 'react-responsive-modal';
 import { FaTimes, FaUserCircle } from 'react-icons/fa';
 import Login from '../homepage/Header/Login';
 import style_modal from '../../styles/Modal.module.css';
+import cookie from 'js-cookie'
 import Link from 'next/link';
 import Signup from '../homepage/Header/Signup';
 import { useSelector, useDispatch } from 'react-redux';
@@ -18,6 +19,7 @@ import { IoMdLogIn,IoMdTrendingUp } from 'react-icons/io';
 import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
 import { BsFillShieldLockFill, BsFillPeopleFill,BsFillMusicPlayerFill } from 'react-icons/bs';
 import { getUserDetails } from '../../actions/authAction';
+import Cookies from 'js-cookie';
 // RiDashboard2Line
 // BsFillShieldLockFill
 // AiFillHome
@@ -50,7 +52,7 @@ const Navbar = () => {
   }, [scrollState]);
 
   useEffect(() => {
-    if(localStorage.getItem("token")){
+    if(cookie.get("token")){
       console.log("hello")
       dispatch(getUserDetails())
       
@@ -128,12 +130,12 @@ const Navbar = () => {
 
               <p style={{ color: 'gray', fontSize: 'x-small' }}>
                 By submitting this form, you confirm that you agree to our{' '}
-                <Link href="privacy-policy">
+                <a href="/privacy-policy">
                 
                   <span style={{ color: 'wheat', cursor: 'pointer' }}>
                     Terms of Service and Privacy Policy
                   </span>
-                </Link>
+                </a>
               </p>
             </>
           )}
@@ -179,12 +181,9 @@ const Navbar = () => {
             <Link href="/testimonial">
               <li className={style.list__items}>Testimonials</li>
             </Link>
-            <Link href="/privacy-policy">
-              <li className={style.list__items}>Privacy Policy</li>
-            </Link>
             {authenticated.isAuthenticated === true ? (
               <Link href="/dashboard">
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                   <FaUserCircle
                     style={{
                       fontSize: '3.1em',
@@ -194,7 +193,12 @@ const Navbar = () => {
                       marginBottom: '-1rem',
                     }}
                   />
-                </div>
+                </div> */}
+                <button style={{ marginLeft: '25px', padding: '0.4em 1em' }} id="dashboard">
+                  <p htmlFor="dashboard" style={{ color: 'wheat', padding: 0, margin: 0, display: 'flex', alignItems: 'center' }}>
+                    <FaUserCircle style={{marginRight: '10px'}}/>Dashboard
+                  </p>
+                </button>
               </Link>
             ) : (
               <button

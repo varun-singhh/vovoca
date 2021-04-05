@@ -6,6 +6,7 @@ import store from '../store'
 import { useMediaQuery } from 'react-responsive'
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Tablet = () => {
   const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 })
@@ -21,7 +22,18 @@ function MyApp({ Component, pageProps }) {
     <Modal open={true} onClose={false} center closeIcon={closeIcon}>
 <h2>This Web service is not available in Tablet mode :(</h2>
 </Modal>
-</>):(<Provider store={store}>
+    </>) : (<Provider store={store}>
+      <ToastContainer
+      position="top-center"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss={false}
+      draggable={false}
+      pauseOnHover={false}
+      />
       <Navbar/>
       <Component {...pageProps} />
     </Provider>)

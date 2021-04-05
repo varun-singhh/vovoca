@@ -8,6 +8,7 @@ import {
   GET_LATEST_MUSIC,
   GET_TRENDING_MUSIC,
 } from "./type";
+import setAuthToken from './utils/setAuthToken'
 
 export const getAllMusic = (page) => async (dispatch) => {
   try {
@@ -71,7 +72,7 @@ export const getLatestMusic = () => async (dispatch) => {
 export const getUploadedMusic = (page = 1) => async (dispatch) => {
   console.log(page);
   try {
-    setAuthToken(localStorage.getItem("token"))
+    setAuthToken(cookie.get("token"))
     const res = await axios.get(
       `https://vovoca.herokuapp.com/api/admin/uploaded?page=${page}`
     );

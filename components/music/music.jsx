@@ -2,18 +2,13 @@ import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import style from './MusicCard.module.css';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { FaGetPocket } from 'react-icons/fa'
 import Link from 'next/link'
 
 const music = ({ music, history }) => {
   return (
     <div className={style.row}>
-      {/* <ToastContainer
-        hideProgressBar={true}
-        closeButton={false}
-        position="top-center"
-      /> */}
       <img
         className={style.image}
         src={music.image}
@@ -31,7 +26,7 @@ const music = ({ music, history }) => {
           toast.error('Internal Server Error');
         }}
       />
-      <Link href={`/music/${encodeURIComponent(music._id)}`} replace>
+      <Link href={`/music/${encodeURIComponent(music._id)}`}>
         <button style={{cursor: 'pointer'}}>
           <FaGetPocket style={{ color: 'wheat', fontSize: '35px' }} />
         </button>

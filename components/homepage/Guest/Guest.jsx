@@ -36,7 +36,7 @@ const Guest = () => {
             
               <p className={style.song__name}>{i.name}</p>
             
-              <Link href={`/music/${encodeURIComponent(i._id)}`} replace>
+              <Link href={`/music/${encodeURIComponent(i._id)}`}>
               <button style={{cursor: 'pointer'}}>
                   <FaGetPocket style={{ color: 'wheat', fontSize: '35px' }} />
               </button>
@@ -62,7 +62,7 @@ const Guest = () => {
               ></div>
             
               <p className={style.song__name}>{i.name}</p>
-              <Link href={`/music/${encodeURIComponent(i._id)}`} replace>
+              <Link href={`/music/${encodeURIComponent(i._id)}`}>
               <button style={{cursor: 'pointer'}}
              
               >

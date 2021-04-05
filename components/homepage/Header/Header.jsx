@@ -90,9 +90,10 @@ const Header = () => {
 
               <p style={{ color: 'gray', fontSize: 'x-small' }}>
                 By submitting this form, you confirm that you agree to our{' '}
-                  <span style={{ color: 'wheat', cursor: 'pointer' }} onClick={()=>{Router.push('/privacy-policy');location.reload();}}>
+                  <a href="/privacy-policy"><span style={{ color: 'wheat', cursor: 'pointer' }} >
                     Terms of Service and Privacy Policy
-                  </span>
+                    </span>
+                  </a>
               </p>
             </>
           )}

@@ -10,9 +10,8 @@ import "react-h5-audio-player/lib/styles.css";
 import { HiViewList, HiCloudDownload, HiShare } from "react-icons/hi";
 import Link from 'next/link'
 import Head from "next/head";
-import fileDownload from "js-file-download";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const index = () => {
@@ -58,14 +57,13 @@ const index = () => {
       <Head>
         <title>VOVOCA | {music.name}</title>
       </Head>
-      <ToastContainer position="top-center" />
       <div className={style.container}>
         <input type="text" id="myInput" style={{ visibility: "hidden" }} />
         <div className={style.card}>
           <img className={style.background__image} src={music.image}></img>
           <img className={style.image} src={music.image}></img>
           <div className={style.buttons}>
-            <Link href="/allMusic" replace>
+            <Link href="/allMusic">
               <button>
                 <HiViewList />
               </button>
