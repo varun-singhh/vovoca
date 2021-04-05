@@ -4,11 +4,11 @@ const UploadModal = ({ user }) => {
   return (
     <div>
       <div className={style.form__row}>
-        <h1 style={{ color: 'wheat' }}>Login</h1>
+        <h2 style={{ color: 'wheat' }}>Upload Music</h2>
         <div className={style.inputs}>
           <input type="text" placeholder="Enter Name of Music" />
           <input type="text" value={user} disabled />
-          <select>
+          <select multiple>
             <option default>
               Select Tags
             </option>
