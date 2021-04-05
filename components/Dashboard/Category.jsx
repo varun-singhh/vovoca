@@ -44,6 +44,8 @@ const Category = () => {
     return (
         <div className={style.category}>
             <div className={style.container}>
+                
+                
                 <div className={style.row}>
                     <div className={style.category__card}>
                         <div id="1" className={style.category__card__icon} style={{backgroundImage: `url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F9to5mac.com%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fapple-music-rap-life.jpeg%3Fresize%3D1024%2C576&f=1&nofb=1)`}} onClick={(e)=>handleClick(e.target.id, "Hip-Hop")}>
