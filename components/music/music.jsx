@@ -2,15 +2,9 @@ import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import style from './MusicCard.module.css';
-<<<<<<< HEAD
 import { toast } from 'react-toastify';
 import { FaGetPocket } from 'react-icons/fa'
 import Link from 'next/link'
-=======
-import { toast, ToastContainer } from 'react-toastify';
-import { FaGetPocket } from 'react-icons/fa';
-import Link from 'next/link';
->>>>>>> 9f9ac389bff1b22e63aeb25394cae9737e6f92a6
 
 const music = ({ music, history }) => {
   return (
@@ -33,18 +27,12 @@ const music = ({ music, history }) => {
           toast.error('Internal Server Error');
         }}
       />
-<<<<<<< HEAD
-      <Link href={`/music/${encodeURIComponent(music._id)}`}>
-        <button style={{cursor: 'pointer'}}>
-          <FaGetPocket style={{ color: 'wheat', fontSize: '35px' }} />
-=======
       <Link href={`/music/${encodeURIComponent(music._id)}`} replace>
         <button style={{ cursor: 'pointer' }} className={style.music_button}>
           <FaGetPocket
             style={{ color: 'wheat' }}
             className={style.music_icon}
           />
->>>>>>> 9f9ac389bff1b22e63aeb25394cae9737e6f92a6
         </button>
       </Link>
     </div>

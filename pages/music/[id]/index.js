@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { getSingleMusic } from "../../../actions/musicActions";
@@ -14,24 +13,6 @@ import Head from "next/head";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-=======
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { getSingleMusic } from '../../../actions/musicActions';
-import { useDispatch, useSelector } from 'react-redux';
-import Loader from '../../../components/Loader/Loader';
-import style from '../../../styles/singleMusic.module.css';
-import Footer from '../../../components/homepage/Footer/Footer';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
-import { HiViewList, HiCloudDownload, HiShare } from 'react-icons/hi';
-import Link from 'next/link';
-import Head from 'next/head';
-import fileDownload from 'js-file-download';
-import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
->>>>>>> 9f9ac389bff1b22e63aeb25394cae9737e6f92a6
 
 const index = () => {
   const router = useRouter();
@@ -84,13 +65,8 @@ const index = () => {
           <img className={style.background__image} src={music.image}></img>
           <img className={style.image} src={music.image}></img>
           <div className={style.buttons}>
-<<<<<<< HEAD
-            <Link href="/allMusic">
-              <button>
-=======
             <Link href="/allMusic" replace>
               <button className={style.single_music_button}>
->>>>>>> 9f9ac389bff1b22e63aeb25394cae9737e6f92a6
                 <HiViewList />
               </button>
             </Link>
@@ -120,7 +96,7 @@ const index = () => {
           </div>
           <div className={style.other__images}>
             <div className={style.detes}>
-              <h1 className={style.name}>{music.name}</h1>
+              <h1 className={style.name}>{music.name.charAt(0).toUpperCase() + music.name.slice(1)}</h1>
               <h4 className={style.artist}>
                 Music by: <span>{music.artist}</span>
               </h4>
