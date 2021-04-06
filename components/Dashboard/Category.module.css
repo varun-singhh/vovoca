@@ -18,7 +18,7 @@
 }
 
 .category__card__icon :after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -63,5 +63,9 @@
 }
 
 .search_btn {
+  margin-top: 2rem;
+}
+
+.clear_btn {
   margin-top: 2rem;
 }
