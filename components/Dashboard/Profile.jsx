@@ -55,6 +55,7 @@ const Profile = () => {
             <input
               type="file"
               if="file"
+              accept="audio/*"
               className={style.custom_file_input}
               onChange={(r) => setFile(r.target.files[0])}
             ></input>
