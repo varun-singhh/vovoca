@@ -7,11 +7,12 @@ import { toast } from 'react-toastify';
 import { AiFillTag } from 'react-icons/ai';
 
 const UploadModal = ({ user, file }) => {
-  const [musicName, setName] = useState('');
-  const [tags, setTags] = useState([]);
   const check = () => {
     console.log(tags, musicName);
   };
+  const [musicName, setName] = useState('');
+  const [tags, setTags] = useState([]);
+
   const handleSubmit = async () => {
     try {
       console.log('Upload Started...');
@@ -51,72 +52,24 @@ const UploadModal = ({ user, file }) => {
             placeholder="Enter Name of Music"
           />
           {/* <input type="text" value={user} disabled /> */}
-          {tags.length >= 5 ? (
+          {tags.length >= 3 ? (
             <></>
           ) : (
             <select className={style.options}>
-              <option default>Select 5 Tags</option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="hip-hop"
-              >
-                Hip Hop
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="base"
-              >
-                Base
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="chill"
-              >
-                Chill
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="beats"
-              >
-                Beats
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="musical"
-              >
-                Musical
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="slow"
-              >
-                Slow
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="edm"
-              >
-                EDM
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="electric"
-              >
-                Electric
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="vocal"
-              >
-                Vocal
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="house"
-              >
-                House
-              </option>
-            </select>
+            <option default disabled>
+              Select 3 Tags
+            </option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="hip-hop">Hip Hop</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="base">Base</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="chill">Chill</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="beats">Beats</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="musical">Musical</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="slow">Slow</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="edm">EDM</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="electric">Electric</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="vocal">Vocal</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="house">House</option>
+          </select>
           )}
         </div>
       </div>
