@@ -47,8 +47,6 @@
 
 .category__card__icon:hover {
   transform: scale(0.9);
-  filter: none;
-  -webkit-filter: none;
 }
 
 .selected {
