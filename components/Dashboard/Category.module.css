@@ -44,7 +44,14 @@
   position: relative;
   z-index: 1;
 }
-
+.heading {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(58, 58, 58, 0.233);
+  width: 100%;
+  color: rgb(255, 255, 255);
+  font-size: large;
+}
 .category__card__icon:hover {
   transform: scale(0.9);
 }
@@ -56,5 +63,9 @@
 }
 
 .search_btn {
+  margin-top: 2rem;
+}
+
+.clear_btn {
   margin-top: 2rem;
 }

@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import style from './Profile.module.css';
 import { FaMusic, FaUpload } from 'react-icons/fa';
-import Axios from 'axios';
-import setAuthToken from '../../actions/utils/setAuthToken';
-import cookie from 'js-cookie'
 
 import style_modal from '../../styles/Modal.module.css';
 import { Modal } from 'react-responsive-modal';
@@ -19,31 +16,14 @@ const Profile = () => {
 
   const authenticated = useSelector((state) => state.auth);
   const [file, setFile] = useState([]);
-  console.log(file);
-  const handleSubmit = (file) => {
-    console.log('Upload Started...');
-    const formdata = new FormData();
-    formdata.append('name', 'Check');
-    formdata.append('music', file);
-    formdata.append('tags', 'hip-hop');
 
-    setAuthToken(cookie.get("token"));
-   
-    Axios.post('https://vovoca.herokuapp.com/api/admin', formdata)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    console.log('Upload Ended');
-  };
   return (
     <div>
       <Modal
         open={open}
         onClose={onCloseModal}
         center
+        file={file}
         classNames={{
           overlay: style_modal.customOverlay,
           modal: style_modal.customModal,
@@ -53,7 +33,7 @@ const Profile = () => {
         <i style={{ color: 'gray', cursor: 'pointer' }} onClick={onCloseModal}>
           <FaTimes />
         </i>
-        <UploadModal user={authenticated.data?.username} />
+        <UploadModal file={file} user={authenticated.data?.username} />
       </Modal>
       <h3>Hi, {authenticated.data?.username}</h3>
       <div className={style.profile_component}>
