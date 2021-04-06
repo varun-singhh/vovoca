@@ -16,7 +16,6 @@ const Profile = () => {
 
   const authenticated = useSelector((state) => state.auth);
   const [file, setFile] = useState([]);
-  console.log(file);
 
   return (
     <div>
