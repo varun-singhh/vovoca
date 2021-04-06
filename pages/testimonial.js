@@ -25,7 +25,7 @@ const testimonial = () => {
                   use and upload these sounds and beats to make songs for
                   my local dance group
                 </p>
-                <span>Devansh Kaushik, </span>
+                <span>Devansh Kaushik, </span><br/>
                 <span>DNRevolution</span>
               </div>
               <div className={styles.testimonial__img}>
@@ -42,7 +42,7 @@ const testimonial = () => {
                   get throught the audio part. Good music wasn't available 
                   anywhere. Vovoca solved both of my problems
                 </p>
-                <span>Sheril Sonkar, </span>
+                <span>Sheril Sonkar, </span><br/>
                 <span>IG Influencer</span>
               </div>
               <div className={styles.testimonial__img}>
@@ -59,7 +59,7 @@ const testimonial = () => {
                   I am more than happy with the filter and sorting feature of
                   vovoca. It is awesome
                 </p>
-                <span>Amolik Vivian, </span>
+                <span>Amolik Vivian, </span><br/>
                 <span>ChaiWala</span>
               </div>
               <div className={styles.testimonial__img}>
@@ -67,8 +67,6 @@ const testimonial = () => {
               </div>
             </article>
           </div>
-        </div>
-        <div className={styles.testimonial__row__2}>
           <div className={styles.testimonial}>
             <article className={styles.testimonial__article}>
               <div className={styles.testimonial__content}>
@@ -78,7 +76,7 @@ const testimonial = () => {
                   like vovoca where your music finds its right destination
                   Wishing vovoca more success
                 </p>
-                <span>DJ John</span>
+                <span>DJ John</span><br/>
                 <span>Ahuja Music</span>
               </div>
               <div className={styles.testimonial__img}>
@@ -95,7 +93,7 @@ const testimonial = () => {
                   if I would have founded vovoca earlier. It is an
                   amazing website with just everything I need
                 </p>
-                <span>Archit Sharma</span>
+                <span>Archit Sharma</span><br/>
                 <span>Head, ACM-JUIT</span>
               </div>
               <div className={styles.testimonial__img}>
@@ -112,7 +110,7 @@ const testimonial = () => {
                   motivation. Vovoca gave it to me, that to free. I owe them 
                   a lot for all my music
                 </p>
-                <span>Andy Cortrell, </span>
+                <span>Andy Cortrell, </span><br/>
                 <span>Tayio.ai</span>
               </div>
               <div className={styles.testimonial__img}>

@@ -1,32 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './UploadModal.module.css';
-const UploadModal = ({ user }) => {
+import Axios from 'axios';
+import setAuthToken from '../../actions/utils/setAuthToken';
+import cookie from 'js-cookie'
+import { toast } from 'react-toastify'
+
+const UploadModal = ({ user, file }) => {
+
+  const [musicName, setName] = useState("")
+  const [tags, setTags] = useState([])
+
+  const handleSubmit = async () => {
+    try {
+      console.log('Upload Started...');
+      let formdata = new FormData();
+      formdata.append('name', musicName);
+      formdata.append('music', file);
+      formdata.append('tags', JSON.stringify(tags));
+
+      setAuthToken(cookie.get("token"));
+      
+      const config = {
+          headers: {
+              'Content-Type': "multipart/form-data"
+          }
+      }
+    
+      const res = await Axios.post('https://vovoca.herokuapp.com/api/admin', formdata, config)
+      if (res.status === 200)
+        toast.success("Music Uploaded")
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong")
+    }
+  };
+
   return (
     <div>
       <div className={style.form__row}>
         <h2 style={{ color: 'wheat' }}>Upload Music</h2>
         <div className={style.inputs}>
-          <input type="text" placeholder="Enter Name of Music" />
-          <input type="text" value={user} disabled />
-          <select multiple>
+          <input type="text" value={musicName} onChange={e => setName(e.target.value)} placeholder="Enter Name of Music" />
+          {/* <input type="text" value={user} disabled /> */}
+          <select>
             <option default>
-              Select Tags
+              Select 5 Tags
             </option>
-            <option Value="Select Tags">Hip Hop</option>
-            <option Value="Select Tags">Base</option>
-            <option Value="Select Tags">Chill</option>
-            <option Value="Select Tags">Beats</option>
-            <option Value="Select Tags">Musical</option>
-            <option Value="Select Tags">Slow</option>
-            <option Value="Select Tags">EDM</option>
-            <option Value="Select Tags">Electric</option>
-            <option Value="Select Tags">Vocal</option>
-            <option Value="Select Tags">House</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="hip-hop">Hip Hop</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="base">Base</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="chill">Chill</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="beats">Beats</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="musical">Musical</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="slow">Slow</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="edm">EDM</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="electric">Electric</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="vocal">Vocal</option>
+            <option onClick={(e) => setTags([...tags, e.target.value])} value="house">House</option>
           </select>
         </div>
       </div>
       <div className={style.subscribe}>
-        <button className={style.subscribe__btn}>Upload</button>
+        <button onClick={() => handleSubmit()} className={style.subscribe__btn}>Upload</button>
       </div>
     </div>
   );
