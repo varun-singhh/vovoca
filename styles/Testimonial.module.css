@@ -46,6 +46,10 @@
 
 .testimonial__img {
   padding-left: 2rem;
+  padding-right: 2rem;
+}
+.developer__img{
+  padding-left: 2rem;
   padding-right: 1rem;
   border-radius: 50%;
   width: 4.75rem;
@@ -57,7 +61,6 @@
   margin: 5%;
   object-fit: cover;
 }
-
 .testimonial__content > h5 {
   color: #d7e1ec;
   line-height: 1.7;

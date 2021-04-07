@@ -38,7 +38,10 @@ const music = ({ music, history }) => {
           music.audiobuffer?.data
         ).toString('base64')}`}
         onError={(e) => {
-          toast.error('Internal Server Error');
+          toast('Internal Server Error', {
+            closeButton: false,
+            className: style.toast_background,
+          });
         }}
       />
       <Link href={`/music/${encodeURIComponent(music._id)}`}>

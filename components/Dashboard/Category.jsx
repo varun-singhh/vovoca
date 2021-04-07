@@ -21,9 +21,9 @@ const Category = () => {
           '+'
         )}`
       );
+      console.log(res.data);
       setCategorised_music(res.data.data);
       setTotal_pages(res.data.totalPages);
-      console.log(res.data);
     } catch {
       console.error('error');
     }

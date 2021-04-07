@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import style from './Navbar.module.css';
 import { Modal } from 'react-responsive-modal';
-import { FaTimes, FaUserCircle } from 'react-icons/fa';
+import { FaTimes, FaUserCircle, FaCode } from 'react-icons/fa';
 import Login from '../homepage/Header/Login';
 import style_modal from '../../styles/Modal.module.css';
-import cookie from 'js-cookie'
+import cookie from 'js-cookie';
 import Link from 'next/link';
 import Signup from '../homepage/Header/Signup';
 import { useSelector, useDispatch } from 'react-redux';
@@ -17,14 +17,13 @@ import {
   BsFillMusicPlayerFill,
 } from 'react-icons/bs';
 import { getUserDetails } from '../../actions/authAction';
-import Cookies from 'js-cookie';
 // RiDashboard2Line
 // BsFillShieldLockFill
 // AiFillHome
 
 const Navbar = () => {
   const logout = () => {
-    localStorage.removeItem('token');
+    cookie.remove('token');
     if (process.browser) {
       window.location.href = '/';
     }
@@ -54,10 +53,9 @@ const Navbar = () => {
   }, [scrollState]);
 
   useEffect(() => {
-    if(cookie.get("token")){
-      console.log("hello")
-      dispatch(getUserDetails())
-      
+    if (cookie.get('token')) {
+      console.log('hello');
+      dispatch(getUserDetails());
     }
   }, []);
   const [open, setOpen] = React.useState(false);
@@ -189,6 +187,9 @@ const Navbar = () => {
             <Link href="/testimonial">
               <li className={style.list__items}>Testimonials</li>
             </Link>
+            <Link href="/developers">
+              <li className={style.list__items}>Developers</li>
+            </Link>
             {authenticated.isAuthenticated === true ? (
               <Link href="/dashboard">
                 {/* <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -202,9 +203,22 @@ const Navbar = () => {
                     }}
                   />
                 </div> */}
-                <button style={{ marginLeft: '25px', padding: '0.4em 1em' }} id="dashboard">
-                  <p htmlFor="dashboard" style={{ color: 'wheat', padding: 0, margin: 0, display: 'flex', alignItems: 'center' }}>
-                    <FaUserCircle style={{marginRight: '10px'}}/>Dashboard
+                <button
+                  style={{ marginLeft: '25px', padding: '0.4em 1em' }}
+                  id="dashboard"
+                >
+                  <p
+                    htmlFor="dashboard"
+                    style={{
+                      color: 'wheat',
+                      padding: 0,
+                      margin: 0,
+                      display: 'flex',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <FaUserCircle style={{ marginRight: '10px' }} />
+                    Dashboard
                   </p>
                 </button>
               </Link>
@@ -328,6 +342,18 @@ const Navbar = () => {
                 {' '}
                 <AiFillHome />
                 <span className={style.text_mobile}>Home</span>
+              </p>
+            </Link>
+            <Link href="/developers">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('history')}
+                style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
+              >
+                {' '}
+                &nbsp;
+                <FaCode />
+                <span className={style.text_mobile}>Developers</span>
               </p>
             </Link>
             <Link href="/#about">

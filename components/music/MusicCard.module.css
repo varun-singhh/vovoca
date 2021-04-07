@@ -23,7 +23,25 @@
     -4px -4px 15px rgb(195 200 205 / 4%);
   font-size: 10px;
 }
-
+.toast_background {
+  color: wheat;
+  background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(134, 3, 21) 0%, #581301 100%) !important;
+}
+.toast_success_background {
+  color: rgb(250, 229, 190) !important;
+  font-weight: 500;
+  background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(7, 114, 3) 0%, #054d03 100%) !important;
+}
 .image {
   border-radius: 50%;
 }

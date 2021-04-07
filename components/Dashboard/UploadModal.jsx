@@ -8,7 +8,7 @@ import { AiFillTag } from 'react-icons/ai';
 
 const UploadModal = ({ user, file }) => {
   const [musicName, setName] = useState('');
-  const [tags, setTags] = useState(['hip-hop']);
+  const [tags, setTags] = useState([]);
   const [list, setList] = useState([
     'bass',
     'beats',
@@ -21,9 +21,7 @@ const UploadModal = ({ user, file }) => {
     'slow',
     'vocal',
   ]);
-  const check = () => {
-    console.log(tags);
-  };
+
   const handleSubmit = async () => {
     try {
       console.log('Upload Started...');
@@ -45,10 +43,17 @@ const UploadModal = ({ user, file }) => {
         formdata,
         config
       );
-      if (res.status === 200) toast.success('Music Uploaded');
+      if (res.status === 200)
+        toast('Music Uploaded', {
+          closeButton: false,
+          className: style.toast_success_background,
+        });
     } catch (error) {
       console.log(error);
-      toast.error('Something went wrong');
+      toast('Something went wrong', {
+        closeButton: false,
+        className: style.toast_background,
+      });
     }
   };
   return (
@@ -63,21 +68,21 @@ const UploadModal = ({ user, file }) => {
             placeholder="Enter Name of Music"
           />
           {/* <input type="text" value={user} disabled /> */}
-          {tags.length >= 5 ? (
+          {tags.length >= 3 ? (
             <></>
           ) : (
-            <select className={style.options}>
+            <select
+              className={style.options}
+              onChange={(e) => {
+                setTags([...tags, e.target.value]);
+                setList(list.filter((l) => l !== e.target.value));
+              }}
+            >
               <option default disabled>
-                Select 5 Tags
+                Select 3 Tags
               </option>
               {list.map((l) => (
-                <option
-                  onClick={(e) => {
-                    setTags([...tags, e.target.value]);
-                    setList(list.filter((l) => l !== e.target.value));
-                  }}
-                  value={l}
-                >
+                <option value={l}>
                   {l.charAt(0).toUpperCase() + l.slice(1)}
                 </option>
               ))}
@@ -86,7 +91,7 @@ const UploadModal = ({ user, file }) => {
         </div>
       </div>
       <div className={style.subscribe}>
-        <button onClick={() => check()} className={style.subscribe__btn}>
+        <button onClick={() => handleSubmit()} className={style.subscribe__btn}>
           Upload
         </button>
       </div>
