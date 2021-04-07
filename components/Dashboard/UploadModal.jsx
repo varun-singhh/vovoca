@@ -7,11 +7,9 @@ import { toast } from 'react-toastify';
 import { AiFillTag } from 'react-icons/ai';
 
 const UploadModal = ({ user, file }) => {
-  const check = () => {
-    console.log(tags, musicName);
-  };
   const [musicName, setName] = useState('');
   const [tags, setTags] = useState([]);
+  const [list, setList] = useState(["bass", "beats", "chill", "edm", "electric", "hip-hop", "house", "musical", "slow", "vocal"]);
 
   const handleSubmit = async () => {
     try {
@@ -52,29 +50,24 @@ const UploadModal = ({ user, file }) => {
             placeholder="Enter Name of Music"
           />
           {/* <input type="text" value={user} disabled /> */}
-          {tags.length >= 3 ? (
+          {tags.length >= 5 ? (
             <></>
           ) : (
             <select className={style.options}>
             <option default disabled>
-              Select 3 Tags
+                  Select 5 Tags
             </option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="hip-hop">Hip Hop</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="base">Base</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="chill">Chill</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="beats">Beats</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="musical">Musical</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="slow">Slow</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="edm">EDM</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="electric">Electric</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="vocal">Vocal</option>
-            <option onClick={(e) => setTags([...tags, e.target.value])} value="house">House</option>
+                {
+                  list.map((l => (
+                    <option onClick={(e) => { setTags([...tags, e.target.value]); setList(list.filter(l => l !== e.target.value))}} value={l}>{ l.charAt(0).toUpperCase() + l.slice(1) }</option>
+                  )))
+                }
           </select>
           )}
         </div>
       </div>
       <div className={style.subscribe}>
-        <button onClick={() => check()} className={style.subscribe__btn}>
+        <button onClick={() => handleSubmit()} className={style.subscribe__btn}>
           Upload
         </button>
       </div>
@@ -91,8 +84,8 @@ const UploadModal = ({ user, file }) => {
               }}
             >
               <AiFillTag />
-              &nbsp;S
-              {res}
+              &nbsp;
+              {res.charAt(0).toUpperCase() + res.slice(1)}
             </p>
           ))}
         </div>
