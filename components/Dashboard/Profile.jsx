@@ -50,17 +50,15 @@ const Profile = () => {
       <div className={style.upload_box}>
         {file.length === 0 ? (
           <>
-            <FaUpload style={{ fontSize: 'xx-large' }} /> <br />
-            Upload Music
+            <FaUpload style={{ fontSize: '60px' }} /> <br />
+            <p style={{ color: 'gray' }}>Upload Music (only Audio Files)</p>
             <input
               type="file"
               if="file"
+              accept="audio/*"
               className={style.custom_file_input}
               onChange={(r) => setFile(r.target.files[0])}
             ></input>
-            <div class="card-subtitle">
-              Drag n Drop your file here / Click Here
-            </div>
           </>
         ) : (
           <>

@@ -1,6 +1,5 @@
 .profile_component {
   display: flex;
-  align-items: center;
   color: gray;
   flex-direction: column;
 }

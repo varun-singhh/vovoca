@@ -9,9 +9,19 @@ import { AiFillTag } from 'react-icons/ai';
 const UploadModal = ({ user, file }) => {
   const [musicName, setName] = useState('');
   const [tags, setTags] = useState([]);
-  const check = () => {
-    console.log(tags, musicName);
-  };
+  const [list, setList] = useState([
+    'bass',
+    'beats',
+    'chill',
+    'edm',
+    'electric',
+    'hip-hop',
+    'house',
+    'musical',
+    'slow',
+    'vocal',
+  ]);
+
   const handleSubmit = async () => {
     try {
       console.log('Upload Started...');
@@ -33,10 +43,17 @@ const UploadModal = ({ user, file }) => {
         formdata,
         config
       );
-      if (res.status === 200) toast.success('Music Uploaded');
+      if (res.status === 200)
+        toast('Music Uploaded', {
+          closeButton: false,
+          className: style.toast_success_background,
+        });
     } catch (error) {
       console.log(error);
-      toast.error('Something went wrong');
+      toast('Something went wrong', {
+        closeButton: false,
+        className: style.toast_background,
+      });
     }
   };
   return (
@@ -51,77 +68,30 @@ const UploadModal = ({ user, file }) => {
             placeholder="Enter Name of Music"
           />
           {/* <input type="text" value={user} disabled /> */}
-          {tags.length >= 5 ? (
+          {tags.length >= 3 ? (
             <></>
           ) : (
-            <select className={style.options}>
-              <option default>Select 5 Tags</option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="hip-hop"
-              >
-                Hip Hop
+            <select
+              className={style.options}
+              onChange={(e) => {
+                setTags([...tags, e.target.value]);
+                setList(list.filter((l) => l !== e.target.value));
+              }}
+            >
+              <option default disabled>
+                Select 3 Tags
               </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="base"
-              >
-                Base
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="chill"
-              >
-                Chill
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="beats"
-              >
-                Beats
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="musical"
-              >
-                Musical
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="slow"
-              >
-                Slow
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="edm"
-              >
-                EDM
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="electric"
-              >
-                Electric
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="vocal"
-              >
-                Vocal
-              </option>
-              <option
-                onClick={(e) => setTags([...tags, e.target.value])}
-                value="house"
-              >
-                House
-              </option>
+              {list.map((l) => (
+                <option value={l}>
+                  {l.charAt(0).toUpperCase() + l.slice(1)}
+                </option>
+              ))}
             </select>
           )}
         </div>
       </div>
       <div className={style.subscribe}>
-        <button onClick={() => check()} className={style.subscribe__btn}>
+        <button onClick={() => handleSubmit()} className={style.subscribe__btn}>
           Upload
         </button>
       </div>
@@ -138,8 +108,8 @@ const UploadModal = ({ user, file }) => {
               }}
             >
               <AiFillTag />
-              &nbsp;S
-              {res}
+              &nbsp;
+              {res.charAt(0).toUpperCase() + res.slice(1)}
             </p>
           ))}
         </div>
