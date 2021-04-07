@@ -26,12 +26,12 @@ function MyApp({ Component, pageProps }) {
       <ToastContainer
       position="top-center"
       autoClose={5000}
-      hideProgressBar={false}
+      hideProgressBar={true}
       newestOnTop
       closeOnClick
       rtl={false}
       pauseOnFocusLoss={false}
-      draggable={false}
+      draggable={true}
       pauseOnHover={false}
       />
       <Navbar/>

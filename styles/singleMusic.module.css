@@ -81,6 +81,25 @@
   background: none;
   box-shadow: none;
 }
+.toast_background {
+  color: wheat;
+  background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(134, 3, 21) 0%, #581301 100%) !important;
+}
+.toast_success_background {
+  color: rgb(250, 229, 190) !important;
+  font-weight: 500;
+  background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(7, 114, 3) 0%, #054d03 100%) !important;
+}
 @media screen and (max-width: 600px) {
   .card {
     width: 100%;
@@ -120,9 +139,8 @@
     background: none;
     box-shadow: none;
   }
-  .single_music_button{
+  .single_music_button {
     margin: 5% !important;
     font-size: 1.1rem;
-
   }
 }

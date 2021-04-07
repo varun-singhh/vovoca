@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 
 const Login = (props) => {
-  console.log(props)
+  console.log(props);
   const dispatch = useDispatch();
   const error = useSelector((state) => state.error);
   const authenticate = useSelector((state) => state.auth.isAuthenticated);
@@ -18,34 +18,41 @@ const Login = (props) => {
     login[e.target.name] = e.target.value;
     setLogin(login);
   };
-  const notify=(category)=>{
-    if (category==="success") {
-      console.log(category)
-      
-      toast.success('Loggedin Successfully');
+  const notify = (category) => {
+    if (category === 'success') {
+      console.log(category);
+
+      toast('Loggedin Successfully', {
+        closeButton: false,
+        className: style.toast_success_background,
+      });
     } else {
-      console.log(error)
-      toast.error(error.err || "Something went wrong");
+      console.log(error);
+      toast(error.err || 'Something went wrong', {
+        closeButton: false,
+        className: style.toast_background,
+      });
     }
-  }
-  
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
-    if (login.email===""|| login.password==="") {
-      toast.error("All feilds are Mandatory")
-    }
-    else{
-      dispatch(loginUser(login.email, login.password)).then((res)=>{
-        if (res===true) {
-          console.log(res)
-          props.onCloseModal()
-          notify("success");
+
+    if (login.email === '' || login.password === '') {
+      toast.error('All feilds are Mandatory', {
+        closeButton: false,
+      });
+    } else {
+      dispatch(loginUser(login.email, login.password)).then((res) => {
+        if (res === true) {
+          console.log(res);
+          props.onCloseModal();
+          notify('success');
         } else {
-          notify("error");
+          notify('error');
         }
       });
-  
+
       // if (x===true) {
       //   console.log(authenticate)
       //   props.onCloseModal()
@@ -56,7 +63,6 @@ const Login = (props) => {
       //   notify("error");
       // }
     }
-    
   };
   return (
     <div>

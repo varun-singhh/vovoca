@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
-import { getSingleMusic } from "../../../actions/musicActions";
-import { useDispatch, useSelector } from "react-redux";
-import Loader from "../../../components/Loader/Loader";
-import style from "../../../styles/singleMusic.module.css";
-import Footer from "../../../components/homepage/Footer/Footer";
-import AudioPlayer from "react-h5-audio-player";
-import "react-h5-audio-player/lib/styles.css";
-import { HiViewList, HiCloudDownload, HiShare } from "react-icons/hi";
-import Link from 'next/link'
-import Head from "next/head";
-import axios from "axios";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { getSingleMusic } from '../../../actions/musicActions';
+import { useDispatch, useSelector } from 'react-redux';
+import Loader from '../../../components/Loader/Loader';
+import style from '../../../styles/singleMusic.module.css';
+import Footer from '../../../components/homepage/Footer/Footer';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import { HiViewList, HiCloudDownload, HiShare } from 'react-icons/hi';
+import Link from 'next/link';
+import Head from 'next/head';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const index = () => {
   const router = useRouter();
@@ -34,7 +34,10 @@ const index = () => {
       inputc.select();
       document.execCommand('copy');
       inputc.parentNode.removeChild(inputc);
-      toast.success('Link Copied');
+      toast('Link Copied', {
+        closeButton: false,
+        className: style.toast_success_background,
+      });
     }
   };
   const downloadMusic = async (id) => {
@@ -96,7 +99,9 @@ const index = () => {
           </div>
           <div className={style.other__images}>
             <div className={style.detes}>
-              <h1 className={style.name}>{music.name.charAt(0).toUpperCase() + music.name.slice(1)}</h1>
+              <h1 className={style.name}>
+                {music.name.charAt(0).toUpperCase() + music.name.slice(1)}
+              </h1>
               <h4 className={style.artist}>
                 Music by: <span>{music.artist}</span>
               </h4>
@@ -113,7 +118,10 @@ const index = () => {
                   music.audiobuffer?.data
                 ).toString('base64')}`}
                 onError={(e) => {
-                  toast.error('Oops! Something went wrong');
+                  toast('Oops! Something went wrong', {
+                    closeButton: false,
+                    className: style.toast_background,
+                  });
                 }}
               />
             </div>
