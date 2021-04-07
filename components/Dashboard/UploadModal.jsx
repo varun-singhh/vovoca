@@ -8,9 +8,22 @@ import { AiFillTag } from 'react-icons/ai';
 
 const UploadModal = ({ user, file }) => {
   const [musicName, setName] = useState('');
-  const [tags, setTags] = useState([]);
-  const [list, setList] = useState(["bass", "beats", "chill", "edm", "electric", "hip-hop", "house", "musical", "slow", "vocal"]);
-
+  const [tags, setTags] = useState(['hip-hop']);
+  const [list, setList] = useState([
+    'bass',
+    'beats',
+    'chill',
+    'edm',
+    'electric',
+    'hip-hop',
+    'house',
+    'musical',
+    'slow',
+    'vocal',
+  ]);
+  const check = () => {
+    console.log(tags);
+  };
   const handleSubmit = async () => {
     try {
       console.log('Upload Started...');
@@ -54,20 +67,26 @@ const UploadModal = ({ user, file }) => {
             <></>
           ) : (
             <select className={style.options}>
-            <option default disabled>
-                  Select 5 Tags
-            </option>
-                {
-                  list.map((l => (
-                    <option onClick={(e) => { setTags([...tags, e.target.value]); setList(list.filter(l => l !== e.target.value))}} value={l}>{ l.charAt(0).toUpperCase() + l.slice(1) }</option>
-                  )))
-                }
-          </select>
+              <option default disabled>
+                Select 5 Tags
+              </option>
+              {list.map((l) => (
+                <option
+                  onClick={(e) => {
+                    setTags([...tags, e.target.value]);
+                    setList(list.filter((l) => l !== e.target.value));
+                  }}
+                  value={l}
+                >
+                  {l.charAt(0).toUpperCase() + l.slice(1)}
+                </option>
+              ))}
+            </select>
           )}
         </div>
       </div>
       <div className={style.subscribe}>
-        <button onClick={() => handleSubmit()} className={style.subscribe__btn}>
+        <button onClick={() => check()} className={style.subscribe__btn}>
           Upload
         </button>
       </div>

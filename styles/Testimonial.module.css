@@ -45,8 +45,17 @@
 }
 
 .testimonial__img {
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-right: 1rem;
+  border-radius: 50%;
+  width: 4.75rem;
+  height: 3.75rem;
+  background: linear-gradient(-32deg, #1a1d21 3%, #393d42 44% 56%, #1a1d21 97%)
+    0% 0%/200% 200%;
+  box-shadow: 4px 4px 18px rgb(0 0 0 / 40%),
+    -4px -2px 16px rgb(195 200 205 / 8%);
+  margin: 5%;
+  object-fit: cover;
 }
 
 .testimonial__content > h5 {
