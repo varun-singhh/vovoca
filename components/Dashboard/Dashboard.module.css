@@ -1,8 +1,8 @@
 .dashboard {
   display: flex !important;
-  flex-direction: row !important;
+  /* flex-direction: column-reverse !important; */
   margin: 1.6rem;
-  height: 110vh;
+  margin-bottom: 5em;
 }
 .dashnav {
   color: rgb(196, 178, 146);
@@ -26,6 +26,13 @@
   height: fit-content;
   width: 15%;
   font-size: medium;
+  /* display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2em auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 10px 0; */
 }
 .dashcontent {
   color: rgb(163, 151, 130);

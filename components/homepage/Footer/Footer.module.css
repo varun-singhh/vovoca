@@ -27,6 +27,14 @@
   margin-left: -15px;
 }
 
+@media (min-width: 1300px) {
+  .contents {
+    align-items: center !important;
+  }
+  .contact__box{
+    margin-left: 0 !important;
+  }
+}
 @media (min-width: 1200px) {
   .contents {
     align-items: center !important;
@@ -305,6 +313,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .footer{
+    margin-top: 20em;
+  }
   .get__in__touch {
     display: block;
     width: 90%;
@@ -312,8 +323,9 @@
     margin-right: auto;
   }
   .contact__box {
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 100%;
+    margin-left: unset;
+    text-align: left;
   }
   .get__in__touch > h2 {
     font-size: 32px;
@@ -339,6 +351,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 35px;
   }
   .download__app__buttons {
     margin-right: -62%;

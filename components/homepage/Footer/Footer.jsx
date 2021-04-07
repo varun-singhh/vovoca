@@ -68,7 +68,7 @@ const Footer = () => {
                             </div>
                             <hr className="divider"></hr>
                             <div className={style.rights}>
-                                <p>© <Link href="https://devbucket.tech/"><span style={{color:"rgb(163, 151, 130)",cursor:"pointer"}}>Devbucket</span></Link> 2021. All rights reserved</p>
+                                <p>© <Link scroll={true} href="https://devbucket.tech/"><span style={{color:"rgb(163, 151, 130)",cursor:"pointer"}}>Devbucket</span></Link> 2021. All rights reserved</p>
                             </div>
                         </div>
                     </div>

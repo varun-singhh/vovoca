@@ -14,26 +14,28 @@ const ScrollButton = () => {
         }
     }
   const [scrollState, setScrollState] = useState('top');
-  useEffect(() => {
-    const listener = document.addEventListener('scroll', (e) => {
-        var scrolled = document.scrollingElement.scrollTop;
-        const btn = document.getElementById('goToTop')
-        if (scrolled >= 1) {
-            if (scrollState !== 'down') {
-                setScrollState('down');
-                btn.style.display = 'block'
-            }
-        } else {
-            if (scrollState !== 'up') {
-                setScrollState('up');
-                btn.style.display = 'none'
-            }
-        }
-    });
+    useEffect(() => {
+        if (process.browser) {
+            const listener = document.addEventListener('scroll', (e) => {
+                var scrolled = document.scrollingElement.scrollTop;
+                const btn = document.getElementById('goToTop')
+                if (scrolled >= 1) {
+                    if (scrollState !== 'down') {
+                        setScrollState('down');
+                        btn.style.display = 'block'
+                    }
+                } else {
+                    if (scrollState !== 'up') {
+                        setScrollState('up');
+                        btn.style.display = 'none'
+                    }
+                }
+            });
 
-    return () => {
-      document.removeEventListener('scroll', listener);
-    };
+            return () => {
+                document.removeEventListener('scroll', listener);
+            };
+        }
   }, [scrollState]);
 
     return (

@@ -29,7 +29,7 @@
     background-origin: padding-box, border-box;
     box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
       -4px -4px 15px rgb(195 200 205 / 4%);
-    width: 640px;
+    width: 500px;
     min-width: 320px;
   }
   .pricing__body:hover {
@@ -78,6 +78,8 @@
   @media only screen and (max-width: 600px) {
     .mobile__chart {
       display: flex;
+      margin-top: 20em;
+      /* margin-bottom: 20em; */
       flex-direction: column;
     }
     .pricing__body {

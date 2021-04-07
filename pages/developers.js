@@ -11,7 +11,7 @@ const developers = () => {
       <div className={styles.testimonials}>
         <Head>
           <title>VOVOCA | Developers</title>
-          <link
+          <Link scroll={true}
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
             integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -41,7 +41,7 @@ const developers = () => {
                   }}
                 ></div>
               </article>
-              <Link href="https://www.linkedin.com/in/v-varun/">
+              <Link scroll={true} href="https://www.linkedin.com/in/v-varun/">
                 <button
                   style={{
                     width: '100%',
@@ -74,7 +74,7 @@ const developers = () => {
                   }}
                 ></div>
               </article>
-              <Link href="https://www.linkedin.com/in/prakhar-pandey-a307b7191/">
+              <Link scroll={true} href="https://www.linkedin.com/in/prakhar-pandey-a307b7191/">
                 <button
                   style={{
                     width: '100%',
@@ -107,7 +107,7 @@ const developers = () => {
                   }}
                 ></div>
               </article>
-              <Link href="https://www.linkedin.com/in/kaustubhai/">
+              <Link scroll={true} href="https://www.linkedin.com/in/kaustubhai/">
                 <button
                   style={{
                     width: '100%',

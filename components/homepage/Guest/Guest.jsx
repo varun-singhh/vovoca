@@ -37,7 +37,7 @@ const Guest = () => {
 
                   <p className={style.song__name}>{i.name.charAt(0).toUpperCase() + i.name.slice(1)}</p>
 
-                  <Link href={`/music/${encodeURIComponent(i._id)}`}>
+                  <Link scroll={true} href={`/music/${encodeURIComponent(i._id)}`}>
                     <button
                       style={{ cursor: 'pointer' }}
                       className={style.music_button}
@@ -70,7 +70,7 @@ const Guest = () => {
                   ></div>
 
                   <p className={style.song__name}>{i.name.charAt(0).toUpperCase() + i.name.slice(1)}</p>
-                  <Link href={`/music/${encodeURIComponent(i._id)}`}>
+                  <Link scroll={true} href={`/music/${encodeURIComponent(i._id)}`}>
                     <button
                       style={{ cursor: 'pointer' }}
                       className={style.music_button}

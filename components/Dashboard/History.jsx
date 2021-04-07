@@ -26,7 +26,7 @@ const History = () => {
   }
 
   return (
-    <div>
+    <div id="container">
       <h1>Upload History</h1>
       <div className="container">
         {musics && !loading ? (

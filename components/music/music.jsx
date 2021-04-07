@@ -15,6 +15,7 @@ const music = ({ music, history }) => {
           flexDirection: 'column',
           alignContent: 'center',
           color: 'wheat',
+          textAlign: 'center'
         }}
       >
         <img
@@ -44,7 +45,7 @@ const music = ({ music, history }) => {
           });
         }}
       />
-      <Link href={`/music/${encodeURIComponent(music._id)}`}>
+      <Link scroll={true} href={`/music/${encodeURIComponent(music._id)}`}>
         <button style={{ cursor: 'pointer' }} className={style.music_button}>
           <FaGetPocket
             style={{ color: 'wheat' }}
