@@ -1,37 +1,45 @@
-import axios from 'axios';
-import { urlObjectKeys } from 'next/dist/next-server/lib/utils';
-import React, { useEffect, useState } from 'react';
-import music from '../music/music';
-import style from './Category.module.css';
-import Music from '../../components/music/music';
-import Loader from '../Loader/Loader';
+import axios from "axios";
+import { urlObjectKeys } from "next/dist/next-server/lib/utils";
+import React, { useEffect, useState } from "react";
+import music from "../music/music";
+import style from "./Category.module.css";
+import Music from "../../components/music/music";
+import Loader from "../Loader/Loader";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getCategorisedMusic,
+  resetCategorisedMusic,
+} from "../../actions/musicActions";
+import ReactPaginate from "react-paginate";
+import styles from "../../styles/AllMusic.module.css";
 
 const Category = () => {
   const selected_category = [];
   const [count, setCount] = useState(0);
   const [category_search, setCategory_search] = useState(0);
-  const [categorised_music, setCategorised_music] = useState([]);
+  const [selected, setSelected] = useState([])
+
+  const dispatch = useDispatch();
+  const categorised_music = useSelector(
+    (state) => state.music.categorised_music
+  );
+  const totalPages = useSelector((state) => state.music.totalPages);
+
+  const handleChange = (e) => {
+    console.log(selected);
+    dispatch(getCategorisedMusic(selected, e.selected + 1));
+  };
 
   async function getCategories() {
     setCategory_search(1);
+    setSelected(selected_category)
     console.log(selected_category.length);
-    try {
-      const res = await axios.get(
-        `https://vovoca.herokuapp.com/api/music/?category=${selected_category.join(
-          '+'
-        )}`
-      );
-      console.log(res.data);
-      setCategorised_music(res.data.data);
-      setTotal_pages(res.data.totalPages);
-    } catch {
-      console.error('error');
-    }
+    dispatch(getCategorisedMusic(selected_category));
   }
 
   const clear_category = () => {
     setCategory_search(0);
-    setCategorised_music([]);
+    dispatch(resetCategorisedMusic());
   };
 
   function handleClick(e, category) {
@@ -63,12 +71,33 @@ const Category = () => {
     <>
       {category_search === 1 ? (
         <div>
-          <h3>Top Searches</h3>
-          {console.log(categorised_music)}
-          {categorised_music.length !== 0 ? (
+          <h2>Top Searches</h2>
+
+          {categorised_music ? (
+            categorised_music &&
             categorised_music?.map((i) => <Music music={i} />)
           ) : (
             <Loader />
+          )}
+          {totalPages && (
+            <div className={styles.pagination_container}>
+              <ReactPaginate
+                containerClassName={
+                  styles.pagination
+                } /* as this work same as bootstrap class */
+                subContainerClassName={[styles.pages, styles.pagination].join(
+                  " "
+                )} /* as this work same as bootstrap class */
+                activeClassName={styles.active}
+                pageCount={totalPages}
+                breakLabel={false}
+                marginPagesDisplayed={0}
+                pageRangeDisplayed={0}
+                previousLabel={"<"}
+                nextLabel={">"}
+                onPageChange={(e) => handleChange( e)}
+              />
+            </div>
           )}
           <button className={style.clear_btn} onClick={() => clear_category()}>
             Clear Category
