@@ -7,8 +7,10 @@ import {
   UPLOADED_MUSIC,
   GET_LATEST_MUSIC,
   GET_TRENDING_MUSIC,
+  CATEGORISED_MUSIC,
+  RESET_CATEGORISED_MUSIC,
 } from "./type";
-import setAuthToken from './utils/setAuthToken'
+import setAuthToken from "./utils/setAuthToken";
 
 export const getAllMusic = (page) => async (dispatch) => {
   try {
@@ -72,7 +74,7 @@ export const getLatestMusic = () => async (dispatch) => {
 export const getUploadedMusic = (page = 1) => async (dispatch) => {
   console.log(page);
   try {
-    setAuthToken(cookie.get("token"))
+    setAuthToken(cookie.get("token"));
     const res = await axios.get(
       `https://vovoca.herokuapp.com/api/admin/uploaded?page=${page}`
     );
@@ -84,4 +86,29 @@ export const getUploadedMusic = (page = 1) => async (dispatch) => {
   } catch (error) {
     console.log(error);
   }
+};
+
+export const getCategorisedMusic = (selected_category, page) => async (
+  dispatch
+) => {
+  console.log("object");
+  try {
+    const res = await axios.get(
+      `https://vovoca.herokuapp.com/api/music/?category=${selected_category.join(
+        "+"
+      )}&page=${page}`
+    );
+    dispatch({
+      type: CATEGORISED_MUSIC,
+      payload: res.data,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const resetCategorisedMusic = () => async (dispatch) => {
+  dispatch({
+    type: RESET_CATEGORISED_MUSIC,
+  });
 };
