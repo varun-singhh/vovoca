@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    height: 90vh;
   }
   .pricing__body {
     margin-top: -7rem;
@@ -28,8 +29,8 @@
     background-origin: padding-box, border-box;
     box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
       -4px -4px 15px rgb(195 200 205 / 4%);
+    width: 640px;
     min-width: 320px;
-    width: 42%;
   }
   .pricing__body:hover {
     background-image: linear-gradient(

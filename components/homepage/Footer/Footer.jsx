@@ -24,21 +24,13 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className={style.subscribe}>
-                                <button className={style.subscribe__btn}>Subscribe</button>
+                                <button className={style.subscribe__btn}>Send Mail</button>
                             </div>
                         </form>
                     </div>
                     <div className={style.contacts}>
                         <div className={style.contact__box}>
                             <div className={style.row}>
-                                <div className={[style.get__the__app, style.phone__display].join(' ')}>
-                                    <h4>Get the app:</h4>
-                                    <div className={style.download__app__buttons}>
-                                        <button className={style.apple__btn}>Apple Store</button>
-                                        <button className={style.playstore__btn}>Google Play</button>
-                                    </div>
-                                    
-                                </div>
                                 <div className={style.contact__details}>
                                     <h4>Contacts:</h4>
                                     <table className={style.contact__info}>

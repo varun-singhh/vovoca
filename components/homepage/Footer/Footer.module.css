@@ -56,11 +56,11 @@
 }
 
 .get__in__touch > p {
-  font-size: 1.0625rem;
   line-height: 1.65;
-  margin-top: -5%;
+  margin-top: -2%;
   color: #d7e1ec;
   width: 92%;
+  line-height: 1.8;
 }
 
 .get__in__touch-form {
@@ -124,7 +124,7 @@
 .contacts {
   position: relative;
   width: 100%;
-
+  color: #d7e1ec !important;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: 3%;
@@ -134,7 +134,7 @@
   padding: 1.875rem;
   border: 1px solid transparent;
   border-radius: 1.25rem;
-  margin-right: 5%;
+  margin-left: 15%;
   background-image: linear-gradient(
       135deg,
       #3a3e41 0%,
@@ -146,6 +146,7 @@
   background-origin: padding-box, border-box;
   box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
     -4px -4px 15px rgb(195 200 205 / 4%);
+    width: 600px;
 }
 
 .row {
@@ -246,7 +247,8 @@
 
 .contact__value {
   font-size: 0.95rem;
-  color: #b4c0ce;
+  color: #d7e1ec;
+
 }
 
 .rights {

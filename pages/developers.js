@@ -2,9 +2,11 @@ import styles from '../styles/Testimonial.module.css';
 import Head from 'next/head';
 import { AiFillLinkedin } from 'react-icons/ai';
 import Link from 'next/link';
+import Footer from '../components/homepage/Footer/Footer';
 
 const developers = () => {
   return (
+    <>
     <div>
       <div className={styles.testimonials}>
         <Head>
@@ -20,7 +22,7 @@ const developers = () => {
           <h1 className={styles.testimonial__heading}>Developers</h1>
           <div className={styles.testimonial__row__1}>
             <div className={styles.testimonial}>
-              <article className={styles.testimonial__article}>
+              <article style={{marginBottom: '1em'}} className={styles.testimonial__article}>
                 <div className={styles.testimonial__content}>
                   <p>
                     This is a simple music streaming and downloading website,
@@ -53,7 +55,7 @@ const developers = () => {
               </Link>
             </div>
             <div className={styles.testimonial}>
-              <article className={styles.testimonial__article}>
+              <article style={{marginBottom: '1em'}} className={styles.testimonial__article}>
                 <div className={styles.testimonial__content}>
                   <p>
                     This is a simple music streaming and downloading website,
@@ -86,7 +88,7 @@ const developers = () => {
               </Link>
             </div>
             <div className={styles.testimonial}>
-              <article className={styles.testimonial__article}>
+              <article style={{marginBottom: '1em'}} className={styles.testimonial__article}>
                 <div className={styles.testimonial__content}>
                   <p>
                     This is a simple music streaming and downloading website,
@@ -122,7 +124,9 @@ const developers = () => {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+      <Footer/>
+    </>
   );
 };
 

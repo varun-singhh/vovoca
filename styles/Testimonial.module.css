@@ -2,7 +2,8 @@
   width: 100%;
   padding-right: 4rem;
   padding-left: 4rem;
-  height: 100vh;
+  margin-bottom: 3em;
+  /* height: 100vh; */
 }
 
 .testimonial {

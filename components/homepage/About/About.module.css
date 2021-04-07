@@ -1,12 +1,17 @@
 .about {
   padding: 5rem 0;
   padding: 5rem 0;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
   background: radial-gradient(
     37.53% 147.33% at 5.39% 8.57%,
     rgba(255, 255, 255, 0.07) 0%,
     rgba(255, 255, 255, 0) 100%
   ),
   linear-gradient(180deg, #26282a 0%, #212325 100%); 
+  background-color: #303234;
 }
 
 .container > h2 {
@@ -22,10 +27,17 @@
   margin-right: auto;
 }
 
+.quote{
+  opacity: 0.5;
+  margin-bottom: 2em !important;
+}
+
 .feature__heading {
-  color: rgb(173, 158, 107);
+  color: #d7e1ec;
+  font-weight: 300;
   margin-bottom: 2rem;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .feature__heading > p {
@@ -56,11 +68,19 @@
   display: flex;
   justify-content: center;
   border-radius: 50%;
+  margin: 0 5em;
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .vovoca__img > img {
-  margin: auto;
-  padding-left: 0.7rem;
+  height: 180%;
+  width: 180%;
+  border: inset 1px 1px 1px #1A1B1F, 1px 1px 1px rgba(64, 65, 68, 0.81);
 }
 
 @media only screen and (max-width: 600px) {

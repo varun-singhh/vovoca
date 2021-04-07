@@ -54,7 +54,6 @@ const Navbar = () => {
 
   useEffect(() => {
     if (cookie.get('token')) {
-      console.log('hello');
       dispatch(getUserDetails());
     }
   }, []);
