@@ -1,3 +1,9 @@
+[![Forks][forks-shield]][https://github.com/varun-singhh/vovoca/network/members]
+[![Stargazers][stars-shield]][https://github.com/varun-singhh/vovoca/stargazers]
+[![Issues][issues-shield]][https://github.com/varun-singhh/vovoca/issues]
+[![MIT License][license-shield]][https://github.com/varun-singhh/vovoca/blob/Development/LICENSE]
+[![LinkedIn][stars-shield]][https://github.com/varun-singhh/vovoca/network/dependencies]
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
