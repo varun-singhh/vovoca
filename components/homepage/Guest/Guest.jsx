@@ -37,7 +37,7 @@ const Guest = () => {
 
                   <p className={style.song__name}>{i.name.charAt(0).toUpperCase() + i.name.slice(1)}</p>
 
-                  <Link href={`/music/${encodeURIComponent(i._id)}`}>
+                  <Link scroll={true} href={`/music/${encodeURIComponent(i._id)}`}>
                     <button
                       style={{ cursor: 'pointer' }}
                       className={style.music_button}
@@ -55,6 +55,10 @@ const Guest = () => {
             )}
           </div>
 
+          <Link href="/allMusic">
+            <button style={{maxWidth: '250px', zIndex: 4, maxHeight: '60px', margin: 'auto'}}>Listen More</button>
+          </Link>
+
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Trending</h1>
             <hr className="divider" />
@@ -70,7 +74,7 @@ const Guest = () => {
                   ></div>
 
                   <p className={style.song__name}>{i.name.charAt(0).toUpperCase() + i.name.slice(1)}</p>
-                  <Link href={`/music/${encodeURIComponent(i._id)}`}>
+                  <Link scroll={true} href={`/music/${encodeURIComponent(i._id)}`}>
                     <button
                       style={{ cursor: 'pointer' }}
                       className={style.music_button}
@@ -89,6 +93,9 @@ const Guest = () => {
           </div>
         </div>
       </div>
+        <div className={style.vovoca__markdown}>
+          <p className={style.vovoca__name}>MUSIC CHARTS</p>
+        </div>
     </div>
   );
 };

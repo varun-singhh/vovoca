@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Footer from '../components/homepage/Footer/Footer'
 import style from '../styles/PrivacyPolicy.module.css'
 
 const privacyPolicy = () => {
@@ -18,6 +19,7 @@ const privacyPolicy = () => {
     }
 
     return (
+        <>
         <div className={style.container}>
             <Head>
                 <title>VOVOCA | Privacy Policy</title>
@@ -59,7 +61,9 @@ const privacyPolicy = () => {
                     </p>
                 </div>
             </div>
-        </div>
+            </div>
+            <Footer/>
+            </>
     )
 }
 

@@ -14,51 +14,93 @@ import Trending from './Trending';
 import History from './History';
 import Logout from './Logout';
 import Link from 'next/link';
+import Footer from '../homepage/Footer/Footer'
 const UserDashboard = () => {
   const [nav, setNav] = useState('profile');
   return (
+    <>
     <div className={style.dashboard}>
       {/* Navbar for wider screen */}
       <div className={style.dashnav}>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('profile')}
+          onClick={(r) => {setNav('profile'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+          document.getElementById('container').scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'profile' ? 'wheat' : 'gray'}` }}
         >
-          Profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Profile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
           <FaUserAlt />{' '}
         </p>
         <hr className="divider"></hr>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('category')}
+          onClick={(r) => {setNav('category'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'category' ? 'wheat' : 'gray'}` }}
         >
-          Category
+          Category{' '}
           <FaLayerGroup />
         </p>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('trending')}
+          onClick={(r) => {setNav('trending'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'trending' ? 'wheat' : 'gray'}` }}
         >
-          Trending <FaCrown />
+          Trending{' '} <FaCrown />
         </p>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('history')}
+          onClick={(r) => {setNav('history'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
         >
-          Uploads &nbsp;
+          Uploads &nbsp;{' '}
           <FaHistory />
         </p>
         <hr className="divider"></hr>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('logout')}
+          onClick={(r) => {setNav('logout'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}` }}
         >
-          Logout <FaPowerOff />
+          Logout{' '} <FaPowerOff />
         </p>
       </div>
 
@@ -66,16 +108,30 @@ const UserDashboard = () => {
       <div className={style.dashnav_mobile}>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('profile')}
+          onClick={(r) => {setNav('profile'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'profile' ? 'wheat' : 'gray'}` }}
         >
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{' '}
           <FaUserAlt />
           <span className={style.text_mobile}>Profile</span>
         </p>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('category')}
+          onClick={(r) => {setNav('category'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'category' ? 'wheat' : 'gray'}` }}
         >
           <FaLayerGroup />
@@ -83,7 +139,14 @@ const UserDashboard = () => {
         </p>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('trending')}
+          onClick={(r) => {setNav('trending'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'trending' ? 'wheat' : 'gray'}` }}
         >
           {' '}
@@ -93,7 +156,14 @@ const UserDashboard = () => {
 
         <p
           className={style.navtext}
-          onClick={(r) => setNav('history')}
+          onClick={(r) => {setNav('history'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
         >
           {' '}
@@ -101,10 +171,17 @@ const UserDashboard = () => {
           <FaHistory />
           <span className={style.text_mobile}>History</span>
         </p>
-        <Link href="/">
+        <Link scroll={true} href="/">
           <p
             className={style.navtext}
-            onClick={(r) => setNav('home')}
+            onClick={(r) => {setNav('home'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
             style={{ color: `${nav === 'home' ? 'wheat' : 'gray'}` }}
           >
             {' '}
@@ -114,7 +191,14 @@ const UserDashboard = () => {
         </Link>
         <p
           className={style.navtext}
-          onClick={(r) => setNav('logout')}
+          onClick={(r) => {setNav('logout'); 
+        if (process.browser) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            })
+        }}}
           style={{ color: `${nav === 'logout' ? 'rgb(218, 84, 84)' : 'gray'}` }}
         >
           <FaPowerOff />
@@ -132,7 +216,7 @@ const UserDashboard = () => {
         <br />
         <p style={{ color: 'gray', fontSize: 'x-small' }}>
           ©{' '}
-          <Link href="https://devbucket.tech/">
+          <Link scroll={true} href="https://devbucket.tech/">
             <span style={{ color: 'rgb(163, 151, 130)', cursor: 'pointer' }}>
               Devbucket
             </span>
@@ -141,6 +225,8 @@ const UserDashboard = () => {
         </p>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

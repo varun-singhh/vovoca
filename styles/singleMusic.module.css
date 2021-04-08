@@ -101,6 +101,9 @@
     linear-gradient(180deg, rgb(7, 114, 3) 0%, #054d03 100%) !important;
 }
 @media screen and (max-width: 600px) {
+  .container{
+    height: 100vh;
+  }
   .card {
     width: 100%;
     border-radius: 5px;
@@ -117,6 +120,8 @@
   .audio {
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
+    
   }
   .buttons {
     margin-top: 600px;

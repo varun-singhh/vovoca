@@ -1,12 +1,16 @@
 .about {
-  padding: 5rem 0;
-  padding: 5rem 0;
+  padding: 5rem;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: radial-gradient(
     37.53% 147.33% at 5.39% 8.57%,
     rgba(255, 255, 255, 0.07) 0%,
     rgba(255, 255, 255, 0) 100%
   ),
   linear-gradient(180deg, #26282a 0%, #212325 100%); 
+  background-color: #303234;
 }
 
 .container > h2 {
@@ -22,10 +26,17 @@
   margin-right: auto;
 }
 
+.quote{
+  opacity: 0.5;
+  margin-bottom: 2em !important;
+}
+
 .feature__heading {
-  color: rgb(173, 158, 107);
+  color: #d7e1ec;
+  font-weight: 300;
   margin-bottom: 2rem;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .feature__heading > p {
@@ -36,6 +47,7 @@
   line-height: 1.74;
   color: #a0a1ac;
   margin-bottom: 2rem;
+  max-width: 320px;
 }
 
 .vovoca__img {
@@ -56,17 +68,36 @@
   display: flex;
   justify-content: center;
   border-radius: 50%;
+  margin: 0 5em;
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.left > p,
+.left > h2{
+  text-align: left !important;
+}
+.right > p,
+.right > h2{
+  text-align: right !important;
 }
 
 .vovoca__img > img {
-  margin: auto;
-  padding-left: 0.7rem;
+  height: 180%;
+  /* width: 180%; */
+  border: inset 1px 1px 1px #1A1B1F, 1px 1px 1px rgba(64, 65, 68, 0.81);
 }
 
 @media only screen and (max-width: 600px) {
   .about {
     width: 90%;
     margin: auto;
+    padding: 38em 0;
+    text-align: center !important;
   }
   .features {
     display: block;
@@ -75,24 +106,21 @@
     font-size: 2em;
   }
 
-  .feature__heading > h1 {
-    text-align: center;
+  .feature__heading > h2 {
+    text-align: center !important;
   }
 
   .feature__heading > p {
-    text-align: center;
+    text-align: center !important;
+    padding: 0 15px;
   }
 
   .vovoca__img {
     height: 200px;
     width: 200px;
-    margin: auto;
+    margin: 5em auto;
   }
-
-  .vovoca__img > img {
-    height: 150px;
-    width: 150px;
-  }
+  
   .feature__col-1 > hr,
   .feature__col-2 > hr {
     display: none;

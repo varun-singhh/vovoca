@@ -54,7 +54,6 @@ const Navbar = () => {
 
   useEffect(() => {
     if (cookie.get('token')) {
-      console.log('hello');
       dispatch(getUserDetails());
     }
   }, []);
@@ -166,32 +165,25 @@ const Navbar = () => {
             : style.navbar__box
         }
       >
-        <Link href="/">
+        <Link scroll={true} href="/">
           <div className={style.neon}>VOVOCA</div>
         </Link>
         <div className={style.nav__bar}>
           <ul className={style.nav__items}>
-            <Link href="/">
+            <Link scroll={true} href="/">
               <li className={style.list__items}>Home</li>
             </Link>
-            <Link href="/#about">
+            <Link scroll={true} href="/#about">
               <li className={style.list__items}>About us</li>
             </Link>
-            {authenticated.isAuthenticated === true ? (
-              <Link href="/allMusic">
-                <li className={style.list__items}>Listen Now</li>
-              </Link>
-            ) : (
-              <></>
-            )}
-            <Link href="/testimonial">
+            <Link scroll={true} href="/testimonial">
               <li className={style.list__items}>Testimonials</li>
             </Link>
-            <Link href="/developers">
+            <Link scroll={true} href="/developers">
               <li className={style.list__items}>Developers</li>
             </Link>
             {authenticated.isAuthenticated === true ? (
-              <Link href="/dashboard">
+              <Link scroll={true} href="/dashboard">
                 {/* <div style={{ display: 'flex', alignItems: 'center' }}>
                   <FaUserCircle
                     style={{
@@ -242,23 +234,12 @@ const Navbar = () => {
       {authenticated.isAuthenticated === true ? (
         <>
           <div className={style.mobile__header}>
-            <Link href="/">
+            <Link scroll={true} href="/">
               <div className={style.neon}>VOVOCA</div>
             </Link>
           </div>
           <div className={style.dashnav_mobile}>
-            <Link href="/#features">
-              <p
-                className={style.navtext}
-                onClick={(r) => setNav('profile')}
-                style={{ color: `${nav === 'profile' ? 'wheat' : 'gray'}` }}
-              >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <IoMdTrendingUp />
-                <span className={style.text_mobile}>Trending</span>
-              </p>
-            </Link>
-            <Link href="/allMusic">
+            <Link scroll={true} href="/allMusic">
               <p
                 className={style.navtext}
                 onClick={(r) => setNav('category')}
@@ -268,7 +249,7 @@ const Navbar = () => {
                 <span className={style.text_mobile}>All Music</span>
               </p>
             </Link>
-            <Link href="/">
+            <Link scroll={true} href="/">
               <p
                 className={style.navtext}
                 onClick={(r) => setNav('trending')}
@@ -279,7 +260,7 @@ const Navbar = () => {
                 <span className={style.text_mobile}>Home</span>
               </p>
             </Link>
-            <Link href="/dashboard">
+            <Link scroll={true} href="/dashboard">
               <p
                 className={style.navtext}
                 onClick={(r) => setNav('history')}
@@ -307,12 +288,12 @@ const Navbar = () => {
       ) : (
         <>
           <div className={style.mobile__header}>
-            <Link href="/">
+            <Link scroll={true} href="/">
               <div className={style.neon}>VOVOCA</div>
             </Link>
           </div>
           <div className={style.dashnav_mobile}>
-            <Link href="/testimonial">
+            <Link scroll={true} href="/testimonial">
               <p
                 className={style.navtext}
                 onClick={(r) => setNav('testimonial')}
@@ -323,28 +304,7 @@ const Navbar = () => {
                 <span className={style.text_mobile}>Testimonial</span>
               </p>
             </Link>
-            <Link href="/privacy-policy">
-              <p
-                className={style.navtext}
-                onClick={(r) => setNav('privacy')}
-                style={{ color: `${nav === 'privacy' ? 'wheat' : 'gray'}` }}
-              >
-                <BsFillShieldLockFill />
-                <span className={style.text_mobile}>Privacy</span>
-              </p>
-            </Link>
-            <Link href="/">
-              <p
-                className={style.navtext}
-                onClick={(r) => setNav('home')}
-                style={{ color: `${nav === 'home' ? 'wheat' : 'gray'}` }}
-              >
-                {' '}
-                <AiFillHome />
-                <span className={style.text_mobile}>Home</span>
-              </p>
-            </Link>
-            <Link href="/developers">
+            <Link scroll={true} href="/developers">
               <p
                 className={style.navtext}
                 onClick={(r) => setNav('history')}
@@ -356,7 +316,18 @@ const Navbar = () => {
                 <span className={style.text_mobile}>Developers</span>
               </p>
             </Link>
-            <Link href="/#about">
+            <Link scroll={true} href="/">
+              <p
+                className={style.navtext}
+                onClick={(r) => setNav('home')}
+                style={{ color: `${nav === 'home' ? 'wheat' : 'gray'}` }}
+              >
+                {' '}
+                <AiFillHome />
+                <span className={style.text_mobile}>Home</span>
+              </p>
+            </Link>
+            <Link scroll={true} href="/#about">
               <p
                 className={style.navtext}
                 onClick={(r) => setNav('about')}

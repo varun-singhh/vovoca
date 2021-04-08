@@ -21,7 +21,7 @@ const index = () => {
   useEffect(() => {
     dispatch(getSingleMusic(id));
   }, [id]);
-  const { music } = useSelector((state) => state.music);
+  const { music, loading } = useSelector((state) => state.music);
 
   const copyLink = () => {
     if (process.browser) {
@@ -47,7 +47,7 @@ const index = () => {
     console.log(res);
   };
 
-  if (!music)
+  if (!music || loading)
     return (
       <>
         <div className={style.container}>
@@ -59,6 +59,7 @@ const index = () => {
 
   return (
     <>
+      {console.log(music)}
       <Head>
         <title>VOVOCA | {music.name}</title>
       </Head>
@@ -68,7 +69,7 @@ const index = () => {
           <img className={style.background__image} src={music.image}></img>
           <img className={style.image} src={music.image}></img>
           <div className={style.buttons}>
-            <Link href="/allMusic">
+            <Link scroll={true} href="/allMusic">
               <button className={style.single_music_button}>
                 <HiViewList />
               </button>

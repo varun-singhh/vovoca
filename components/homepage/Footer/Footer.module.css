@@ -27,6 +27,14 @@
   margin-left: -15px;
 }
 
+@media (min-width: 1300px) {
+  .contents {
+    align-items: center !important;
+  }
+  .contact__box{
+    margin-left: 0 !important;
+  }
+}
 @media (min-width: 1200px) {
   .contents {
     align-items: center !important;
@@ -56,11 +64,11 @@
 }
 
 .get__in__touch > p {
-  font-size: 1.0625rem;
   line-height: 1.65;
-  margin-top: -5%;
+  margin-top: -2%;
   color: #d7e1ec;
   width: 92%;
+  line-height: 1.8;
 }
 
 .get__in__touch-form {
@@ -124,7 +132,7 @@
 .contacts {
   position: relative;
   width: 100%;
-
+  color: #d7e1ec !important;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: 3%;
@@ -134,7 +142,7 @@
   padding: 1.875rem;
   border: 1px solid transparent;
   border-radius: 1.25rem;
-  margin-right: 5%;
+  margin-left: 15%;
   background-image: linear-gradient(
       135deg,
       #3a3e41 0%,
@@ -146,6 +154,7 @@
   background-origin: padding-box, border-box;
   box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
     -4px -4px 15px rgb(195 200 205 / 4%);
+    width: 600px;
 }
 
 .row {
@@ -246,7 +255,8 @@
 
 .contact__value {
   font-size: 0.95rem;
-  color: #b4c0ce;
+  color: #d7e1ec;
+
 }
 
 .rights {
@@ -303,6 +313,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .footer{
+    margin-top: unset;
+  }
   .get__in__touch {
     display: block;
     width: 90%;
@@ -310,8 +323,9 @@
     margin-right: auto;
   }
   .contact__box {
-    margin-right: 5%;
-    margin-left: 5%;
+    width: 100%;
+    margin-left: unset;
+    text-align: left;
   }
   .get__in__touch > h2 {
     font-size: 32px;
@@ -337,6 +351,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-bottom: 35px;
   }
   .download__app__buttons {
     margin-right: -62%;

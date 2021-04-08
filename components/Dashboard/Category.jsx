@@ -70,8 +70,8 @@ const Category = () => {
   return (
     <>
       {category_search === 1 ? (
-        <div>
-          <h2>Top Searches</h2>
+        <div id="container">
+          <h1>Top Searches</h1>
 
           {categorised_music ? (
             categorised_music &&
@@ -104,6 +104,8 @@ const Category = () => {
           </button>
         </div>
       ) : (
+          <>
+      <h1>Select Categories</h1>
         <div className={style.category}>
           <div className={style.container}>
             <div className={style.row}>
@@ -177,8 +179,6 @@ const Category = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className={style.row}>
               <div className={style.category__card}>
                 <div
                   id="6"
@@ -253,6 +253,7 @@ const Category = () => {
             <button onClick={() => getCategories()}>Search</button>
           </div>
         </div>
+      </>
       )}
     </>
   );

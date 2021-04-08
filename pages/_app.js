@@ -8,6 +8,8 @@ import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollButton from '../components/scrollToTop/ScrollButton'
+
 const Tablet = () => {
   const isTablet = useMediaQuery({ minWidth: 601, maxWidth: 1226 })
   return isTablet
@@ -34,7 +36,8 @@ function MyApp({ Component, pageProps }) {
       draggable={true}
       pauseOnHover={false}
       />
-      <Navbar/>
+        <Navbar />
+        <ScrollButton/>
       <Component {...pageProps} />
     </Provider>)
     

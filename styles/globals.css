@@ -108,6 +108,15 @@ ul {
   background-image: linear-gradient(180deg, #2e3138 0%, #43464e 100%);
   opacity: 0.9;
 }
+.divider-main::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(180deg, #2e3138 0%, #43464e 100%);
+  opacity: 0.9;
+  margin-bottom: 55px;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -180,6 +189,9 @@ ul {
   }
   .rhap_horizontal {
     flex-direction: column !important;
+  }
+  .divider-main::after{
+    margin-bottom: unset;
   }
 }
 @media only screen and (max-width: 360px) {

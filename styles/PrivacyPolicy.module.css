@@ -91,4 +91,7 @@
     .app > h2{
         font-size: 2.2em;
     }
+    .container{
+        margin-bottom: 10em;
+    }
 }

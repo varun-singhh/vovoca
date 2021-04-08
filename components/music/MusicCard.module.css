@@ -64,6 +64,7 @@
 .rhap_main_controls_button button {
   background: none;
   box-shadow: none;
+  
 }
 @media screen and (max-width: 600px) {
   .row {
@@ -72,6 +73,7 @@
     align-items: center;
     padding: 1em;
     min-width: 0px;
+    margin: 2em auto;
   }
   .details {
     justify-content: center;

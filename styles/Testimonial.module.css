@@ -2,7 +2,8 @@
   width: 100%;
   padding-right: 4rem;
   padding-left: 4rem;
-  height: 100vh;
+  margin-bottom: 3em;
+  /* height: 100vh; */
 }
 
 .testimonial {
@@ -76,13 +77,26 @@
   color: #d7e1ec;
 }
 
+@media (min-width: 1300px) {
+  .testimonial{
+    padding: 0.5em;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .testimonial__row__1 {
     display: block;
   }
+  .testimonial{
+    padding: 1em;
+  }
   /* .testimonial__row__2 {
     display: block;
   } */
+  .testimonial__content > p {
+    width: 105%;
+    margin-top: 5px;
+  }
   .container {
     padding-right: 0;
     padding-left: 0;

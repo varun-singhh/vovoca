@@ -18,7 +18,7 @@ const Profile = () => {
   const [file, setFile] = useState([]);
 
   return (
-    <div>
+    <div id="container">
       <Modal
         open={open}
         onClose={onCloseModal}
@@ -35,13 +35,13 @@ const Profile = () => {
         </i>
         <UploadModal file={file} user={authenticated.data?.username} />
       </Modal>
-      <h3>Hi, {authenticated.data?.username}</h3>
+      <h3>Hi, {authenticated.data?.username.charAt(0).toUpperCase() + authenticated.data?.username.slice(1)}</h3>
       <div className={style.profile_component}>
-        <div style={{ display: 'flex' }}>
+        <div>
           <p style={{ color: 'wheat' }}>Username:</p>
           <p> &nbsp;@{authenticated.data?.username}</p>
         </div>
-        <div style={{ display: 'flex' }}>
+        <div>
           <p style={{ color: 'wheat' }}>Email Id:</p>
           <p>&nbsp;{authenticated.data?.email}</p>
         </div>
