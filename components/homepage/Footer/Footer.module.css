@@ -314,7 +314,7 @@
 
 @media only screen and (max-width: 600px) {
   .footer{
-    margin-top: 20em;
+    margin-top: unset;
   }
   .get__in__touch {
     display: block;

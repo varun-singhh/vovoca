@@ -1,6 +1,5 @@
 .about {
-  padding: 5rem 0;
-  padding: 5rem 0;
+  padding: 5rem;
   height: 90vh;
   display: flex;
   justify-content: center;
@@ -48,6 +47,7 @@
   line-height: 1.74;
   color: #a0a1ac;
   margin-bottom: 2rem;
+  max-width: 320px;
 }
 
 .vovoca__img {
@@ -77,6 +77,15 @@
   overflow: hidden;
 }
 
+.left > p,
+.left > h2{
+  text-align: left !important;
+}
+.right > p,
+.right > h2{
+  text-align: right !important;
+}
+
 .vovoca__img > img {
   height: 180%;
   /* width: 180%; */
@@ -88,6 +97,7 @@
     width: 90%;
     margin: auto;
     padding: 38em 0;
+    text-align: center !important;
   }
   .features {
     display: block;
@@ -96,12 +106,13 @@
     font-size: 2em;
   }
 
-  .feature__heading > h1 {
-    text-align: center;
+  .feature__heading > h2 {
+    text-align: center !important;
   }
 
   .feature__heading > p {
-    text-align: center;
+    text-align: center !important;
+    padding: 0 15px;
   }
 
   .vovoca__img {

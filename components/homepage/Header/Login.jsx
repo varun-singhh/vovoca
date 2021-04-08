@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { loginUser } from '../../../actions/authAction';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
+import Router from 'next/router'
 
 const Login = (props) => {
   console.log(props);
@@ -26,6 +27,9 @@ const Login = (props) => {
         closeButton: false,
         className: style.toast_success_background,
       });
+      Router.push("/dashboard")
+
+
     } else {
       console.log(error);
       toast(error.err || 'Something went wrong', {

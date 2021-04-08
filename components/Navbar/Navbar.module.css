@@ -138,6 +138,7 @@
       justify-content: start !important;
       margin-bottom: -6% !important;
       align-items: center;
+      width: 50%;
   }
   .dashcontent_mobile {
     height: fit-content;

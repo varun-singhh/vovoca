@@ -239,17 +239,6 @@ const Navbar = () => {
             </Link>
           </div>
           <div className={style.dashnav_mobile}>
-            <Link scroll={true} href="/#features">
-              <p
-                className={style.navtext}
-                onClick={(r) => setNav('profile')}
-                style={{ color: `${nav === 'profile' ? 'wheat' : 'gray'}` }}
-              >
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <IoMdTrendingUp />
-                <span className={style.text_mobile}>Trending</span>
-              </p>
-            </Link>
             <Link scroll={true} href="/allMusic">
               <p
                 className={style.navtext}
@@ -315,14 +304,16 @@ const Navbar = () => {
                 <span className={style.text_mobile}>Testimonial</span>
               </p>
             </Link>
-            <Link scroll={true} href="/privacy-policy">
+            <Link scroll={true} href="/developers">
               <p
                 className={style.navtext}
-                onClick={(r) => setNav('privacy')}
-                style={{ color: `${nav === 'privacy' ? 'wheat' : 'gray'}` }}
+                onClick={(r) => setNav('history')}
+                style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
               >
-                <BsFillShieldLockFill />
-                <span className={style.text_mobile}>Privacy</span>
+                {' '}
+                &nbsp;
+                <FaCode />
+                <span className={style.text_mobile}>Developers</span>
               </p>
             </Link>
             <Link scroll={true} href="/">
@@ -334,18 +325,6 @@ const Navbar = () => {
                 {' '}
                 <AiFillHome />
                 <span className={style.text_mobile}>Home</span>
-              </p>
-            </Link>
-            <Link scroll={true} href="/developers">
-              <p
-                className={style.navtext}
-                onClick={(r) => setNav('history')}
-                style={{ color: `${nav === 'history' ? 'wheat' : 'gray'}` }}
-              >
-                {' '}
-                &nbsp;
-                <FaCode />
-                <span className={style.text_mobile}>Developers</span>
               </p>
             </Link>
             <Link scroll={true} href="/#about">

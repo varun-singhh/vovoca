@@ -87,9 +87,16 @@
   .testimonial__row__1 {
     display: block;
   }
+  .testimonial{
+    padding: 1em;
+  }
   /* .testimonial__row__2 {
     display: block;
   } */
+  .testimonial__content > p {
+    width: 130%;
+    margin-top: 5px;
+  }
   .container {
     padding-right: 0;
     padding-left: 0;

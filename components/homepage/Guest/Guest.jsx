@@ -55,6 +55,10 @@ const Guest = () => {
             )}
           </div>
 
+          <Link href="/allMusic">
+            <button style={{maxWidth: '250px', zIndex: 4, maxHeight: '60px', margin: '0 auto 0 auto'}}>Listen More</button>
+          </Link>
+
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Trending</h1>
             <hr className="divider" />
@@ -89,6 +93,9 @@ const Guest = () => {
           </div>
         </div>
       </div>
+        <div className={style.vovoca__markdown}>
+          <p className={style.vovoca__name}>MUSIC CHARTS</p>
+        </div>
     </div>
   );
 };
