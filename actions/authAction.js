@@ -7,7 +7,7 @@ import {
   FETCH_USER,
 } from "./type";
 import setAuthToken from "./utils/setAuthToken";
-import cookie from 'js-cookie'
+import cookie from "js-cookie";
 
 export const loginUser = (email, password) => async (dispatch) => {
   const config = {
@@ -18,7 +18,6 @@ export const loginUser = (email, password) => async (dispatch) => {
   const body = JSON.stringify({ email, password });
   try {
     dispatch({ type: LOADING });
-    console.log("No token");
     const res = await axios.post(
       "https://vovoca.herokuapp.com/api/admin/login",
       body,
@@ -52,7 +51,6 @@ export const registerUser = async (username, email, password) => {
       body,
       config
     );
-    console.log(res.data);
     return res.data;
   } catch (err) {
     console.error(err);
@@ -63,9 +61,7 @@ export const registerUser = async (username, email, password) => {
 export const getUserDetails = () => async (dispatch) => {
   if (cookie.get("token")) {
     setAuthToken(cookie.get("token"));
-    console.log("token");
     const res = await axios.get("https://vovoca.herokuapp.com/api/admin");
-    console.log(res);
     dispatch({
       type: FETCH_USER,
       payload: res.data,

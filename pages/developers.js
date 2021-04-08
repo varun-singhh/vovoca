@@ -1,8 +1,8 @@
-import styles from '../styles/Testimonial.module.css';
-import Head from 'next/head';
-import { AiFillLinkedin } from 'react-icons/ai';
-import Link from 'next/link';
-import Footer from '../components/homepage/Footer/Footer';
+import styles from "../styles/Testimonial.module.css";
+import Head from "next/head";
+import { AiFillLinkedin } from "react-icons/ai";
+import Link from "next/link";
+import Footer from "../components/homepage/Footer/Footer";
 
 const developers = () => {
   return (
@@ -45,15 +45,15 @@ const developers = () => {
                 <Link scroll={true} href="https://www.linkedin.com/in/v-varun/">
                   <button
                     style={{
-                      width: '100%',
-                      borderTopLeftRadius: '0px',
-                      borderTopRightRadius: '0px',
-                      borderBottomLeftRadius: '1.25rem',
-                      borderBottomRightRadius: '1.25rem',
-                      marginTop: '-5%',
+                      width: "100%",
+                      borderTopLeftRadius: "0px",
+                      borderTopRightRadius: "0px",
+                      borderBottomLeftRadius: "1.25rem",
+                      borderBottomRightRadius: "1.25rem",
+                      marginTop: "-5%",
                     }}
                   >
-                    <AiFillLinkedin style={{ fontSize: 'x-large' }} />
+                    <AiFillLinkedin style={{ fontSize: "x-large" }} />
                   </button>
                 </Link>
               </div>
@@ -64,8 +64,8 @@ const developers = () => {
                       The concept was farely new and it was challenging to
                       forsee the design of our website as such websites are not
                       in huge quantities on the web, however, we worked hard as
-                      a team and coded vovoca as beautiful as we can.I hope you
-                      all with love vovoca too.
+                      a team and coded vovoca as beautiful as we can. I hope you
+                      all will love vovoca too.
                     </p>
                     <span>Prakhar Pandey</span>
                     <br />
@@ -75,9 +75,9 @@ const developers = () => {
                     className={styles.developer__img}
                     style={{
                       backgroundImage: `url(https://avatars.githubusercontent.com/u/51090491?v=4)`,
-                      backgroundSize: '90px 90px',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: "90px 90px",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
                     }}
                   ></div>
                 </article>
@@ -87,15 +87,15 @@ const developers = () => {
                 >
                   <button
                     style={{
-                      width: '100%',
-                      borderTopLeftRadius: '0px',
-                      borderTopRightRadius: '0px',
-                      borderBottomLeftRadius: '1.25rem',
-                      borderBottomRightRadius: '1.25rem',
-                      marginTop: '-10%',
+                      width: "100%",
+                      borderTopLeftRadius: "0px",
+                      borderTopRightRadius: "0px",
+                      borderBottomLeftRadius: "1.25rem",
+                      borderBottomRightRadius: "1.25rem",
+                      marginTop: "-10%",
                     }}
                   >
-                    <AiFillLinkedin style={{ fontSize: 'x-large' }} />
+                    <AiFillLinkedin style={{ fontSize: "x-large" }} />
                   </button>
                 </Link>
               </div>
@@ -116,9 +116,9 @@ const developers = () => {
                     className={styles.developer__img}
                     style={{
                       backgroundImage: `url(https://media-exp1.licdn.com/dms/image/C5103AQFIQ2yP_StD7g/profile-displayphoto-shrink_800_800/0/1566850251714?e=1623283200&v=beta&t=NR2yJOJhnhVJtp4y2B2QKRYJJ9wChmSlOzfYtoDZ2Jw)`,
-                      backgroundSize: '90px 90px',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
+                      backgroundSize: "90px 90px",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
                     }}
                   ></div>
                 </article>
@@ -128,15 +128,15 @@ const developers = () => {
                 >
                   <button
                     style={{
-                      width: '100%',
-                      borderTopLeftRadius: '0px',
-                      borderTopRightRadius: '0px',
-                      borderBottomLeftRadius: '1.25rem',
-                      borderBottomRightRadius: '1.25rem',
-                      marginTop: '-5%',
+                      width: "100%",
+                      borderTopLeftRadius: "0px",
+                      borderTopRightRadius: "0px",
+                      borderBottomLeftRadius: "1.25rem",
+                      borderBottomRightRadius: "1.25rem",
+                      marginTop: "-5%",
                     }}
                   >
-                    <AiFillLinkedin style={{ fontSize: 'x-large' }} />
+                    <AiFillLinkedin style={{ fontSize: "x-large" }} />
                   </button>
                 </Link>
               </div>

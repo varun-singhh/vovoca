@@ -8,7 +8,7 @@ import {
   UPLOADED_MUSIC,
   CATEGORISED_MUSIC,
   RESET_CATEGORISED_MUSIC,
-  SET_ERROR
+  SET_ERROR,
 } from "../actions/type";
 
 const initialState = {
@@ -49,7 +49,6 @@ const reducer = (state = initialState, action) => {
         uploaded: action.payload,
       };
     case GET_LATEST_MUSIC:
-      console.log(action.payload);
       return {
         ...state,
         loading: false,
@@ -76,7 +75,7 @@ const reducer = (state = initialState, action) => {
     case SET_ERROR:
       return {
         ...state,
-        error: "No Music Founded"
+        error: "No Music Founded",
       };
     default:
       return state;

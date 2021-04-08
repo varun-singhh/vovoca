@@ -6,7 +6,6 @@ import Loader from "../Loader/Loader";
 import style from "../../styles/AllMusic.module.css";
 import ReactPaginate from "react-paginate";
 import { LOADING } from "../../actions/type";
-import music from "../music/music";
 
 const History = () => {
   const dispatch = useDispatch();
@@ -19,7 +18,6 @@ const History = () => {
 
   const handleChange = (e) => {
     dispatch({ type: LOADING });
-    console.log(e.selected + 1);
     dispatch(getUploadedMusic(e.selected + 1));
   };
 
