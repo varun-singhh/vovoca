@@ -15,7 +15,7 @@ Vovoca is an online music streaming and downloading website, and the coolest fea
 - Download Music
 - Share Music
 
-### Is the Any Authentication?  
+### Is there Any Authentication?  
 Yes Vovoca is authenticated and takes care of your personal info privacy, although songs uploaded by you will be available for everyone to listen and download
 
 ## Dependencies used:
@@ -29,7 +29,6 @@ Yes Vovoca is authenticated and takes care of your personal info privacy, althou
 - React Toastify
 - React Icons
 - React Responsive
-- Bootstrap
 ```
 ![screen-capture-_1_](https://user-images.githubusercontent.com/47475007/114043261-c230c780-98a3-11eb-8526-7a39f52f5b72.gif)
 
