@@ -7,7 +7,6 @@ import { useDispatch } from 'react-redux';
 import Router from 'next/router'
 
 const Login = (props) => {
-  console.log(props);
   const dispatch = useDispatch();
   const error = useSelector((state) => state.error);
   const authenticate = useSelector((state) => state.auth.isAuthenticated);
@@ -21,7 +20,6 @@ const Login = (props) => {
   };
   const notify = (category) => {
     if (category === 'success') {
-      console.log(category);
 
       toast('Loggedin Successfully', {
         closeButton: false,
@@ -49,7 +47,7 @@ const Login = (props) => {
     } else {
       dispatch(loginUser(login.email, login.password)).then((res) => {
         if (res === true) {
-          console.log(res);
+        
           props.onCloseModal();
           notify('success');
         } else {
@@ -57,15 +55,7 @@ const Login = (props) => {
         }
       });
 
-      // if (x===true) {
-      //   console.log(authenticate)
-      //   props.onCloseModal()
-      //   notify("success");
-      // } else {
-      //   //props.onCloseModal()
-      //   console.log(x)
-      //   notify("error");
-      // }
+     
     }
   };
   return (
@@ -101,7 +91,5 @@ const Login = (props) => {
     </div>
   );
 };
-// const mapStateToProps = (state) => ({
-//   isAuthenticated: state.auth.isAuthenticated,
-// });
+
 export default Login;

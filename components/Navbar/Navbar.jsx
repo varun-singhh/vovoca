@@ -9,17 +9,14 @@ import Link from 'next/link';
 import Signup from '../homepage/Header/Signup';
 import { useSelector, useDispatch } from 'react-redux';
 import { FaPowerOff } from 'react-icons/fa';
-import { IoMdLogIn, IoMdTrendingUp } from 'react-icons/io';
+import { IoMdLogIn } from 'react-icons/io';
 import { AiFillHome, AiFillInfoCircle } from 'react-icons/ai';
 import {
-  BsFillShieldLockFill,
   BsFillPeopleFill,
   BsFillMusicPlayerFill,
 } from 'react-icons/bs';
 import { getUserDetails } from '../../actions/authAction';
-// RiDashboard2Line
-// BsFillShieldLockFill
-// AiFillHome
+
 
 const Navbar = () => {
   const logout = () => {
@@ -176,6 +173,13 @@ const Navbar = () => {
             <Link scroll={true} href="/#about">
               <li className={style.list__items}>About us</li>
             </Link>
+            {authenticated.isAuthenticated === true ? (
+              <Link href="/allMusic">
+                <li className={style.list__items}>Listen Now</li>
+              </Link>
+            ) : (
+              <></>
+            )}
             <Link scroll={true} href="/testimonial">
               <li className={style.list__items}>Testimonials</li>
             </Link>
@@ -184,17 +188,7 @@ const Navbar = () => {
             </Link>
             {authenticated.isAuthenticated === true ? (
               <Link scroll={true} href="/dashboard">
-                {/* <div style={{ display: 'flex', alignItems: 'center' }}>
-                  <FaUserCircle
-                    style={{
-                      fontSize: '3.1em',
-                      marginLeft: '1.5rem',
-                      color: 'wheat',
-                      cursor: 'pointer',
-                      marginBottom: '-1rem',
-                    }}
-                  />
-                </div> */}
+                
                 <button
                   style={{ marginLeft: '25px', padding: '0.4em 1em' }}
                   id="dashboard"
@@ -339,6 +333,7 @@ const Navbar = () => {
                 <span className={style.text_mobile}>About</span>
               </p>
             </Link>
+            
 
             <p
               className={style.navtext}

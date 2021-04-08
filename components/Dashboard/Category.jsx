@@ -1,7 +1,4 @@
-import axios from "axios";
-import { urlObjectKeys } from "next/dist/next-server/lib/utils";
-import React, { useEffect, useState } from "react";
-import music from "../music/music";
+import React, { useState } from "react";
 import style from "./Category.module.css";
 import Music from "../../components/music/music";
 import Loader from "../Loader/Loader";
@@ -15,7 +12,6 @@ import styles from "../../styles/AllMusic.module.css";
 
 const Category = () => {
   const selected_category = [];
-  const [count, setCount] = useState(0);
   const [category_search, setCategory_search] = useState(0);
   const [selected, setSelected] = useState([])
 
@@ -26,14 +22,13 @@ const Category = () => {
   const totalPages = useSelector((state) => state.music.totalPages);
 
   const handleChange = (e) => {
-    console.log(selected);
     dispatch(getCategorisedMusic(selected, e.selected + 1));
   };
 
   async function getCategories() {
     setCategory_search(1);
     setSelected(selected_category)
-    console.log(selected_category.length);
+    
     dispatch(getCategorisedMusic(selected_category));
   }
 
@@ -45,7 +40,6 @@ const Category = () => {
   function handleClick(e, category) {
     if (process.browser) {
       if (selected_category.indexOf(category.toLowerCase()) !== -1) {
-        console.log(selected_category.indexOf(category.toLowerCase()));
         selected_category.splice(
           selected_category.indexOf(category.toLowerCase()),
           1
@@ -63,7 +57,6 @@ const Category = () => {
         param.classList.remove('Category_selected__k-mej');
       }
 
-      console.log(selected_category.length);
     }
   }
 

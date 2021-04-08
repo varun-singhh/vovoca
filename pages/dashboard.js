@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import UserDashboard from "../components/Dashboard/UserDashboard";
 import { useSelector } from "react-redux";
-import cookie from 'js-cookie'
+import cookie from "js-cookie";
 import Head from "next/head";
 
 const dashboard = () => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAllMusic } from "../actions/musicActions";
 import style from "../styles/AllMusic.module.css";
@@ -18,7 +18,6 @@ const allMusic = () => {
   }, []);
 
   const handleChange = (e) => {
-    console.log(e);
     dispatch({ type: LOADING });
     dispatch(getAllMusic(e.selected + 1));
   };
@@ -38,8 +37,10 @@ const allMusic = () => {
         <title>VOVOCA | Royalty Free Music</title>
       </Head>
       <div className={style.container}>
-        {!music.loading ? music.musics.data?.map((m) => (console.log(m), (<Music music={m} />))) : (
-            <Loader loading={true} />
+        {!music.loading ? (
+          music.musics.data?.map((m) => <Music music={m} />)
+        ) : (
+          <Loader loading={true} />
         )}
         {auth.isAuthenticated ? (
           <div className={style.pagination_container}>
@@ -61,7 +62,7 @@ const allMusic = () => {
             />
           </div>
         ) : (
-           !music.loading && <p>*Login to listen more*</p>
+          !music.loading && <p>*Login to listen more*</p>
         )}
       </div>
 

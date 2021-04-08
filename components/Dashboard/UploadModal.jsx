@@ -24,7 +24,6 @@ const UploadModal = ({ user, file }) => {
 
   const handleSubmit = async () => {
     try {
-      console.log('Upload Started...');
       let formdata = new FormData();
       formdata.append('name', musicName);
       formdata.append('music', file);

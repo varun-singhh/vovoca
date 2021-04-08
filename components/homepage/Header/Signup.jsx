@@ -46,7 +46,7 @@ const Signup = (props) => {
           className: style.toast_background,
         });
       } else {
-        console.log("user registered");
+        
         props.onCloseModal();
         toast('Account Created Successfully, Login to Enter', {
           closeButton: false,

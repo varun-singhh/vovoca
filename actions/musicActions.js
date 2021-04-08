@@ -63,7 +63,7 @@ export const getLatestMusic = () => async (dispatch) => {
     const res = await axios.get(
       `https://vovoca.herokuapp.com/api/music/latest`
     );
-    console.log(res.data);
+
     dispatch({
       type: GET_LATEST_MUSIC,
       payload: res.data,
@@ -74,19 +74,18 @@ export const getLatestMusic = () => async (dispatch) => {
 };
 
 export const getUploadedMusic = (page = 1) => async (dispatch) => {
-  console.log(page);
   try {
     setAuthToken(cookie.get("token"));
     const res = await axios.get(
       `https://vovoca.herokuapp.com/api/admin/uploaded?page=${page}`
     );
-    console.log(res.data.data);
+
     dispatch({
       type: UPLOADED_MUSIC,
       payload: res.data,
     });
   } catch (error) {
-    dispatch({type: SET_ERROR})
+    dispatch({ type: SET_ERROR });
     console.log(error);
   }
 };
@@ -94,7 +93,6 @@ export const getUploadedMusic = (page = 1) => async (dispatch) => {
 export const getCategorisedMusic = (selected_category, page) => async (
   dispatch
 ) => {
-  console.log("object");
   try {
     const res = await axios.get(
       `https://vovoca.herokuapp.com/api/music/?category=${selected_category.join(
