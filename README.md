@@ -5,8 +5,34 @@
 
 ![Capture](https://user-images.githubusercontent.com/47475007/114023460-86d8cd80-9890-11eb-814d-a0d30dbc0b5b.PNG)
 
-## Getting Started
+## What is VOVOCA?
+Vovoca is an online music streaming and downloading website, and the coolest feature of this website is, one can download royalty free music and no credits required for the same, we provide for free just because your creativity never stops
+.
+## Features of Vovoca:
+- Trednding Music
+- Lastest Music
+- Upload Music
+- Download Music
+- Share Music
 
+### Is the Any Authentication?  
+Yes Vovoca is authenticated and takes care of your personal info privacy, although songs uploaded by you will be available for everyone to listen
+
+## Dependencies used:
+```
+- Next JS
+- React Redux
+- Redux
+- React Modal
+- React H5 Audio Player
+- React Spinner
+- React Toastify
+- React Icons
+- React Responsive
+- Bootstrap
+```
+
+#How to Begin:
 First, run the development server:
 
 ```bash
