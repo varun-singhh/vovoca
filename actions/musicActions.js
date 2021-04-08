@@ -1,5 +1,6 @@
 import axios from "axios";
 import cookie from "js-cookie";
+import { toast } from "react-toastify";
 import {
   GET_MUSIC,
   LOADING,
@@ -9,6 +10,7 @@ import {
   GET_TRENDING_MUSIC,
   CATEGORISED_MUSIC,
   RESET_CATEGORISED_MUSIC,
+  SET_ERROR,
 } from "./type";
 import setAuthToken from "./utils/setAuthToken";
 
@@ -23,7 +25,7 @@ export const getAllMusic = (page) => async (dispatch) => {
       payload: res.data,
     });
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 };
 
@@ -84,6 +86,7 @@ export const getUploadedMusic = (page = 1) => async (dispatch) => {
       payload: res.data,
     });
   } catch (error) {
+    dispatch({type: SET_ERROR})
     console.log(error);
   }
 };

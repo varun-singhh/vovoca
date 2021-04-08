@@ -70,7 +70,12 @@
 }
 
 @media (max-width: 1300px) {
-  grid-template-columns: auto auto auto auto;
+  .row{
+    grid-template-columns: auto auto auto auto;
+  }
+  .row:nth-last-child(1) {
+    grid-column: auto auto;
+  }
 }
 
 @media (max-width: 550px) {

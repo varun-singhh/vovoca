@@ -69,6 +69,11 @@
 .mobile__header,.dashnav_mobile {
   display: none;
 }
+@media  (max-width: 1300px) {
+  .neon{
+    padding-top: 1.5em;
+  }
+}
 @media only screen and (max-width: 600px) {
   .navbar__box {
     display: none;

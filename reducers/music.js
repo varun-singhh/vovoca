@@ -8,6 +8,7 @@ import {
   UPLOADED_MUSIC,
   CATEGORISED_MUSIC,
   RESET_CATEGORISED_MUSIC,
+  SET_ERROR
 } from "../actions/type";
 
 const initialState = {
@@ -19,6 +20,7 @@ const initialState = {
   trending_music: null,
   categorised_music: null,
   totalPages: null,
+  error: null,
 };
 
 const reducer = (state = initialState, action) => {
@@ -70,6 +72,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         categorised_music: null,
         totalPages: 1,
+      };
+    case SET_ERROR:
+      return {
+        ...state,
+        error: "No Music Founded"
       };
     default:
       return state;

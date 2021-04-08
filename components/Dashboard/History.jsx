@@ -6,6 +6,7 @@ import Loader from "../Loader/Loader";
 import style from "../../styles/AllMusic.module.css";
 import ReactPaginate from "react-paginate";
 import { LOADING } from "../../actions/type";
+import music from "../music/music";
 
 const History = () => {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const History = () => {
   }, []);
   const musics = useSelector((state) => state.music.uploaded);
   const loading = useSelector((state) => state.music.loading);
+  const error = useSelector((state) => state.music.error);
 
   const handleChange = (e) => {
     dispatch({ type: LOADING });
@@ -21,8 +23,11 @@ const History = () => {
     dispatch(getUploadedMusic(e.selected + 1));
   };
 
-  if (!musics) {
+  if (!musics && !error) {
     return <Loader loading={true} />;
+  }
+  if (error) {
+    return <h2 style={{color: 'wheat'}}>No Music Found</h2>
   }
 
   return (
