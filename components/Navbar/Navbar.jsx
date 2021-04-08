@@ -173,6 +173,13 @@ const Navbar = () => {
             <Link scroll={true} href="/#about">
               <li className={style.list__items}>About us</li>
             </Link>
+            {authenticated.isAuthenticated === true ? (
+              <Link href="/allMusic">
+                <li className={style.list__items}>Listen Now</li>
+              </Link>
+            ) : (
+              <></>
+            )}
             <Link scroll={true} href="/testimonial">
               <li className={style.list__items}>Testimonials</li>
             </Link>
@@ -326,6 +333,7 @@ const Navbar = () => {
                 <span className={style.text_mobile}>About</span>
               </p>
             </Link>
+            
 
             <p
               className={style.navtext}
