@@ -12,7 +12,7 @@
     height: 90vh;
   }
   .pricing__body {
-    margin-top: -7rem;
+    /* margin-top: -7rem;
     margin-bottom: 7rem;
     text-align: center;
     padding: 1.875rem 1.25rem;
@@ -32,7 +32,6 @@
     box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
       -4px -4px 15px rgb(195 200 205 / 4%);
     width: 500px;
-    max-height: 450px;
     min-width: 320px;
     background-image: linear-gradient(
         135deg,
@@ -40,7 +39,29 @@
         #2a2d30 49%,
         #242628 100%
       ),
-      linear-gradient(139deg, #c1c3c7 1%, #2a2c2f 45%, #8f949b 75%);
+      linear-gradient(139deg, #c1c3c7 1%, #2a2c2f 45%, #8f949b 75%); */
+      margin-top: -7rem;
+      margin-bottom: -7rem;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 1.875rem 1.25rem;
+      border: 1px solid transparent;
+      border-radius: 1.25rem;
+      max-height: 500px;
+      background-image: linear-gradient(135deg,#3a3e41,#2a2d30 49%,#242628),linear-gradient(139deg,#434b54 1%,#2a2c2f 45%,#191b1e 75%);
+      background-clip: padding-box,border-box;
+      background-origin: padding-box,border-box;
+      box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24/24%),-4px -4px 15px rgb(195 200 205/4%);
+      min-width: 320px;
+      width: 42%;
+      background-image: linear-gradient(
+          135deg,
+          #3a3e41 0%,
+          #2a2d30 49%,
+          #242628 100%
+        ),
+        linear-gradient(139deg, #c1c3c7 1%, #2a2c2f 45%, #8f949b 75%);
   }
   .guest__chart {
     display: flex;
@@ -62,13 +83,13 @@
     margin: 5%;
   }
   .vovoca__name {
-    font-size: 17em;
+    display: none;
     font-family: fantasy;
     color: #47474723;
     z-index: 0;
     position: relative;
-    margin-top: -45%;
-    margin-bottom: -7px;
+    margin-top: -35%;
+    margin-bottom: 1em;
     font-weight: 800;
     -ms-user-select: none;
     -moz-user-select: none;
@@ -94,7 +115,7 @@
   }
   @media only screen and (max-width: 1300px) {
     .guest__chart{
-      margin-top: 20.5em;
+      margin-top: 0.5em;
       padding: 2%;
     }
   }

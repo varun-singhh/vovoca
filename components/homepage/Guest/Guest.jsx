@@ -56,7 +56,7 @@ const Guest = () => {
           </div>
 
           <Link href="/allMusic">
-            <button style={{maxWidth: '250px', zIndex: 4, maxHeight: '60px', margin: '0 auto 0 auto'}}>Listen More</button>
+            <button style={{maxWidth: '250px', zIndex: 4, maxHeight: '60px', margin: 'auto'}}>Listen More</button>
           </Link>
 
           <div className={style.pricing__body}>

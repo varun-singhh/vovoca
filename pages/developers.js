@@ -58,10 +58,10 @@ const developers = () => {
               <article style={{marginBottom: '1em'}} className={styles.testimonial__article}>
                 <div className={styles.testimonial__content}>
                   <p>
-                    This is a simple music streaming and downloading website,
-                    but BTS it was a roller coaster ride while resolving the
-                    bugs, but teamwork and decidation helped us overcome these
-                    pronlems , and here we are with all of our hard Work :)
+                    The concept was farely new and it was challenging to
+                    forsee the design of our website as such websites are not in huge
+                    quantities on the web, however, we worked hard as a team
+                    and coded vovoca as beautiful as we can
                   </p>
                   <span>Prakhar Pandey</span>
                   <br />
@@ -91,10 +91,9 @@ const developers = () => {
               <article style={{marginBottom: '1em'}} className={styles.testimonial__article}>
                 <div className={styles.testimonial__content}>
                   <p>
-                    This is a simple music streaming and downloading website,
-                    but BTS it was a roller coaster ride while resolving the
-                    bugs, but teamwork and decidation helped us overcome these
-                    pronlems , and here we are with all of our hard Work :)
+                      We all have learnt a lot while completing vovoca. I think hardest
+                      part for all of us was shifting from react to next as it is fairly new
+                      and none of us had used before. Overall, voovca came out to be of great success
                   </p>
                   <span>Kaustubh Mishra</span>
                   <br />
@@ -103,7 +102,10 @@ const developers = () => {
                 <div
                   className={styles.developer__img}
                   style={{
-                    backgroundImage: `url(https://avatars.githubusercontent.com/u/47121025?v=4)`,
+                    backgroundImage: `url(https://media-exp1.licdn.com/dms/image/C5103AQFIQ2yP_StD7g/profile-displayphoto-shrink_800_800/0/1566850251714?e=1623283200&v=beta&t=NR2yJOJhnhVJtp4y2B2QKRYJJ9wChmSlOzfYtoDZ2Jw)`,
+                    backgroundSize: '90px 90px',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
                   }}
                 ></div>
               </article>
