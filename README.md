@@ -1,8 +1,7 @@
-[![Forks][forks-shield]][https://github.com/varun-singhh/vovoca/network/members]
-[![Stargazers][stars-shield]][https://github.com/varun-singhh/vovoca/stargazers]
-[![Issues][issues-shield]][https://github.com/varun-singhh/vovoca/issues]
-[![MIT License][license-shield]][https://github.com/varun-singhh/vovoca/blob/Development/LICENSE]
-[![LinkedIn][stars-shield]][https://github.com/varun-singhh/vovoca/network/dependencies]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -35,13 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 
 [forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[forks-url]: https://github.com/varun-singhh/vovoca/network/members
 [stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
+[stars-url]: https://github.com/varun-singhh/vovoca/stargazers
 [issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[issues-url]:https://github.com/varun-singhh/vovoca/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-url]: https://github.com/varun-singhh/vovoca/blob/Development/LICENSE
 
 ## Deploy on Vercel
 
