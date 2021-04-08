@@ -33,14 +33,14 @@ To learn more about Next.js, take a look at the following resources:
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/varun-singhh/vovoca/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/varun-singhh/vovoca/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]:https://github.com/varun-singhh/vovoca/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/varun-singhh/vovoca/blob/Development/LICENSE
+[forks-shield]: 	https://img.shields.io/github/forks/varun-singhh/vovoca
+[forks-url]:      https://github.com/varun-singhh/vovoca/network/members
+[stars-shield]: 	https://img.shields.io/github/stars/varun-singhh/vovoca
+[stars-url]:      https://github.com/varun-singhh/vovoca/stargazers
+[issues-shield]: 	https://img.shields.io/github/issues/varun-singhh/vovoca
+[issues-url]:     https://github.com/varun-singhh/vovoca/issues
+[license-shield]: https://img.shields.io/github/license/varun-singhh/vovoca
+[license-url]:    https://github.com/varun-singhh/vovoca/blob/Development/LICENSE
 
 ## Deploy on Vercel
 
