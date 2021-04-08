@@ -31,6 +31,7 @@ Yes Vovoca is authenticated and takes care of your personal info privacy, althou
 - React Responsive
 - Bootstrap
 ```
+![screen-capture-_1_](https://user-images.githubusercontent.com/47475007/114043261-c230c780-98a3-11eb-8526-7a39f52f5b72.gif)
 
 #How to Begin:
 First, run the development server:
@@ -44,7 +45,6 @@ Install all the Dependencies:
 
 ```
 npm install
-
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -66,3 +66,12 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Contributions
+Vovoca is now open source anyone can contribute to this project, but there are several steps which needs to be followed by you.  
+If you made up you mind to contribute the fork the repository and star it, and then follow the steps given below.
+- Raise an Issue with proper title, description and label
+- Wait for the project Coordinator to assign you the Issue
+- Once Assigned work on it, and then Create the Pull Request.
+- After PR wait until Project Coordinator Accepts/Reverts the Changes.
+- Once Accepted Issue will be closed
