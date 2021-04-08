@@ -39,7 +39,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 [stars-url]:      https://github.com/varun-singhh/vovoca/stargazers
 [issues-shield]: 	https://img.shields.io/github/issues/varun-singhh/vovoca
 [issues-url]:     https://github.com/varun-singhh/vovoca/issues
-[license-shield]: https://img.shields.io/github/license/varun-singhh/vovoca
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template
 [license-url]:    https://github.com/varun-singhh/vovoca/blob/Development/LICENSE
 
 ## Deploy on Vercel
