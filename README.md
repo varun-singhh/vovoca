@@ -68,7 +68,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Contributions
 Vovoca is now open source anyone can contribute to this project, but there are several steps which needs to be followed by you.  
-If you made up you mind to contribute the fork the repository and star it, and then follow the steps given below.
+If you made up you mind to contribute the fork the repository and star it, and then follow the steps given below.  
 - Raise an Issue with proper title, description and label
 - Wait for the project Coordinator to assign you the Issue
 - Once Assigned work on it, and then Create the Pull Request.
