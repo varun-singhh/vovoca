@@ -60,7 +60,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 [issues-shield]: 	https://img.shields.io/github/issues/varun-singhh/vovoca
 [issues-url]:     https://github.com/varun-singhh/vovoca/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template
-[license-url]:    https://github.com/varun-singhh/vovoca/blob/Development/LICENSE
+[license-url]:    https://github.com/varun-singhh/vovoca/blob/Development/LICENSE.txt
 
 ## Deploy on Vercel
 
