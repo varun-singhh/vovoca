@@ -51,7 +51,7 @@ textarea {
   resize: none;
 }
 
-button {
+button, a.button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -87,7 +87,7 @@ button {
   white-space: nowrap;
   outline: none;
 }
-button:hover {
+button:hover, a.button:hover {
   text-decoration: none;
   background-position: 100% 100%, 0% 0%;
   color: #d7e1ec;

@@ -1,5 +1,5 @@
 .container {
-  height: 110vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -33,6 +33,7 @@
   width: 100%;
   object-fit: cover;
   opacity: 0.3;
+  position: absolute;
 }
 .name {
   color: wheat;
@@ -42,17 +43,16 @@
   height: 300px;
   width: 25%;
   border-radius: 15px;
-  position: absolute;
   box-shadow: 6px 6px 22px rgba(21, 22, 24, 0.65),
     -3px -1px 16px rgba(195, 200, 205, 0.06);
   object-fit: cover;
   margin-top: 100px;
 }
 .buttons {
-  position: absolute;
   margin-top: 35px;
+  margin-bottom: 35px;
 }
-.buttons button {
+.buttons button, .buttons a, .buttons a:hover {
   margin-left: 5px;
   margin-right: 5px;
   color: wheat;
@@ -115,7 +115,6 @@
   }
   .other__images {
     width: 100%;
-    margin-bottom: 80px;
   }
   .audio {
     display: flex;
@@ -124,7 +123,6 @@
     
   }
   .buttons {
-    margin-top: 600px;
     display: flex;
     justify-content: space-evenly;
   }

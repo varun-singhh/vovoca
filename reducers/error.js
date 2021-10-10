@@ -5,7 +5,7 @@ const initialState = {
   err:null
 };
 
-export default function (state = initialState, action) {
+export default function ErrorReducer(state = initialState, action) {
   switch (action.type) {
     case LOADING:
       return {
