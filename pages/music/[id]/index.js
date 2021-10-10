@@ -41,9 +41,15 @@ const index = () => {
     }
   };
   const downloadMusic = async (id) => {
-    const res = await axios.patch(
-      `https://vovoca.herokuapp.com/api/music/download/${id}`
-    );
+    // const res = await axios.patch(
+    //   `https://vovoca.herokuapp.com/api/music/download/${id}`
+    // );
+    const link = document.createElement('a');
+    link.download = music.name;
+    link.href = `data:audio/mp3;base64,${Buffer.from(
+      music.audiobuffer.data
+    ).toString("base64")}`;
+    link.click();
   };
 
   if (!music || loading)
@@ -73,21 +79,16 @@ const index = () => {
               </button>
             </Link>
 
-            <a
-              className={`button ${style.single_music_button}`}
-              href={`data:audio/mp3;base64,${Buffer.from(
-                music.audiobuffer.data
-              ).toString("base64")}`}
-              download={music.name}
+            <button
+              className={style.single_music_button}
+              onClick={downloadMusic}
             >
               <HiCloudDownload />
-            </a>
+            </button>
 
             <button
               className={style.single_music_button}
-              onClick={() => {
-                copyLink();
-              }}
+              onClick={copyLink}
             >
               <HiShare />
             </button>

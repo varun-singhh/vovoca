@@ -51,7 +51,7 @@ textarea {
   resize: none;
 }
 
-button, a.button {
+button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -87,7 +87,7 @@ button, a.button {
   white-space: nowrap;
   outline: none;
 }
-button:hover, a.button:hover {
+button:hover {
   text-decoration: none;
   background-position: 100% 100%, 0% 0%;
   color: #d7e1ec;
@@ -178,7 +178,6 @@ ul {
     line-height: 0.7;
     font-size: 0.9rem;
     border-radius: 0.325rem;
-    width: 50%;
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -201,7 +200,6 @@ ul {
     margin-left: auto !important;
     line-height: 0.7;
     font-size: 0.9rem;
-    width: 50%;
     padding: 5%;
     border-radius: 0.325rem;
   }
