@@ -18,16 +18,18 @@ const ScrollButton = () => {
         if (process.browser) {
             const listener = document.addEventListener('scroll', (e) => {
                 var scrolled = document.scrollingElement.scrollTop;
-                const btn = document.getElementById('goToTop')
-                if (scrolled >= 1) {
-                    if (scrollState !== 'down') {
-                        setScrollState('down');
-                        btn.style.display = 'block'
-                    }
-                } else {
-                    if (scrollState !== 'up') {
-                        setScrollState('up');
-                        btn.style.display = 'none'
+                const btn = document.getElementById('goToTop');
+                if (btn) {
+                    if (scrolled >= 1) {
+                        if (scrollState !== 'down') {
+                            setScrollState('down');
+                            btn.style.display = 'block'
+                        }
+                    } else {
+                        if (scrollState !== 'up') {
+                            setScrollState('up');
+                            btn.style.display = 'none'
+                        }
                     }
                 }
             });

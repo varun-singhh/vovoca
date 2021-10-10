@@ -1,5 +1,5 @@
 .container {
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -10,7 +10,6 @@
 }
 .card {
   width: 100%;
-  height: 700px;
   overflow: hidden;
   border-radius: 2px;
   margin: 75px auto;
@@ -33,6 +32,7 @@
   width: 100%;
   object-fit: cover;
   opacity: 0.3;
+  position: absolute;
 }
 .name {
   color: wheat;
@@ -42,15 +42,13 @@
   height: 300px;
   width: 25%;
   border-radius: 15px;
-  position: absolute;
   box-shadow: 6px 6px 22px rgba(21, 22, 24, 0.65),
     -3px -1px 16px rgba(195, 200, 205, 0.06);
   object-fit: cover;
-  margin-top: 100px;
 }
-.buttons {
-  position: absolute;
+.buttons, .other__images {
   margin-top: 35px;
+  margin-bottom: 35px;
 }
 .buttons button {
   margin-left: 5px;
@@ -73,9 +71,6 @@
   color: wheat;
   opacity: 1;
   font-weight: 500;
-}
-.other__images {
-  margin-bottom: 25px;
 }
 .rhap_main_controls_button button {
   background: none;
@@ -112,10 +107,13 @@
   }
   .image {
     width: 80%;
+    order: 1;
+    margin-top: 35px;
   }
   .other__images {
     width: 100%;
-    margin-bottom: 80px;
+    order: 2;
+    margin-bottom: 0;
   }
   .audio {
     display: flex;
@@ -124,9 +122,9 @@
     
   }
   .buttons {
-    margin-top: 600px;
     display: flex;
     justify-content: space-evenly;
+    order: 3;
   }
   .rhap_container {
     margin-left: unset;

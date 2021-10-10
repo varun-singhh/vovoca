@@ -140,7 +140,7 @@
   .navtext {
       display: flex;
       flex-direction: column;
-      justify-content: start !important;
+      justify-content: flex-start !important;
       margin-bottom: -6% !important;
       align-items: center;
       width: 50%;

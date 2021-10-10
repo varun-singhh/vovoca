@@ -13,7 +13,7 @@ const initialState = {
   token: null,
   data: null,
 };
-export default (state = initialState, action) => {
+export default function AuthReducer(state = initialState, action) {
   switch (action.type) {
     case LOADING:
       return {

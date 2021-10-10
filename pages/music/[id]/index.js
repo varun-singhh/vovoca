@@ -41,9 +41,15 @@ const index = () => {
     }
   };
   const downloadMusic = async (id) => {
-    const res = await axios.patch(
-      `https://vovoca.herokuapp.com/api/music/download/${id}`
-    );
+    // const res = await axios.patch(
+    //   `https://vovoca.herokuapp.com/api/music/download/${id}`
+    // );
+    const link = document.createElement('a');
+    link.download = music.name;
+    link.href = `data:audio/mp3;base64,${Buffer.from(
+      music.audiobuffer.data
+    ).toString("base64")}`;
+    link.click();
   };
 
   if (!music || loading)
@@ -66,7 +72,6 @@ const index = () => {
         <input type="text" id="myInput" style={{ visibility: "hidden" }} />
         <div className={style.card}>
           <img className={style.background__image} src={music.image}></img>
-          <img className={style.image} src={music.image}></img>
           <div className={style.buttons}>
             <Link scroll={true} href="/allMusic">
               <button className={style.single_music_button}>
@@ -75,28 +80,20 @@ const index = () => {
             </Link>
 
             <button
-              onClick={() => downloadMusic(music._id)}
               className={style.single_music_button}
+              onClick={downloadMusic}
             >
-              <a
-                href={`data:audio/mp3;base64,${Buffer.from(
-                  music.audiobuffer.data
-                ).toString("base64")}`}
-                download={music.name}
-              >
-                <HiCloudDownload />
-              </a>
+              <HiCloudDownload />
             </button>
 
             <button
               className={style.single_music_button}
-              onClick={() => {
-                copyLink();
-              }}
+              onClick={copyLink}
             >
               <HiShare />
             </button>
           </div>
+          <img className={style.image} src={music.image}></img>
           <div className={style.other__images}>
             <div className={style.detes}>
               <h1 className={style.name}>
