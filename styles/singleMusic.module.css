@@ -49,7 +49,7 @@
   margin-top: 35px;
   margin-bottom: 35px;
 }
-.buttons button, .buttons a, .buttons a:hover {
+.buttons button {
   margin-left: 5px;
   margin-right: 5px;
   color: wheat;
