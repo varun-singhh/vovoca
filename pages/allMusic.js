@@ -38,7 +38,7 @@ const allMusic = () => {
       </Head>
       <div className={style.container}>
         {!music.loading ? (
-          music.musics.data?.map((m) => <Music music={m} />)
+          music.musics.data?.map((m) => <Music key={m._id} music={m} />)
         ) : (
           <Loader loading={true} />
         )}
