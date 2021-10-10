@@ -66,6 +66,32 @@ const index = () => {
         <input type="text" id="myInput" style={{ visibility: "hidden" }} />
         <div className={style.card}>
           <img className={style.background__image} src={music.image}></img>
+          <div className={style.buttons}>
+            <Link scroll={true} href="/allMusic">
+              <button className={style.single_music_button}>
+                <HiViewList />
+              </button>
+            </Link>
+
+            <a
+              className={`button ${style.single_music_button}`}
+              href={`data:audio/mp3;base64,${Buffer.from(
+                music.audiobuffer.data
+              ).toString("base64")}`}
+              download={music.name}
+            >
+              <HiCloudDownload />
+            </a>
+
+            <button
+              className={style.single_music_button}
+              onClick={() => {
+                copyLink();
+              }}
+            >
+              <HiShare />
+            </button>
+          </div>
           <img className={style.image} src={music.image}></img>
           <div className={style.other__images}>
             <div className={style.detes}>
@@ -95,32 +121,6 @@ const index = () => {
                 }}
               />
             </div>
-          </div>
-          <div className={style.buttons}>
-            <Link scroll={true} href="/allMusic">
-              <button className={style.single_music_button}>
-                <HiViewList />
-              </button>
-            </Link>
-
-            <a
-              className={`button ${style.single_music_button}`}
-              href={`data:audio/mp3;base64,${Buffer.from(
-                music.audiobuffer.data
-              ).toString("base64")}`}
-              download={music.name}
-            >
-              <HiCloudDownload />
-            </a>
-
-            <button
-              className={style.single_music_button}
-              onClick={() => {
-                copyLink();
-              }}
-            >
-              <HiShare />
-            </button>
           </div>
         </div>
       </div>
