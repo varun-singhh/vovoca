@@ -1,0 +1,32 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "js-cookie": "^2.2.1",
+    "netlify": "^6.1.16",
+    "next": "^10.0.9",
+    "nextjs-redirect": "^5.0.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-h5-audio-player": "^3.6.2",
+    "react-icons": "^4.2.0",
+    "react-js-pagination": "^3.0.3",
+    "react-modal": "^3.12.1",
+    "react-paginate": "^7.1.2",
+    "react-redux": "^7.2.3",
+    "react-responsive": "^8.2.0",
+    "react-responsive-modal": "^6.0.1",
+    "react-spinners-kit": "^1.9.1",
+    "react-toastify": "^7.0.3",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0"
+  }
+}
