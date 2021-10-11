@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
             <form action="https://formspree.io/f/xnqlqgza" method="POST" className={style.get__in__touch__form}>
               <div className={style.form__row}>
-                <div className={style.inputs}>
+                <div className={style.inputs} >
                   <input
                     className={style.feild__input}
                     type="text"
@@ -30,7 +30,10 @@ const Footer = () => {
                   />
                 </div>
                 <div className={style.message}>
-                  <textarea
+                  <textarea style={{
+                    fontSize: "15px",
+                    fontFamily: "sans-serif"
+                  }}
                     className={style.mssg__input}
                     type="text"
                     placeholder="What you have to say"

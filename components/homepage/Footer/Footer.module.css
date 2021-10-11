@@ -88,7 +88,7 @@
 .mssg__input {
   width: 92%;
   height: 7rem;
-  font-family: 'Poppins', sans-serif !important;
+  font-family: sans-serif !important;
   outline: none;
 }
 .mssg__input{
