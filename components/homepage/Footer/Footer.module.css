@@ -88,6 +88,7 @@
 .mssg__input {
   width: 92%;
   height: 7rem;
+  font-size: 15px;
   font-family: sans-serif !important;
   outline: none;
 }

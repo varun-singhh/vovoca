@@ -30,10 +30,7 @@ const Footer = () => {
                   />
                 </div>
                 <div className={style.message}>
-                  <textarea style={{
-                    fontSize: "15px",
-                    fontFamily: "sans-serif"
-                  }}
+                  <textarea
                     className={style.mssg__input}
                     type="text"
                     placeholder="What you have to say"
