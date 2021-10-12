@@ -9,7 +9,7 @@
 Vovoca is an online music streaming and downloading website, and the coolest feature of this website is, one can download royalty free music and no credits required for the same, we provide for free just because your creativity never stops
 .
 ## Features of Vovoca:
-- Trednding Music
+- Trending Music
 - Lastest Music
 - Upload Music
 - Download Music
