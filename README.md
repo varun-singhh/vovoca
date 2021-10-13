@@ -10,7 +10,7 @@ Vovoca is an online music streaming and downloading website, and the coolest fea
 .
 ## Features of Vovoca:
 - Trending Music
-- Lastest Music
+- Latest Music
 - Upload Music
 - Download Music
 - Share Music
