@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
             <form action="https://formspree.io/f/xnqlqgza" method="POST" className={style.get__in__touch__form}>
               <div className={style.form__row}>
-                <div className={style.inputs}>
+                <div className={style.inputs} >
                   <input
                     className={style.feild__input}
                     type="text"
