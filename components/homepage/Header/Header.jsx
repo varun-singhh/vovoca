@@ -1,55 +1,55 @@
-import React, { useState } from 'react';
-import style from './Header.module.css';
-import { FaTimes } from 'react-icons/fa';
-import { Modal } from 'react-responsive-modal';
-import Login from './Login';
-import style_modal from '../../../styles/Modal.module.css';
-import Signup from './Signup';
-import Link from 'next/link';
-import { useSelector } from 'react-redux';
-import Router from 'next/router';
+import React, { useState } from "react";
+import style from "./Header.module.css";
+import { FaTimes } from "react-icons/fa";
+import { Modal } from "react-responsive-modal";
+import Login from "./Login";
+import style_modal from "../../../styles/Modal.module.css";
+import Signup from "./Signup";
+import Link from "next/link";
+import { useSelector } from "react-redux";
+import Router from "next/router";
 const Header = () => {
   const authenticated = useSelector((state) => state.auth.isAuthenticated);
   const [open, setOpen] = React.useState(false);
 
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
-  const closeIcon = <svg style={{ display: 'none' }}></svg>;
-  const [method, setMethod] = useState('login');
-  
+  const closeIcon = <svg style={{ display: "none" }}></svg>;
+  const [method, setMethod] = useState("login");
+
   const AuthModal = () => {
     return (
       <>
-        <i style={{ color: 'gray', cursor: 'pointer' }} onClick={onCloseModal}>
+        <i style={{ color: "gray", cursor: "pointer" }} onClick={onCloseModal}>
           <FaTimes />
         </i>
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
           <p
             style={{
-              cursor: 'pointer',
-              color: `${method === 'login' ? 'wheat' : 'gray'}`,
+              cursor: "pointer",
+              color: `${method === "login" ? "wheat" : "gray"}`,
               borderBottom: `${
-                method === 'login' ? '1px solid wheat' : 'gray'
+                method === "login" ? "1px solid wheat" : "gray"
               }`,
-              paddingBottom: '5px',
+              paddingBottom: "5px",
             }}
             onClick={(res) => {
-              setMethod('login');
+              setMethod("login");
             }}
           >
             Login
           </p>
           <p
             style={{
-              cursor: 'pointer',
-              color: `${method === 'signup' ? 'wheat' : 'gray'}`,
+              cursor: "pointer",
+              color: `${method === "signup" ? "wheat" : "gray"}`,
               borderBottom: `${
-                method === 'signup' ? '1px solid wheat' : 'gray'
+                method === "signup" ? "1px solid wheat" : "gray"
               }`,
-              paddingBottom: '5px',
+              paddingBottom: "5px",
             }}
             onClick={(res) => {
-              setMethod('signup');
+              setMethod("signup");
             }}
           >
             Signup
@@ -57,18 +57,22 @@ const Header = () => {
         </div>
         <hr className="divider"></hr>
 
-        {method === 'login' ? <Login oncloseModal= {onCloseModal} hello="hello"/> : <Signup />}
+        {method === "login" ? (
+          <Login oncloseModal={onCloseModal} hello="hello" />
+        ) : (
+          <Signup />
+        )}
         <br />
         <hr className="divider"></hr>
         {/* By submitting this form, you confirm that you agree to our Terms of Service and Privacy Policy. */}
-        <div style={{ textAlign: 'center' }}>
-          {method === 'login' ? (
-            <p style={{ color: 'gray', fontSize: 'x-small' }}>
-              Don’t have an account?{' '}
+        <div style={{ textAlign: "center" }}>
+          {method === "login" ? (
+            <p style={{ color: "gray", fontSize: "x-small" }}>
+              Don’t have an account?{" "}
               <span
-                style={{ color: 'wheat', cursor: 'pointer' }}
+                style={{ color: "wheat", cursor: "pointer" }}
                 onClick={(res) => {
-                  setMethod('signup');
+                  setMethod("signup");
                 }}
               >
                 Signup Here
@@ -76,24 +80,25 @@ const Header = () => {
             </p>
           ) : (
             <>
-              <p style={{ color: 'gray', fontSize: 'x-small' }}>
-                Already have an account?{' '}
+              <p style={{ color: "gray", fontSize: "x-small" }}>
+                Already have an account?{" "}
                 <span
-                  style={{ color: 'wheat', cursor: 'pointer' }}
+                  style={{ color: "wheat", cursor: "pointer" }}
                   onClick={(res) => {
-                    setMethod('login');
+                    setMethod("login");
                   }}
                 >
                   Login Here
                 </span>
               </p>
 
-              <p style={{ color: 'gray', fontSize: 'x-small' }}>
-                By submitting this form, you confirm that you agree to our{' '}
-                  <a href="/privacy-policy"><span style={{ color: 'wheat', cursor: 'pointer' }} >
+              <p style={{ color: "gray", fontSize: "x-small" }}>
+                By submitting this form, you confirm that you agree to our{" "}
+                <a href="/privacy-policy">
+                  <span style={{ color: "wheat", cursor: "pointer" }}>
                     Terms of Service and Privacy Policy
-                    </span>
-                  </a>
+                  </span>
+                </a>
               </p>
             </>
           )}
@@ -128,15 +133,15 @@ const Header = () => {
             <></>
           ) : (
             <button
-              style={{ marginTop: '25px' }}
-              className={[style.btn, style.joinUs__btn].join(' ')}
+              style={{ marginTop: "25px" }}
+              className={[style.btn, style.joinUs__btn].join(" ")}
               onClick={onOpenModal}
             >
               Join us Now
             </button>
           )}
         </div>
-        <img src="./static/saly.svg" className={style.banner__image} />
+        <img src="./static/saly.png" className={style.banner__image} />
       </div>
 
       <div className={style.header}>
