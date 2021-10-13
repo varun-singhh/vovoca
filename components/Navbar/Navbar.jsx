@@ -184,7 +184,7 @@ const Navbar = () => {
               <li className={style.list__items}>Testimonials</li>
             </Link>
             <Link scroll={true} href="/developers">
-              <li className={style.list__items}>Developers</li>
+              <li className={style.list__items}>Team</li>
             </Link>
             {authenticated.isAuthenticated === true ? (
               <Link scroll={true} href="/dashboard">
@@ -307,7 +307,7 @@ const Navbar = () => {
                 {' '}
                 &nbsp;
                 <FaCode />
-                <span className={style.text_mobile}>Developers</span>
+                <span className={style.text_mobile}>Team</span>
               </p>
             </Link>
             <Link scroll={true} href="/">
