@@ -141,6 +141,61 @@ const developers = () => {
                 </Link>
               </div>
             </div>
+            <h1 className={styles.testimonial__heading} style={{ paddingTop: "3rem", }}>Contributors</h1>
+            <div className={styles.testimonial__row__2}>
+              <div className={styles.testimonial}>
+                <article className={styles.testimonial__article}>
+                  <div
+                    className={styles.developer__img}
+                    style={{
+                      backgroundImage: `url(https://avatars.githubusercontent.com/u/10459377?v=4)`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}>
+                  </div>
+                </article>
+              </div>
+              <div className={styles.testimonial}>
+                <article className={styles.testimonial__article}>
+                  <div
+                    className={styles.developer__img}
+                    style={{
+                      backgroundImage: `url(https://avatars.githubusercontent.com/u/80252410?v=4)`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}>
+                  </div>
+                </article>
+              </div>
+              <div className={styles.testimonial}>
+                <article className={styles.testimonial__article}>
+                  <div
+                    className={styles.developer__img}
+                    style={{
+                      backgroundImage: `url(https://avatars.githubusercontent.com/u/20971507?v=4)`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}>
+                  </div>
+                </article>
+              </div>
+              <div className={styles.testimonial}>
+                <article className={styles.testimonial__article}>
+                  <div
+                    className={styles.developer__img}
+                    style={{
+                      backgroundImage: `url(https://avatars.githubusercontent.com/u/15236104?v=4)`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </div>
