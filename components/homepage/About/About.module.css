@@ -1,129 +1,129 @@
 .about {
-    padding: 5rem;
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(
-            37.53% 147.33% at 5.39% 8.57%,
-            rgba(255, 255, 255, 0.07) 0%,
-            rgba(255, 255, 255, 0) 100%
-    ),
-    linear-gradient(180deg, #26282a 0%, #212325 100%);
-    background-color: #303234;
+  padding: 5rem;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    37.53% 147.33% at 5.39% 8.57%,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ),
+  linear-gradient(180deg, #26282a 0%, #212325 100%);
+  background-color: #303234;
 }
 
 .container > h2 {
-    color: #d7e1ec;
-    text-align: center;
-    font-size: 3em;
-    margin-top: 0;
+  color: #d7e1ec;
+  text-align: center;
+  font-size: 3em;
+  margin-top: 0;
 }
 
 .features {
-    display: flex;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .quote{
-    opacity: 0.5;
-    margin-bottom: 2em !important;
+  opacity: 0.5;
+  margin-bottom: 2em !important;
 }
 
 .feature__heading {
-    color: #d7e1ec;
-    font-weight: 300;
-    margin-bottom: 2rem;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+  color: #d7e1ec;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .feature__heading > p {
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-weight: 400;
-    line-height: 1.74;
-    color: #a0a1ac;
-    margin-bottom: 2rem;
-    max-width: 320px;
+  font-weight: 400;
+  line-height: 1.74;
+  color: #a0a1ac;
+  margin-bottom: 2rem;
+  max-width: 320px;
 }
 
 .vovoca__img {
-    /* background-image: linear-gradient(
-        135deg,
-        #3a3e41 0%,
-        #2a2d30 49%,
-        #242628 100%
-      ),
-      linear-gradient(139deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;*/
-    box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
+  /* background-image: linear-gradient(
+      135deg,
+      #3a3e41 0%,
+      #2a2d30 49%,
+      #242628 100%
+    ),
+    linear-gradient(139deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;*/
+  box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
     -4px -4px 15px rgb(195 200 205 / 4%);
 
-    height: 400px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 5em;
-    padding: 3em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    overflow: hidden;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 5em;
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .left > p,
 .left > h2{
-    text-align: left !important;
+  text-align: left !important;
 }
 .right > p,
 .right > h2{
-    text-align: right !important;
+  text-align: right !important;
 }
 
 .vovoca__img > img {
-    height: 180%;
-    /* width: 180%; */
-    border: inset 1px 1px 1px #1A1B1F, 1px 1px 1px rgba(64, 65, 68, 0.81);
+  height: 180%;
+  /* width: 180%; */
+  border: inset 1px 1px 1px #1A1B1F, 1px 1px 1px rgba(64, 65, 68, 0.81);
 }
 
 @media only screen and (max-width: 600px) {
-    .about {
-        width: 90%;
-        margin: auto;
-        padding: 38em 0;
-        text-align: center !important;
-    }
-    .features {
-        display: block;
-    }
-    .container > h2 {
-        font-size: 2em;
-    }
+  .about {
+    width: 90%;
+    margin: auto;
+    padding: 38em 0;
+    text-align: center !important;
+  }
+  .features {
+    display: block;
+  }
+  .container > h2 {
+    font-size: 2em;
+  }
 
-    .feature__heading > h2 {
-        text-align: center !important;
-    }
+  .feature__heading > h2 {
+    text-align: center !important;
+  }
 
-    .feature__heading > p {
-        text-align: center !important;
-        padding: 0 15px;
-    }
+  .feature__heading > p {
+    text-align: center !important;
+    padding: 0 15px;
+  }
 
-    .vovoca__img {
-        height: 200px;
-        width: 200px;
-        margin: 5em auto;
-    }
+  .vovoca__img {
+    height: 200px;
+    width: 200px;
+    margin: 5em auto;
+  }
 
-    .feature__col-1 > hr,
-    .feature__col-2 > hr {
-        display: none;
-    }
+  .feature__col-1 > hr,
+  .feature__col-2 > hr {
+    display: none;
+  }
 }
