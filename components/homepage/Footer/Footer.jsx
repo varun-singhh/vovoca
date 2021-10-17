@@ -25,7 +25,7 @@ const Footer = () => {
                   />
                   <input
                     className={style.feild__input}
-                    type="text"
+                    type="email"
                     placeholder="Your email id*"
                     name="email"
                     required
