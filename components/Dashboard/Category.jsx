@@ -149,7 +149,7 @@ const Category = () => {
                   id="4"
                   className={style.category__card__icon}
                   style={{
-                    backgroundImage: `url(https://imageproxy.themaven.net//https%3A%2F%2Fimages.saymedia-content.com%2F.image%2FMTc0NDUyMjI0MzcyNTE2NDg2%2F200-greatest-bollywood-dance-songs-dance-hits-for-parties.jpg)`,
+                    backgroundImage: `url(https://www.icmp.ac.uk/sites/default/files/styles/page_background/public/music-production-studio-process-explained-mixing-mastering-songwriting-editing-promoting.jpg?itok=eC1jlQ1J)`,
                   }}
                   onClick={(e) => handleClick(e.target.id, 'Beats')}
                 >
