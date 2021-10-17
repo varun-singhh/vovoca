@@ -21,20 +21,28 @@ const Footer = () => {
                     type="text"
                     placeholder="Your name*"
                     name="name"
+                    required
                   />
                   <input
                     className={style.feild__input}
-                    type="text"
+                    type="email"
                     placeholder="Your email id*"
                     name="email"
+                    required
+                  />
+                  <input
+                    type="hidden"
+                    value="Vovoca "
+                    name="from"
                   />
                 </div>
                 <div className={style.message}>
                   <textarea
                     className={style.mssg__input}
                     type="text"
-                    placeholder="What you have to say"
+                    placeholder="What you have to say*"
                     name="message"
+                    required
                   />
                 </div>
               </div>
