@@ -30,6 +30,11 @@ const Footer = () => {
                     name="email"
                     required
                   />
+                  <input
+                    type="hidden"
+                    value="Vovoca "
+                    name="from"
+                  />
                 </div>
                 <div className={style.message}>
                   <textarea
