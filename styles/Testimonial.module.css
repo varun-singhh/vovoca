@@ -1,0 +1,107 @@
+.container {
+  width: 100%;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  margin-bottom: 3em;
+  /* height: 100vh; */
+}
+
+.testimonial {
+  padding: 2rem;
+}
+
+.testimonial__heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #d7e1ec;
+}
+
+.testimonial__row__1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: masonry;
+}
+/* .testimonial__row__2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: masonry;
+} */
+
+.testimonial__article {
+  padding: 1.25rem;
+  border: 1px solid transparent;
+  border-radius: 1.25rem;
+  background-image: linear-gradient(
+      154deg,
+      #3a3e41 0%,
+      #2a2d30 49%,
+      #242628 100%
+    ),
+    linear-gradient(160deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
+    -4px -4px 15px rgb(195 200 205 / 4%);
+  display: flex;
+}
+
+.testimonial__img {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.developer__img{
+  padding-left: 2rem;
+  padding-right: 1rem;
+  border-radius: 50%;
+  width: 4.75rem;
+  height: 3.75rem;
+  background: linear-gradient(-32deg, #1a1d21 3%, #393d42 44% 56%, #1a1d21 97%)
+    0% 0%/200% 200%;
+  box-shadow: 4px 4px 18px rgb(0 0 0 / 40%),
+    -4px -2px 16px rgb(195 200 205 / 8%);
+  margin: 5%;
+  object-fit: cover;
+}
+.testimonial__content > h5 {
+  color: #d7e1ec;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.testimonial__content > p {
+  color: #a0a1ac;
+}
+
+.testimonial__content > span {
+  color: #d7e1ec;
+}
+
+@media (min-width: 1300px) {
+  .testimonial{
+    padding: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonial__row__1 {
+    display: block;
+  }
+  .testimonial{
+    padding: 1em;
+  }
+  /* .testimonial__row__2 {
+    display: block;
+  } */
+  .testimonial__content > p {
+    width: 105%;
+    margin-top: 5px;
+  }
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .testimonial__heading {
+    font-size: 2rem;
+  }
+}

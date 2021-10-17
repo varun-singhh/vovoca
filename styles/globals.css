@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 html,
 body {
@@ -10,7 +10,8 @@ body {
     ),
     linear-gradient(180deg, #26282a 0%, #212325 100%);
   overflow-x: hidden !important;
-  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -79,11 +80,12 @@ button {
   padding: 0.68rem 2.5rem;
   font-size: 1.2rem;
   font-weight: 500;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   border-radius: 0.625rem;
   cursor: pointer;
   margin-top: -5px;
   white-space: nowrap;
+  outline: none;
 }
 button:hover {
   text-decoration: none;
@@ -94,22 +96,101 @@ button:hover {
     inset -2px -2px 4px rgb(54 54 57 / 16%),
     inset 2px 2px 4px rgb(30 30 32 / 18%);
 }
+
+ul {
+  padding-inline-start: unset !important;
+}
 .divider::after {
   display: block;
-  content: '';
+  content: "";
   height: 1px;
   width: 100%;
   background-image: linear-gradient(180deg, #2e3138 0%, #43464e 100%);
   opacity: 0.9;
+}
+.divider-main::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(180deg, #2e3138 0%, #43464e 100%);
+  opacity: 0.9;
+  margin-bottom: 55px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(27, 26, 26, 0);
+  background-color: #26282a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  box-shadow: inset 0 0 10px rgba(2, 2, 2, 0.993);
+  background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, #5c5959 0%, #3f3e3c 100%);
+  border-radius: 10px;
+  transition: all ease 2s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(194, 175, 141) 0%, rgb(151, 136, 108) 100%);
+}
+.rhap_container {
+  background-color: unset !important;
+  box-shadow: unset !important;
+  width: 600px !important;
+  margin-left: 55px;
+  margin-right: 55px;
+}
+.rhap_time {
+  color: rgb(136, 135, 133) !important;
+}
+.rhap_controls-section {
+  justify-content: space-around !important;
+}
+.rhap_additional-controls {
+  display: none !important;
+}
+.rhap_volume-controls {
+  display: none !important;
+}
+.rhap_progress_filled{
+  background-color: #8b6b2b;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 600px) {
   button {
     line-height: 0.7;
     font-size: 0.9rem;
     border-radius: 0.325rem;
-    width: 50%;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+  .rhap_container {
+    margin-left: unset;
+    margin-right: unset;
+    width: 90% !important;
+  }
+  .rhap_horizontal {
+    flex-direction: column !important;
+  }
+  .divider-main::after{
+    margin-bottom: unset;
   }
 }
 @media only screen and (max-width: 360px) {
@@ -119,8 +200,7 @@ button:hover {
     margin-left: auto !important;
     line-height: 0.7;
     font-size: 0.9rem;
-    width: 30%;
-    padding: 4%;
+    padding: 5%;
     border-radius: 0.325rem;
   }
 }

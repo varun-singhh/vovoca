@@ -1,0 +1,118 @@
+
+.form__row {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .inputs {
+    margin-bottom: 2%;
+  }
+  .feild__input {
+    margin-right: 4%;
+  }
+  .inputs > input {
+    outline: none;
+    width: 92%;
+    max-width: 92%;
+    height: calc(1.74em + 2rem + 2px);
+    padding: 1rem 1.25rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.74;
+    color: #d7e1ec;
+    background-color: #2c2d2f;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+    border-radius: 0.625rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    margin-bottom: 2%;
+  }
+  .inputs > input {
+    background-image: linear-gradient(166deg, #2c2d2f 0% 100%),
+      linear-gradient(166deg, #525a63 0%, #2e353c 50%, #616972 50%, #3e464f 100%);
+    background-size: auto auto, 200% 200%;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: inset 2px 2px 8px rgb(4 4 5 / 60%);
+    transition: 0.7s ease-in-out;
+  }
+  .subscribe__btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0.125rem 0.125rem 0.125rem 0.1875rem;
+    border-style: solid;
+    border-color: transparent;
+    font-weight: 500;
+    letter-spacing: 0;
+    background-image: linear-gradient(
+        166deg,
+        transparent 0% 50%,
+        #2d3135 50%,
+        #3e4248 100%
+      ),
+      linear-gradient(166deg, #3e4248 0%, #2a2e32 50%, #3e4248 50%, #313437 100%);
+    background-position: 0% 0%, 100% 100%;
+    background-size: 200% 200%;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    color: #b4c0ce;
+    text-shadow: inherit;
+    box-shadow: 8px 8px 22px rgb(21 22 24 / 38%),
+      -4px -2px 16px rgb(195 200 205 / 8%);
+    transition: 0.5s ease-in-out;
+    padding: 0.6875rem 2.5rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    margin-top: 1%;
+    white-space: nowrap;
+    margin-left: 2%;
+    width: 93%;
+  }
+  
+  .subscribe__btn:hover {
+    text-decoration: none;
+    background-position: 100% 100%, 0% 0%;
+    color: #d7e1ec;
+    box-shadow: 8px 8px 22px rgb(21 22 24 / 38%),
+      -4px -2px 16px rgb(195 200 205 / 8%),
+      inset -2px -2px 4px rgb(54 54 57 / 16%),
+      inset 2px 2px 4px rgb(30 30 32 / 18%);
+  }
+  .toast_background{
+    color: wheat;
+    background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(134, 3, 21) 0%, #581301 100%) !important;
+  }
+  .toast_success_background{
+    color: rgb(255, 255, 255) !important;
+    font-weight: 500;
+    background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(7, 114, 3) 0%, #054d03 100%) !important;
+  }
+  @media only screen and (max-width: 600px) {
+  .subscribe__btn {
+    margin-top: 5%;
+    margin-left: 3% !important;
+    line-height: 0.9;
+    font-size: 0.9rem;
+    width: 92%;
+    padding: 6%;
+    border-radius: 0.325rem;
+  }
+  .inputs > input {
+      margin-top: 3%;
+  }
+}

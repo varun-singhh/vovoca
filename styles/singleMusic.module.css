@@ -1,0 +1,149 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -5%;
+  margin-bottom: -5%;
+}
+.card {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  margin: 75px auto;
+  background-image: linear-gradient(
+      135deg,
+      #2c2929 0%,
+      #303336 49%,
+      #1a1919 100%
+    ),
+    linear-gradient(139deg, #434b54 1%, #2a2c2f 45%, #191b1e 75%);
+  box-shadow: 6px 6px 22px rgba(21, 22, 24, 0.65),
+    -3px -1px 16px rgba(195, 200, 205, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.background__image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  position: absolute;
+}
+.name {
+  color: wheat;
+  margin: 0;
+}
+.image {
+  height: 300px;
+  width: 25%;
+  border-radius: 15px;
+  box-shadow: 6px 6px 22px rgba(21, 22, 24, 0.65),
+    -3px -1px 16px rgba(195, 200, 205, 0.06);
+  object-fit: cover;
+}
+.buttons, .other__images {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.buttons button {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: wheat;
+}
+.detes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.artist {
+  color: white;
+  opacity: 0.5;
+  margin: 0;
+  font-weight: 400;
+}
+.artist > span {
+  color: wheat;
+  opacity: 1;
+  font-weight: 500;
+}
+.rhap_main_controls_button button {
+  background: none;
+  box-shadow: none;
+}
+.toast_background {
+  color: wheat;
+  background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(134, 3, 21) 0%, #581301 100%) !important;
+}
+.toast_success_background {
+  color: rgb(250, 229, 190) !important;
+  font-weight: 500;
+  background: radial-gradient(
+      37.53% 147.33% at 5.39% 8.57%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    linear-gradient(180deg, rgb(7, 114, 3) 0%, #054d03 100%) !important;
+}
+@media screen and (max-width: 600px) {
+  .container{
+    height: 100vh;
+  }
+  .card {
+    width: 100%;
+    border-radius: 5px;
+    margin: 15px auto;
+    justify-content: space-between;
+  }
+  .image {
+    width: 80%;
+    order: 1;
+    margin-top: 35px;
+  }
+  .other__images {
+    width: 100%;
+    order: 2;
+    margin-bottom: 0;
+  }
+  .audio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    order: 3;
+  }
+  .rhap_container {
+    margin-left: unset;
+    margin-right: unset;
+    width: 90% !important;
+    padding: 3rem;
+  }
+  .rhap_controls_section svg {
+    justify-content: space-around !important;
+    background: none;
+    width: 55px;
+    height: 55px;
+  }
+  .rhap_main_controls_button button {
+    background: none;
+    box-shadow: none;
+  }
+  .single_music_button {
+    margin: 5% !important;
+    font-size: 1.1rem;
+  }
+}

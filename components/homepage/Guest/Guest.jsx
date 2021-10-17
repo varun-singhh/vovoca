@@ -1,118 +1,116 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { FaGetPocket } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  getLatestMusic,
+  getTrendingMusic,
+} from '../../../actions/musicActions';
 import style from './Guest.module.css';
+import Link from 'next/link';
+import Loader from '../../Loader/Loader';
 
 const Guest = () => {
+  const dispatch = useDispatch();
+  const trending_music = useSelector((state) => state.music.trending_music);
+  const latest_music = useSelector((state) => state.music.latest_music);
+  useEffect(() => {
+    dispatch(getTrendingMusic());
+    dispatch(getLatestMusic());
+  }, []);
+
   return (
-    <div>
+    <div id="features">
       <div className={style.guest}>
         <div className={[style.guest__chart, style.mobile__chart].join(' ')}>
           <div className={style.pricing__body}>
-          <h1 className={style.trend__heading}>New Arrival</h1>
-            <hr className={style.divider}/>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/00000779_3.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#1</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/00000779_3.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#2</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/00000779_3.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#3</p>
-            </div>
+            <h1 className={style.trend__heading}>Latest</h1>
+            <hr className="divider" />
+            {latest_music ? (
+              latest_music.slice(0, 3).map((i, index) => (
+                <div className={style.song__box}>
+                  <div
+                    className={style.music__cover}
+                    style={{
+                      backgroundImage: `url(${i.image})`,
+                      backgroundSize: '90px 90px',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                    }}
+                  ></div>
+
+                  <p className={style.song__name}>
+                    {i.name.charAt(0).toUpperCase() + i.name.slice(1)}
+                  </p>
+
+                  <Link
+                    scroll={true}
+                    href={`/music/${encodeURIComponent(i._id)}`}
+                  >
+                    <button
+                      style={{ cursor: 'pointer' }}
+                      className={style.music_button}
+                    >
+                      <FaGetPocket
+                        style={{ color: 'wheat' }}
+                        className={style.music_icon}
+                      />
+                    </button>
+                  </Link>
+                </div>
+              ))
+            ) : (
+              <Loader loading={true} />
+            )}
           </div>
 
+          {/* <Link href="/allMusic">
+            <button style={{maxWidth: '250px', zIndex: 4, maxHeight: '60px', margin: 'auto'}}>Listen More</button>
+          </Link> */}
 
           <div className={style.pricing__body}>
             <h1 className={style.trend__heading}>Trending</h1>
-          <hr className={style.divider} />
-            <div className={style.song__box}>
-              <div
-              className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://i.pinimg.com/originals/72/c7/df/72c7df46166570810953740ebfcb3d70.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#1</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://i.pinimg.com/originals/db/64/a9/db64a9770d61b573e9e1440d62aa4f14.jpg")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#2</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://i.pinimg.com/originals/6a/2d/13/6a2d13b7be4848e17a35a3001c7db423.jpg")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Name</p>
-              <p className={style.song__rank}>#3</p>
-            </div>
-          </div>
+            <hr className="divider" />
 
+            {trending_music ? (
+              trending_music.slice(0, 3).map((i, index) => (
+                <div className={style.song__box}>
+                  <div
+                    className={style.music__cover}
+                    style={{
+                      backgroundImage: `url(${i.image})`,
+                      backgroundSize: '90px 90px',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                    }}
+                  ></div>
 
-          <div className={style.pricing__body}>
-          <h1 className={style.trend__heading}>Popular</h1>
-            <hr className={style.divider}/>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://upload.wikimedia.org/wikipedia/en/8/8d/Shawn_Mendes_and_Camila_Cabello_-_Se%C3%B1orita.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Senorita ft. Kaustubh </p>
-              <p className={style.song__rank}>#1</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://upload.wikimedia.org/wikipedia/en/b/b4/Shape_Of_You_%28Official_Single_Cover%29_by_Ed_Sheeran.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Shape of You ft. Varun</p>
-              <p className={style.song__rank}>#2</p>
-            </div>
-            <div className={style.song__box}>
-              <div
-                className={style.music__cover}
-                style={{
-                  backgroundImage: `url("https://static.stacker.com/s3fs-public/styles/properly_sized_image/s3/00000779_3.png")`,
-                }}
-              ></div>
-              <p className={style.song__name}>Yummy ft. prakhar pandey</p>
-              <p className={style.song__rank}>#3</p>
-            </div>
+                  <p className={style.song__name}>
+                    {i.name.charAt(0).toUpperCase() + i.name.slice(1)}
+                  </p>
+                  <Link
+                    scroll={true}
+                    href={`/music/${encodeURIComponent(i._id)}`}
+                  >
+                    <button
+                      style={{ cursor: 'pointer' }}
+                      className={style.music_button}
+                    >
+                      <FaGetPocket
+                        style={{ color: 'wheat' }}
+                        className={style.music_icon}
+                      />
+                    </button>
+                  </Link>
+                </div>
+              ))
+            ) : (
+              <Loader loading={true} />
+            )}
           </div>
         </div>
+      </div>
+      <div className={style.vovoca__markdown}>
+        <p className={style.vovoca__name}>MUSIC CHARTS</p>
       </div>
     </div>
   );

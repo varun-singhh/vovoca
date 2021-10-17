@@ -7,13 +7,18 @@
       linear-gradient(180deg, #26282a 0%, #212325 100%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
+    height: 90vh;
   }
   .pricing__body {
+    /* margin-top: -7rem;
+    margin-bottom: 7rem;
     text-align: center;
     padding: 1.875rem 1.25rem;
     border: 1px solid transparent;
+    position: relative;
+    z-index: 2;
     border-radius: 1.25rem;
     background-image: linear-gradient(
         135deg,
@@ -26,8 +31,37 @@
     background-origin: padding-box, border-box;
     box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24 / 24%),
       -4px -4px 15px rgb(195 200 205 / 4%);
+    width: 500px;
     min-width: 320px;
-    width: 25%;
+    background-image: linear-gradient(
+        135deg,
+        #3a3e41 0%,
+        #2a2d30 49%,
+        #242628 100%
+      ),
+      linear-gradient(139deg, #c1c3c7 1%, #2a2c2f 45%, #8f949b 75%); */
+      margin-top: -7rem;
+      margin-bottom: -7rem;
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 1.875rem 1.25rem;
+      border: 1px solid transparent;
+      border-radius: 1.25rem;
+      max-height: 500px;
+      background-image: linear-gradient(135deg,#3a3e41,#2a2d30 49%,#242628),linear-gradient(139deg,#434b54 1%,#2a2c2f 45%,#191b1e 75%);
+      background-clip: padding-box,border-box;
+      background-origin: padding-box,border-box;
+      box-shadow: 1.875rem 1.5625rem 1.375rem rgb(21 22 24/24%),-4px -4px 15px rgb(195 200 205/4%);
+      min-width: 320px;
+      width: 42%;
+      background-image: linear-gradient(
+          135deg,
+          #3a3e41 0%,
+          #2a2d30 49%,
+          #242628 100%
+        ),
+        linear-gradient(139deg, #c1c3c7 1%, #2a2c2f 45%, #8f949b 75%);
   }
   .guest__chart {
     display: flex;
@@ -36,7 +70,7 @@
     justify-content: space-between;
   }
   .trend__heading {
-    color: rgb(173, 158, 107);
+    color: #d7e1ec;
   }
   .music__cover {
     border-radius: 50%;
@@ -47,6 +81,22 @@
     box-shadow: 4px 4px 18px rgb(0 0 0 / 40%),
       -4px -2px 16px rgb(195 200 205 / 8%);
     margin: 5%;
+  }
+  .vovoca__name {
+    display: none;
+    font-family: fantasy;
+    color: #47474723;
+    z-index: 0;
+    position: relative;
+    margin-top: -35%;
+    margin-bottom: 1em;
+    font-weight: 800;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    user-select: none;
   }
   .song__box {
     display: flex;
@@ -63,15 +113,54 @@
   .song__name{
     width: 50%;
   }
+  @media only screen and (max-width: 1300px) {
+    .guest__chart{
+      margin-top: 0.5em;
+      padding: 2%;
+    }
+  }
   @media only screen and (max-width: 600px) {
+    .guest{
+      margin-bottom: 20em;
+    }
     .mobile__chart {
       display: flex;
+      margin-top: 20em;
+      /* margin-bottom: 20em; */
       flex-direction: column;
     }
     .pricing__body {
-      width: 90%;
       margin-bottom: 5%;
-      margin-left: -4%;
+      margin-top: 1rem;
+      min-width: 0;
+      width:100%;
+    }
+    .vovoca__name{
+      display: none;
+    }
+    .music_icon {
+      font-size: medium;
+    }
+    .music__cover{
+      margin: 0;
+    }
+    .song__box{
+      margin: 7% 2%;
+      align-items: unset;
+    }
+    .music_button {
+      margin-top: 5%;
+      margin-right: auto !important;
+      margin-left: auto !important;
+      line-height: 0.7;
+      font-size: 0.9rem;
+      width: 30%;
+      height: 50%;
+      padding: 2% 2% !important;
+      border-radius: 0.325rem;
+    }
+    .guest__chart{
+      padding: 2%;
     }
   }
   
