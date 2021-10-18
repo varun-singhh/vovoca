@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@octokit/rest": "^18.12.0",
     "axios": "^0.21.1",
     "js-cookie": "^2.2.1",
     "netlify": "^6.1.16",
@@ -27,6 +28,7 @@
     "react-toastify": "^7.0.3",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "swr": "^1.0.1"
   }
 }
