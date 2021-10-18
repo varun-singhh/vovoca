@@ -13,7 +13,7 @@ async function fetcher(...args) {
 
 const developers = () => {
   const { data } = useSWR('/api/github', fetcher)
-
+console.log(data);
   return (
     <>
       <div>
@@ -47,7 +47,7 @@ const developers = () => {
                   <div
                     className={styles.developer__img}
                     style={{
-                      backgroundImage: `url(https://media-exp1.licdn.com/dms/image/C5103AQHlqCz2y6gWFA/profile-displayphoto-shrink_800_800/0/1576986523117?e=1623283200&v=beta&t=9m4ZEjXa-M_XOEKVe-JX1l9ayHqpwq1flSQd0gfHgJY)`,
+                      backgroundImage: `url(https://media-exp1.licdn.com/dms/image/C5103AQHlqCz2y6gWFA/profile-displayphoto-shrink_800_800/0/1576986523117?e=1640217600&v=beta&t=wKHjyBSdnUwaXGmafmZ6MS_lij51Q_MIKNvLTa1ot1A)`,
                     }}
                   ></div>
                 </article>
@@ -124,7 +124,7 @@ const developers = () => {
                   <div
                     className={styles.developer__img}
                     style={{
-                      backgroundImage: `url(https://media-exp1.licdn.com/dms/image/C5103AQFIQ2yP_StD7g/profile-displayphoto-shrink_800_800/0/1566850251714?e=1623283200&v=beta&t=NR2yJOJhnhVJtp4y2B2QKRYJJ9wChmSlOzfYtoDZ2Jw)`,
+                      backgroundImage: `url(https://media-exp1.licdn.com/dms/image/C5103AQFIQ2yP_StD7g/profile-displayphoto-shrink_800_800/0/1566850251714?e=1640217600&v=beta&t=olTFXy-j2NtqoGnuPoBrvUV5Y1lgSG9kHSAAwKKgZEA)`,
                       backgroundSize: "90px 90px",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",
@@ -153,18 +153,19 @@ const developers = () => {
             <h1 className={styles.testimonial__heading} style={{ paddingTop: "3rem", }}>Contributors</h1>
             <div className={styles.testimonial__row__2}>
             {data ? (
-              data.avatars.map((src, index) => (
+              data.users.map((user, index) => (
               <div className={styles.testimonial} key={index}>
-                <article className={styles.testimonial__article}>
+                <article className={styles.testimonial__article}><a target="_blank" rel="" href={user.url}>
                   <div
-                    className={styles.developer__img}
+                    className={styles.contributor__img}
                     style={{
-                      backgroundImage: `url(${src})`,
+                      backgroundImage: `url(${user.avatar_url})`,
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",
+                      backgroundSize: "90px 90px",
                     }}>
-                  </div>
+                  </div></a>
                 </article>
               </div>
               ))

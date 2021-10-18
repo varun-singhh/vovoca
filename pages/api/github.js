@@ -11,12 +11,12 @@ export default async (req, res) => {
             repo: "vovoca",
         })
         .then(({ data }) => {
-            const avatarsList = data.map(src => {
-                return src.avatar_url
+            const usersList = data.map(src => {
+                return { avatar_url: src.avatar_url, url: src.html_url }
             })
 
             return res.status(200).json({
-                avatars: avatarsList
+                users: usersList
             })
         })
     } catch (error) {
