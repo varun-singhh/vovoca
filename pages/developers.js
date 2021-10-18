@@ -3,14 +3,23 @@ import Head from "next/head";
 import { AiFillLinkedin } from "react-icons/ai";
 import Link from "next/link";
 import Footer from "../components/homepage/Footer/Footer";
+import Loader from "../components/Loader/Loader";
+import useSWR from "swr"
+
+async function fetcher(...args) {
+  const res = await fetch(...args)
+  return res.json()
+}
 
 const developers = () => {
+  const { data } = useSWR('/api/github', fetcher)
+
   return (
     <>
       <div>
         <div className={styles.testimonials}>
           <Head>
-            <title>VOVOCA | Developers</title>
+            <title>VOVOCA | Team</title>
             <link
               rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -140,6 +149,28 @@ const developers = () => {
                   </button>
                 </Link>
               </div>
+            </div>
+            <h1 className={styles.testimonial__heading} style={{ paddingTop: "3rem", }}>Contributors</h1>
+            <div className={styles.testimonial__row__2}>
+            {data ? (
+              data.avatars.map((src, index) => (
+              <div className={styles.testimonial} key={index}>
+                <article className={styles.testimonial__article}>
+                  <div
+                    className={styles.developer__img}
+                    style={{
+                      backgroundImage: `url(${src})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}>
+                  </div>
+                </article>
+              </div>
+              ))
+              ) : (
+              <Loader loading={true} />
+            )}
             </div>
           </div>
         </div>

@@ -21,11 +21,13 @@
   grid-template-columns: auto auto auto;
   grid-template-rows: masonry;
 }
-/* .testimonial__row__2 {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: masonry;
-} */
+
+.testimonial__row__2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 .testimonial__article {
   padding: 1.25rem;
