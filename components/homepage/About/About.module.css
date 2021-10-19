@@ -1,6 +1,6 @@
 .about {
   padding: 5rem;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
     rgba(255, 255, 255, 0.07) 0%,
     rgba(255, 255, 255, 0) 100%
   ),
-  linear-gradient(180deg, #26282a 0%, #212325 100%); 
+  linear-gradient(180deg, #26282a 0%, #212325 100%);
   background-color: #303234;
 }
 
@@ -17,6 +17,7 @@
   color: #d7e1ec;
   text-align: center;
   font-size: 3em;
+  margin-top: 0;
 }
 
 .features {
@@ -96,7 +97,7 @@
   .about {
     width: 90%;
     margin: auto;
-    padding: 38em 0;
+    padding: 5rem 0;
     text-align: center !important;
   }
   .features {
@@ -120,7 +121,7 @@
     width: 200px;
     margin: 5em auto;
   }
-  
+
   .feature__col-1 > hr,
   .feature__col-2 > hr {
     display: none;
