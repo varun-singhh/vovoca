@@ -13,6 +13,7 @@ feel free to propose changes to this document in a pull request.
 - Commit Messages
 - Pull Request Title
 - Styles
+- Labels
 
 ## Steps to contribute
 
@@ -25,7 +26,8 @@ feel free to propose changes to this document in a pull request.
 - Wait for the maintainer to review or merge it
 
 ## Issues and Pull Requests
-
+- Issue Title should be : `VOVOCA - Issue Number`
+- Make sure to add description about issue in the section below the issue to get more clear picture, try adding screenshots/gifs for better clearance
 - If you're not sure about adding something, [open an issue](https://github.com/varun-singhh/vovoca/issues/new) to discuss it.
 - Feel free to open a Pull Request early so that a discussion can be had as changes are developed.
 - Include screenshots and animated gifs of your changes whenever possible.
@@ -49,3 +51,15 @@ Please do follow naming convention for new classes (if added) and try to kee sim
 If any of this information confusing, incorrect, or incomplete, feel free to
 [open an issue](https://github.com/varun-singhh/vovoca/issues/new)
 for help.
+
+## Labels
+
+Labels are very important to categorize the PR, make sure to use/change labels as necessary
+Following are the mentioned labels with their usecase
+- Bug
+- Enhancement
+- WIP (work in progress)
+- Testing
+- Ready for Review
+- In Review
+- Done
